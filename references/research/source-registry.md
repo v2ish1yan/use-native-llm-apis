@@ -132,6 +132,20 @@ Purpose:
 - Messages endpoint reference: <https://docs.siliconflow.com/en/api-reference/chat-completions/messages>
 - Embeddings reference: <https://docs.siliconflow.com/en/api-reference/embeddings/create-embeddings>
 
+## Novita AI
+
+- API reference overview: <https://novita.ai/docs/api-reference>
+- Authentication: <https://novita.ai/docs/api-reference/basic-authentication>
+- Model APIs introduction: <https://novita.ai/docs/api-reference/model-apis-introduction>
+- OWL guide mentioning OpenAI-compatible endpoint: <https://novita.ai/docs/guides/owl>
+
+## GitHub Copilot / Copilot SDK
+
+- OpenAI Codex in GitHub Docs: <https://docs.github.com/en/copilot/concepts/agents/openai-codex>
+- Copilot SDK authentication: <https://docs.github.com/en/copilot/how-tos/copilot-sdk/authenticate-copilot-sdk/authenticate-copilot-sdk>
+- Bring your own key: <https://docs.github.com/en/copilot/how-tos/copilot-sdk/authenticate-copilot-sdk/bring-your-own-key>
+- Using your LLM provider API keys with Copilot: <https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/use-your-own-api-keys>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>

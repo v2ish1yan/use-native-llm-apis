@@ -22,6 +22,8 @@ Use this file as the entry point for the skill.
 - NewAPI: [providers/newapi.md](providers/newapi.md)
 - AiHubMix: [providers/aihubmix.md](providers/aihubmix.md)
 - SiliconFlow: [providers/siliconflow.md](providers/siliconflow.md)
+- Novita AI: [providers/novita-ai.md](providers/novita-ai.md)
+- GitHub Copilot / Copilot SDK: [providers/github-copilot.md](providers/github-copilot.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -68,6 +70,8 @@ Stage 2 expansion has started with:
 - NewAPI
 - AiHubMix
 - SiliconFlow
+- Novita AI
+- GitHub Copilot / Copilot SDK
 
 ## Stage 2 map
 

@@ -38,6 +38,8 @@ Status labels:
 | NewAPI | covered | Dedicated gateway reference |
 | AiHubMix | covered | Dedicated aggregation-layer reference |
 | SiliconFlow | covered | Dedicated hosted aggregation-layer reference |
+| Novita AI | covered | Dedicated aggregation-layer reference |
+| GitHub Copilot / Copilot SDK | covered | Special OAuth / BYOK reference |
 | DMXAPI | pending | Third-party relay |
 | PackyCode | pending | Third-party relay |
 | Cubence | pending | Third-party relay |

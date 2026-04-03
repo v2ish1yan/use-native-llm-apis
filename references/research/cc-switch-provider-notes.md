@@ -105,6 +105,8 @@ Current Stage 2 in progress:
 - NewAPI
 - AiHubMix
 - SiliconFlow
+- Novita AI
+- GitHub Copilot / Copilot SDK
 
 ## Primary sources for the pilot
 

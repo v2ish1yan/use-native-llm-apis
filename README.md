@@ -43,6 +43,8 @@ Stage 2 has started with:
 - NewAPI
 - AiHubMix
 - SiliconFlow
+- Novita AI
+- GitHub Copilot / Copilot SDK
 
 It also includes comparison guides for:
 
@@ -117,6 +119,8 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - NewAPI: [references/providers/newapi.md](references/providers/newapi.md)
 - AiHubMix: [references/providers/aihubmix.md](references/providers/aihubmix.md)
 - SiliconFlow: [references/providers/siliconflow.md](references/providers/siliconflow.md)
+- Novita AI: [references/providers/novita-ai.md](references/providers/novita-ai.md)
+- GitHub Copilot / Copilot SDK: [references/providers/github-copilot.md](references/providers/github-copilot.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 - Coverage tracker: [references/research/coverage-status.md](references/research/coverage-status.md)
 
@@ -150,6 +154,8 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - NewAPI
 - AiHubMix
 - SiliconFlow
+- Novita AI
+- GitHub Copilot / Copilot SDK
 
 ## Validation
 
