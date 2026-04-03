@@ -52,7 +52,7 @@ Status labels:
 | SSSAiCode | pending | Third-party relay |
 | Compshare | covered | Official Compshare / ModelVerse docs expose OpenAI, Responses, Anthropic, and Gemini protocol entries |
 | Micu | pending | Third-party relay |
-| CTok.ai | pending | Third-party relay |
+| CTok.ai | partial | Official API root and `/v1/models` are verified, but fully crawlable public protocol docs remain limited |
 
 ## Cloud and managed variants
 

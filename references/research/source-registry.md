@@ -170,6 +170,13 @@ Purpose:
 - OpenAI-compatible chat docs: <https://www.compshare.cn/docs/modelverse/models/text_api/openai_compatible>
 - OpenAPI protocol list and extension fields: <https://www.compshare.cn/docs/modelverse/models/text_api/api-expand>
 
+## CTok.ai
+
+- Main site: <https://ctok.ai/>
+- API app root: <https://api.ctok.ai/>
+- Model list endpoint requiring API key: <https://api.ctok.ai/v1/models>
+- Docs domain: <https://docs.ctok.ai/>
+
 ## PackyCode
 
 - Docs root: <https://docs.packyapi.com/>
