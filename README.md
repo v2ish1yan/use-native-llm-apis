@@ -49,6 +49,7 @@ Stage 2 has started with:
 - Cubence
 - CrazyRouter
 - Xiaomi MiMo
+- Compshare
 - Right Code
 - X-Code API
 - Ai Go Code
@@ -134,6 +135,7 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - Cubence: [references/providers/cubence.md](references/providers/cubence.md)
 - CrazyRouter: [references/providers/crazyrouter.md](references/providers/crazyrouter.md)
 - Xiaomi MiMo: [references/providers/xiaomi-mimo.md](references/providers/xiaomi-mimo.md)
+- Compshare: [references/providers/compshare.md](references/providers/compshare.md)
 - Right Code: [references/providers/rightcode.md](references/providers/rightcode.md)
 - X-Code API: [references/providers/xcode-api.md](references/providers/xcode-api.md)
 - Ai Go Code: [references/providers/aigocode.md](references/providers/aigocode.md)

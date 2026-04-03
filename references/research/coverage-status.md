@@ -50,7 +50,7 @@ Status labels:
 | DMXAPI | covered | Dedicated relay reference with docs site |
 | AICoding | pending | Third-party relay |
 | SSSAiCode | pending | Third-party relay |
-| Compshare | pending | Third-party relay |
+| Compshare | covered | Official Compshare / ModelVerse docs expose OpenAI, Responses, Anthropic, and Gemini protocol entries |
 | Micu | pending | Third-party relay |
 | CTok.ai | pending | Third-party relay |
 

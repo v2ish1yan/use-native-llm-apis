@@ -45,6 +45,8 @@ Purpose:
 
 ## Alibaba Bailian / DashScope
 
+- Help center root: <https://help.aliyun.com/zh/model-studio/>
+- Console docs entry: <https://bailian.console.aliyun.com/cn-beijing?tab=doc#/doc>
 - Compatibility overview: <https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope>
 - OpenAI chat completions compatibility: <https://help.aliyun.com/zh/model-studio/qwen-api-via-openai-chat-completions>
 - Regions guide: <https://help.aliyun.com/zh/model-studio/regions/>
@@ -160,6 +162,13 @@ Purpose:
 - Audio understanding: <https://platform.xiaomimimo.com/docs/usage-guide/multimodal-understanding/audio-understanding.md>
 - Video understanding: <https://platform.xiaomimimo.com/docs/usage-guide/multimodal-understanding/video-understanding.md>
 - Speech synthesis: <https://platform.xiaomimimo.com/docs/usage-guide/speech-synthesis.md>
+
+## Compshare
+
+- Docs root: <https://www.compshare.cn/docs>
+- Platform overview: <https://www.compshare.cn/docs/overview/platform/introduce>
+- OpenAI-compatible chat docs: <https://www.compshare.cn/docs/modelverse/models/text_api/openai_compatible>
+- OpenAPI protocol list and extension fields: <https://www.compshare.cn/docs/modelverse/models/text_api/api-expand>
 
 ## PackyCode
 
