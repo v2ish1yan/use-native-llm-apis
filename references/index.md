@@ -28,6 +28,8 @@ Use this file as the entry point for the skill.
 - Cubence: [providers/cubence.md](providers/cubence.md)
 - CrazyRouter: [providers/crazyrouter.md](providers/crazyrouter.md)
 - Xiaomi MiMo: [providers/xiaomi-mimo.md](providers/xiaomi-mimo.md)
+- Right Code: [providers/rightcode.md](providers/rightcode.md)
+- X-Code API: [providers/xcode-api.md](providers/xcode-api.md)
 - Ai Go Code: [providers/aigocode.md](providers/aigocode.md)
 - AICodeMirror: [providers/aicodemirror.md](providers/aicodemirror.md)
 
@@ -82,6 +84,8 @@ Stage 2 expansion has started with:
 - Cubence
 - CrazyRouter
 - Xiaomi MiMo
+- Right Code
+- X-Code API
 - Ai Go Code
 - AICodeMirror
 

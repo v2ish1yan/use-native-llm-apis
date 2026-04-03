@@ -49,6 +49,8 @@ Stage 2 has started with:
 - Cubence
 - CrazyRouter
 - Xiaomi MiMo
+- Right Code
+- X-Code API
 - Ai Go Code
 - AICodeMirror
 
@@ -131,6 +133,8 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - Cubence: [references/providers/cubence.md](references/providers/cubence.md)
 - CrazyRouter: [references/providers/crazyrouter.md](references/providers/crazyrouter.md)
 - Xiaomi MiMo: [references/providers/xiaomi-mimo.md](references/providers/xiaomi-mimo.md)
+- Right Code: [references/providers/rightcode.md](references/providers/rightcode.md)
+- X-Code API: [references/providers/xcode-api.md](references/providers/xcode-api.md)
 - Ai Go Code: [references/providers/aigocode.md](references/providers/aigocode.md)
 - AICodeMirror: [references/providers/aicodemirror.md](references/providers/aicodemirror.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
@@ -172,6 +176,8 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - Cubence
 - CrazyRouter
 - Xiaomi MiMo
+- Right Code
+- X-Code API
 - Ai Go Code
 - AICodeMirror
 

@@ -45,13 +45,13 @@ Status labels:
 | CrazyRouter | covered | Dedicated relay reference |
 | Ai Go Code | covered | Dedicated relay reference with docs center |
 | AICodeMirror | covered | Dedicated relay reference with public tutorial docs |
+| Right Code | covered | Dedicated relay reference with docs and curl examples |
+| X-Code API | covered | Dedicated relay reference with docs site |
 | DMXAPI | pending | Third-party relay |
-| RightCode | pending | Third-party relay |
 | AICoding | pending | Third-party relay |
 | SSSAiCode | pending | Third-party relay |
 | Compshare | pending | Third-party relay |
 | Micu | pending | Third-party relay |
-| X-Code API | pending | Third-party relay |
 | CTok.ai | pending | Third-party relay |
 | Novita AI | pending | Aggregation layer |
 

@@ -111,6 +111,8 @@ Current Stage 2 in progress:
 - Cubence
 - CrazyRouter
 - Xiaomi MiMo
+- Right Code
+- X-Code API
 - Ai Go Code
 - AICodeMirror
 

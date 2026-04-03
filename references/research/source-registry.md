@@ -189,6 +189,18 @@ Purpose:
 - Main docs / tutorial page: <https://www.aicodemirror.com/docs>
 - Domain and API stability note: <https://www.aicodemirror.com/why-aicodemirror>
 
+## Right Code
+
+- Docs home: <https://docs.right.codes/>
+- Intro: <https://docs.right.codes/docs/rc_quick_start/intro>
+- Curl examples: <https://docs.right.codes/docs/rc_extension/curl>
+- OpenCode configuration: <https://docs.right.codes/docs/rc_extension/opencode>
+
+## X-Code API
+
+- Docs home: <https://docs.x-code.cc/>
+- Codex configuration: <https://docs.x-code.cc/codex>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>
