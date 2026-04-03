@@ -47,19 +47,17 @@ Status labels:
 | AICodeMirror | covered | Dedicated relay reference with public tutorial docs |
 | Right Code | covered | Dedicated relay reference with docs and curl examples |
 | X-Code API | covered | Dedicated relay reference with docs site |
-| DMXAPI | pending | Third-party relay |
+| DMXAPI | covered | Dedicated relay reference with docs site |
 | AICoding | pending | Third-party relay |
 | SSSAiCode | pending | Third-party relay |
 | Compshare | pending | Third-party relay |
 | Micu | pending | Third-party relay |
 | CTok.ai | pending | Third-party relay |
-| Novita AI | pending | Aggregation layer |
 
 ## Cloud and managed variants
 
 | Provider | Status | Notes |
 |---|---|---|
-| GitHub Copilot | pending | Special OAuth-based path, not a plain API key provider |
 | AWS Bedrock (AK/SK) | covered | Included in AWS Bedrock reference |
 | AWS Bedrock (API key) | covered | Covered as Bedrock deployment style note |
 | Azure OpenAI | covered | Included as separate official provider |

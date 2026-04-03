@@ -53,6 +53,7 @@ Stage 2 has started with:
 - X-Code API
 - Ai Go Code
 - AICodeMirror
+- DMXAPI
 
 It also includes comparison guides for:
 
@@ -137,6 +138,7 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - X-Code API: [references/providers/xcode-api.md](references/providers/xcode-api.md)
 - Ai Go Code: [references/providers/aigocode.md](references/providers/aigocode.md)
 - AICodeMirror: [references/providers/aicodemirror.md](references/providers/aicodemirror.md)
+- DMXAPI: [references/providers/dmxapi.md](references/providers/dmxapi.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 - Coverage tracker: [references/research/coverage-status.md](references/research/coverage-status.md)
 
@@ -180,6 +182,7 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - X-Code API
 - Ai Go Code
 - AICodeMirror
+- DMXAPI
 
 ## Validation
 

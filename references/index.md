@@ -32,6 +32,7 @@ Use this file as the entry point for the skill.
 - X-Code API: [providers/xcode-api.md](providers/xcode-api.md)
 - Ai Go Code: [providers/aigocode.md](providers/aigocode.md)
 - AICodeMirror: [providers/aicodemirror.md](providers/aicodemirror.md)
+- DMXAPI: [providers/dmxapi.md](providers/dmxapi.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -88,6 +89,7 @@ Stage 2 expansion has started with:
 - X-Code API
 - Ai Go Code
 - AICodeMirror
+- DMXAPI
 
 ## Stage 2 map
 

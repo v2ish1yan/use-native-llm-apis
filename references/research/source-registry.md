@@ -201,6 +201,14 @@ Purpose:
 - Docs home: <https://docs.x-code.cc/>
 - Codex configuration: <https://docs.x-code.cc/codex>
 
+## DMXAPI
+
+- Docs home: <https://doc.dmxapi.com/>
+- Chinese docs home: <https://doc.dmxapi.com/zh/>
+- Quick start: <https://doc.dmxapi.com/jichu.html>
+- Common endpoints: <https://doc.dmxapi.com/jiekou.html>
+- Responses API note: <https://doc.dmxapi.com/responses.html>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>
