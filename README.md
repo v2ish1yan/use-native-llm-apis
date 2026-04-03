@@ -45,6 +45,9 @@ Stage 2 has started with:
 - SiliconFlow
 - Novita AI
 - GitHub Copilot / Copilot SDK
+- PackyCode
+- Cubence
+- CrazyRouter
 
 It also includes comparison guides for:
 
@@ -121,6 +124,9 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - SiliconFlow: [references/providers/siliconflow.md](references/providers/siliconflow.md)
 - Novita AI: [references/providers/novita-ai.md](references/providers/novita-ai.md)
 - GitHub Copilot / Copilot SDK: [references/providers/github-copilot.md](references/providers/github-copilot.md)
+- PackyCode: [references/providers/packycode.md](references/providers/packycode.md)
+- Cubence: [references/providers/cubence.md](references/providers/cubence.md)
+- CrazyRouter: [references/providers/crazyrouter.md](references/providers/crazyrouter.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 - Coverage tracker: [references/research/coverage-status.md](references/research/coverage-status.md)
 
@@ -156,6 +162,9 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - SiliconFlow
 - Novita AI
 - GitHub Copilot / Copilot SDK
+- PackyCode
+- Cubence
+- CrazyRouter
 
 ## Validation
 

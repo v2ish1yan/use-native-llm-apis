@@ -146,6 +146,23 @@ Purpose:
 - Bring your own key: <https://docs.github.com/en/copilot/how-tos/copilot-sdk/authenticate-copilot-sdk/bring-your-own-key>
 - Using your LLM provider API keys with Copilot: <https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/use-your-own-api-keys>
 
+## PackyCode
+
+- Docs root: <https://docs.packyapi.com/>
+- CLI docs index: <https://docs.packyapi.com/docs/cli/>
+- Codex setup guide: <https://docs.packyapi.com/docs/cli/codex>
+- Claude guide: <https://docs.packyapi.com/docs/cli/claude>
+
+## Cubence
+
+- Docs root: <https://docs.cubence.com/>
+- Main site: <https://www.cubence.com/>
+
+## CrazyRouter
+
+- Main site: <https://crazyrouter.com/>
+- Pricing and API compatibility explanation: <https://crazyrouter.com/tools/pricing-calculator>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>

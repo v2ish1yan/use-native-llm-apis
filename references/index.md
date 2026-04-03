@@ -24,6 +24,9 @@ Use this file as the entry point for the skill.
 - SiliconFlow: [providers/siliconflow.md](providers/siliconflow.md)
 - Novita AI: [providers/novita-ai.md](providers/novita-ai.md)
 - GitHub Copilot / Copilot SDK: [providers/github-copilot.md](providers/github-copilot.md)
+- PackyCode: [providers/packycode.md](providers/packycode.md)
+- Cubence: [providers/cubence.md](providers/cubence.md)
+- CrazyRouter: [providers/crazyrouter.md](providers/crazyrouter.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -72,6 +75,9 @@ Stage 2 expansion has started with:
 - SiliconFlow
 - Novita AI
 - GitHub Copilot / Copilot SDK
+- PackyCode
+- Cubence
+- CrazyRouter
 
 ## Stage 2 map
 

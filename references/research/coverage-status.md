@@ -40,14 +40,14 @@ Status labels:
 | SiliconFlow | covered | Dedicated hosted aggregation-layer reference |
 | Novita AI | covered | Dedicated aggregation-layer reference |
 | GitHub Copilot / Copilot SDK | covered | Special OAuth / BYOK reference |
+| PackyCode | covered | Dedicated relay reference with docs site |
+| Cubence | covered | Dedicated relay reference |
+| CrazyRouter | covered | Dedicated relay reference |
 | DMXAPI | pending | Third-party relay |
-| PackyCode | pending | Third-party relay |
-| Cubence | pending | Third-party relay |
 | AIGoCode | pending | Third-party relay |
 | RightCode | pending | Third-party relay |
 | AICodeMirror | pending | Third-party relay |
 | AICoding | pending | Third-party relay |
-| CrazyRouter | pending | Third-party relay |
 | SSSAiCode | pending | Third-party relay |
 | Compshare | pending | Third-party relay |
 | Micu | pending | Third-party relay |

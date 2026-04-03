@@ -107,6 +107,9 @@ Current Stage 2 in progress:
 - SiliconFlow
 - Novita AI
 - GitHub Copilot / Copilot SDK
+- PackyCode
+- Cubence
+- CrazyRouter
 
 ## Primary sources for the pilot
 
