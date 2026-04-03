@@ -163,6 +163,17 @@ Purpose:
 - Main site: <https://crazyrouter.com/>
 - Pricing and API compatibility explanation: <https://crazyrouter.com/tools/pricing-calculator>
 
+## Ai Go Code
+
+- Docs center: <https://www.aigocode.com/docs>
+- Codex setup guide: <https://www.aigocode.com/docs/getting-started/codex>
+- OpenCode setup guide: <https://www.aigocode.com/docs/advanced/opencode>
+
+## AICodeMirror
+
+- Main docs / tutorial page: <https://www.aicodemirror.com/docs>
+- Domain and API stability note: <https://www.aicodemirror.com/why-aicodemirror>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>

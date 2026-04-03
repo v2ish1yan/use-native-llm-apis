@@ -110,6 +110,8 @@ Current Stage 2 in progress:
 - PackyCode
 - Cubence
 - CrazyRouter
+- Ai Go Code
+- AICodeMirror
 
 ## Primary sources for the pilot
 

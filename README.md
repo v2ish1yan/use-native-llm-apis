@@ -48,6 +48,8 @@ Stage 2 has started with:
 - PackyCode
 - Cubence
 - CrazyRouter
+- Ai Go Code
+- AICodeMirror
 
 It also includes comparison guides for:
 
@@ -127,6 +129,8 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - PackyCode: [references/providers/packycode.md](references/providers/packycode.md)
 - Cubence: [references/providers/cubence.md](references/providers/cubence.md)
 - CrazyRouter: [references/providers/crazyrouter.md](references/providers/crazyrouter.md)
+- Ai Go Code: [references/providers/aigocode.md](references/providers/aigocode.md)
+- AICodeMirror: [references/providers/aicodemirror.md](references/providers/aicodemirror.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 - Coverage tracker: [references/research/coverage-status.md](references/research/coverage-status.md)
 
@@ -165,6 +169,8 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - PackyCode
 - Cubence
 - CrazyRouter
+- Ai Go Code
+- AICodeMirror
 
 ## Validation
 

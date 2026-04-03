@@ -43,10 +43,10 @@ Status labels:
 | PackyCode | covered | Dedicated relay reference with docs site |
 | Cubence | covered | Dedicated relay reference |
 | CrazyRouter | covered | Dedicated relay reference |
+| Ai Go Code | covered | Dedicated relay reference with docs center |
+| AICodeMirror | covered | Dedicated relay reference with public tutorial docs |
 | DMXAPI | pending | Third-party relay |
-| AIGoCode | pending | Third-party relay |
 | RightCode | pending | Third-party relay |
-| AICodeMirror | pending | Third-party relay |
 | AICoding | pending | Third-party relay |
 | SSSAiCode | pending | Third-party relay |
 | Compshare | pending | Third-party relay |
