@@ -49,6 +49,14 @@ Purpose:
 - OpenAI chat completions compatibility: <https://help.aliyun.com/zh/model-studio/qwen-api-via-openai-chat-completions>
 - Regions guide: <https://help.aliyun.com/zh/model-studio/regions/>
 
+## Kimi / Moonshot
+
+- Docs root: <https://platform.moonshot.cn/docs/introduction>
+- Quick start guide: <https://platform.moonshot.cn/blog/posts/kimi-api-quick-start-guide>
+- Streaming guide: <https://platform.moonshot.cn/docs/guide/utilize-the-streaming-output-feature-of-kimi-api>
+- Tool calls guide: <https://platform.moonshot.cn/docs/guide/use-kimi-api-to-complete-tool-calls>
+- JSON mode guide: <https://platform.moonshot.cn/docs/guide/use-json-mode-feature-of-kimi-api>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>

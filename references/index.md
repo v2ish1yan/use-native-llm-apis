@@ -10,6 +10,7 @@ Use this file as the entry point for the skill.
 - DeepSeek: [providers/deepseek.md](providers/deepseek.md)
 - Zhipu GLM: [providers/zhipu-glm.md](providers/zhipu-glm.md)
 - Alibaba Bailian / DashScope: [providers/alibaba-bailian.md](providers/alibaba-bailian.md)
+- Kimi / Moonshot: [providers/kimi-moonshot.md](providers/kimi-moonshot.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -44,6 +45,7 @@ Stage 2 expansion has started with:
 
 - Zhipu GLM
 - Alibaba Bailian / DashScope
+- Kimi / Moonshot
 
 ## Stage 2 map
 

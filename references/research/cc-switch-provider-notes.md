@@ -93,6 +93,7 @@ Current Stage 2 in progress:
 
 - Zhipu GLM
 - Alibaba Bailian / DashScope
+- Kimi / Moonshot
 
 ## Primary sources for the pilot
 
