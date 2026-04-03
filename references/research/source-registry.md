@@ -78,6 +78,28 @@ Purpose:
 - Anthropic prompt caching: <https://platform.minimax.io/docs/api-reference/anthropic-api-compatible-cache>
 - AI coding tools guide: <https://platform.minimax.io/docs/api-reference/text-ai-coding-refer>
 
+## StepFun
+
+- Chat completion create: <https://platform.stepfun.com/docs/api-reference/chat/chat-completion-create>
+- Chat response object: <https://platform.stepfun.com/docs/en/api-reference/chat/object>
+- Step plan quick start: <https://platform.stepfun.com/docs/zh/stepplan/quick-start>
+
+## Azure OpenAI
+
+- Responses API how-to: <https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/work-with-code>
+- v1 API lifecycle and overview: <https://learn.microsoft.com/en-us/azure/foundry/openai/api-version-lifecycle>
+- Switching between OpenAI and Azure OpenAI endpoints: <https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/switching-endpoints>
+- v1 REST API reference: <https://learn.microsoft.com/en-us/azure/ai-foundry/openai/latest>
+
+## AWS Bedrock
+
+- Anthropic Claude Messages API on Bedrock: <https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html>
+- Supported Claude models on Bedrock: <https://docs.aws.amazon.com/bedrock/latest/userguide/claude-messages-supported-models.html>
+
+## NVIDIA NIM
+
+- LLM APIs reference: <https://docs.api.nvidia.com/nim/reference/llm-apis>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>

@@ -13,6 +13,10 @@ Use this file as the entry point for the skill.
 - Kimi / Moonshot: [providers/kimi-moonshot.md](providers/kimi-moonshot.md)
 - Doubao / Volcengine Ark: [providers/doubao-volcengine-ark.md](providers/doubao-volcengine-ark.md)
 - MiniMax: [providers/minimax.md](providers/minimax.md)
+- StepFun: [providers/stepfun.md](providers/stepfun.md)
+- Azure OpenAI: [providers/azure-openai.md](providers/azure-openai.md)
+- AWS Bedrock: [providers/aws-bedrock.md](providers/aws-bedrock.md)
+- NVIDIA NIM: [providers/nvidia-nim.md](providers/nvidia-nim.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -50,6 +54,10 @@ Stage 2 expansion has started with:
 - Kimi / Moonshot
 - Doubao / Volcengine Ark
 - MiniMax
+- StepFun
+- Azure OpenAI
+- AWS Bedrock
+- NVIDIA NIM
 
 ## Stage 2 map
 

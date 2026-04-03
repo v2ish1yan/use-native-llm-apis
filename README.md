@@ -34,6 +34,10 @@ Stage 2 has started with:
 - Kimi / Moonshot
 - Doubao / Volcengine Ark
 - MiniMax
+- StepFun
+- Azure OpenAI
+- AWS Bedrock
+- NVIDIA NIM
 
 It also includes comparison guides for:
 
@@ -99,6 +103,10 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - Kimi / Moonshot: [references/providers/kimi-moonshot.md](references/providers/kimi-moonshot.md)
 - Doubao / Volcengine Ark: [references/providers/doubao-volcengine-ark.md](references/providers/doubao-volcengine-ark.md)
 - MiniMax: [references/providers/minimax.md](references/providers/minimax.md)
+- StepFun: [references/providers/stepfun.md](references/providers/stepfun.md)
+- Azure OpenAI: [references/providers/azure-openai.md](references/providers/azure-openai.md)
+- AWS Bedrock: [references/providers/aws-bedrock.md](references/providers/aws-bedrock.md)
+- NVIDIA NIM: [references/providers/nvidia-nim.md](references/providers/nvidia-nim.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 
 ## Project status
@@ -123,6 +131,9 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - Doubao / Volcengine Ark
 - MiniMax
 - StepFun
+- Azure OpenAI
+- AWS Bedrock
+- NVIDIA NIM
 
 ## Validation
 

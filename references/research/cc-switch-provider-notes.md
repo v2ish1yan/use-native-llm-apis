@@ -96,6 +96,10 @@ Current Stage 2 in progress:
 - Kimi / Moonshot
 - Doubao / Volcengine Ark
 - MiniMax
+- StepFun
+- Azure OpenAI
+- AWS Bedrock
+- NVIDIA NIM
 
 ## Primary sources for the pilot
 
