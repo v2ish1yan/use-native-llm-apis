@@ -95,6 +95,7 @@ Current Stage 2 in progress:
 - Alibaba Bailian / DashScope
 - Kimi / Moonshot
 - Doubao / Volcengine Ark
+- MiniMax
 
 ## Primary sources for the pilot
 

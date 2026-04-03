@@ -66,6 +66,18 @@ Purpose:
 - Web search / Responses tool example: <https://www.volcengine.com/docs/82379/1338552>
 - Endpoint management overview: <https://www.volcengine.com/docs/82379/1182403>
 
+## MiniMax
+
+- API overview: <https://platform.minimax.io/docs/api-reference/api-overview>
+- Text generation overview: <https://platform.minimax.io/docs/api-reference/text-intro>
+- Text generation guide: <https://platform.minimax.io/docs/guides/text-generation>
+- Compatible Anthropic API: <https://platform.minimax.io/docs/api-reference/text-anthropic-api>
+- Compatible OpenAI API: <https://platform.minimax.io/docs/api-reference/text-openai-api>
+- Tool use and interleaved thinking: <https://platform.minimax.io/docs/api-reference/text-m2-function-call-refer>
+- Prompt caching: <https://platform.minimax.io/docs/api-reference/text-prompt-caching>
+- Anthropic prompt caching: <https://platform.minimax.io/docs/api-reference/anthropic-api-compatible-cache>
+- AI coding tools guide: <https://platform.minimax.io/docs/api-reference/text-ai-coding-refer>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>

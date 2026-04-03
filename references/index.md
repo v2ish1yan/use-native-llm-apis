@@ -12,6 +12,7 @@ Use this file as the entry point for the skill.
 - Alibaba Bailian / DashScope: [providers/alibaba-bailian.md](providers/alibaba-bailian.md)
 - Kimi / Moonshot: [providers/kimi-moonshot.md](providers/kimi-moonshot.md)
 - Doubao / Volcengine Ark: [providers/doubao-volcengine-ark.md](providers/doubao-volcengine-ark.md)
+- MiniMax: [providers/minimax.md](providers/minimax.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -48,6 +49,7 @@ Stage 2 expansion has started with:
 - Alibaba Bailian / DashScope
 - Kimi / Moonshot
 - Doubao / Volcengine Ark
+- MiniMax
 
 ## Stage 2 map
 
