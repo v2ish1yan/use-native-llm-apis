@@ -32,6 +32,7 @@ Stage 2 has started with:
 - Zhipu GLM
 - Alibaba Bailian / DashScope
 - Kimi / Moonshot
+- Doubao / Volcengine Ark
 
 It also includes comparison guides for:
 
@@ -95,6 +96,7 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - Zhipu GLM: [references/providers/zhipu-glm.md](references/providers/zhipu-glm.md)
 - Alibaba Bailian / DashScope: [references/providers/alibaba-bailian.md](references/providers/alibaba-bailian.md)
 - Kimi / Moonshot: [references/providers/kimi-moonshot.md](references/providers/kimi-moonshot.md)
+- Doubao / Volcengine Ark: [references/providers/doubao-volcengine-ark.md](references/providers/doubao-volcengine-ark.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 
 ## Project status

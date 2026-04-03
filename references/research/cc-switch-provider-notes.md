@@ -94,6 +94,7 @@ Current Stage 2 in progress:
 - Zhipu GLM
 - Alibaba Bailian / DashScope
 - Kimi / Moonshot
+- Doubao / Volcengine Ark
 
 ## Primary sources for the pilot
 

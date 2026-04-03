@@ -57,6 +57,15 @@ Purpose:
 - Tool calls guide: <https://platform.moonshot.cn/docs/guide/use-kimi-api-to-complete-tool-calls>
 - JSON mode guide: <https://platform.moonshot.cn/docs/guide/use-json-mode-feature-of-kimi-api>
 
+## Doubao / Volcengine Ark
+
+- Docs root: <https://www.volcengine.com/docs/82379>
+- SDK install and OpenAI compatibility note: <https://www.volcengine.com/docs/82379/1541595>
+- Regular online inference and Responses example: <https://www.volcengine.com/docs/82379/2121998>
+- Responses API query example: <https://www.volcengine.com/docs/82379/1783709>
+- Web search / Responses tool example: <https://www.volcengine.com/docs/82379/1338552>
+- Endpoint management overview: <https://www.volcengine.com/docs/82379/1182403>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>
