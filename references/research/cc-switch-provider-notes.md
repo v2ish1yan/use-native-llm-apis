@@ -101,6 +101,8 @@ Current Stage 2 in progress:
 - AWS Bedrock
 - NVIDIA NIM
 - ModelScope API Inference
+- OpenRouter
+- NewAPI
 
 ## Primary sources for the pilot
 

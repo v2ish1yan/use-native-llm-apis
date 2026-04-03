@@ -18,6 +18,8 @@ Use this file as the entry point for the skill.
 - AWS Bedrock: [providers/aws-bedrock.md](providers/aws-bedrock.md)
 - NVIDIA NIM: [providers/nvidia-nim.md](providers/nvidia-nim.md)
 - ModelScope API Inference: [providers/modelscope.md](providers/modelscope.md)
+- OpenRouter: [providers/openrouter.md](providers/openrouter.md)
+- NewAPI: [providers/newapi.md](providers/newapi.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -60,6 +62,8 @@ Stage 2 expansion has started with:
 - AWS Bedrock
 - NVIDIA NIM
 - ModelScope API Inference
+- OpenRouter
+- NewAPI
 
 ## Stage 2 map
 

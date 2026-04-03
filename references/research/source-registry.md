@@ -106,6 +106,19 @@ Purpose:
 - Community announcement with OpenAI-compatible examples: <https://community.modelscope.cn/675262372db35d1195183bdb.html>
 - Community update referencing `https://api-inference.modelscope.cn/v1/`: <https://community.modelscope.cn/67aac48359bcf8384ab5c5f8.html>
 
+## OpenRouter
+
+- API overview: <https://openrouter.ai/docs/api/reference/overview/>
+- OpenAPI spec YAML: <https://openrouter.ai/openapi.yaml>
+- OpenAPI spec JSON: <https://openrouter.ai/openapi.json>
+- Embeddings reference: <https://openrouter.ai/docs/api-reference/embeddings>
+
+## NewAPI
+
+- Docs root: <https://docs.newapi.pro/en/>
+- Quick start: <https://docs.newapi.pro/zh/docs>
+- Supported AI apps overview: <https://docs.newapi.pro/en/docs/apps>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>
