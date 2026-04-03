@@ -100,6 +100,12 @@ Purpose:
 
 - LLM APIs reference: <https://docs.api.nvidia.com/nim/reference/llm-apis>
 
+## ModelScope API Inference
+
+- API Inference intro: <https://modelscope.cn/docs/model-service/API-Inference/intro>
+- Community announcement with OpenAI-compatible examples: <https://community.modelscope.cn/675262372db35d1195183bdb.html>
+- Community update referencing `https://api-inference.modelscope.cn/v1/`: <https://community.modelscope.cn/67aac48359bcf8384ab5c5f8.html>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>

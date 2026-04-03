@@ -100,6 +100,7 @@ Current Stage 2 in progress:
 - Azure OpenAI
 - AWS Bedrock
 - NVIDIA NIM
+- ModelScope API Inference
 
 ## Primary sources for the pilot
 

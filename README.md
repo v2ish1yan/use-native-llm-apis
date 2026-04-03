@@ -38,6 +38,7 @@ Stage 2 has started with:
 - Azure OpenAI
 - AWS Bedrock
 - NVIDIA NIM
+- ModelScope API Inference
 
 It also includes comparison guides for:
 
@@ -107,6 +108,7 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - Azure OpenAI: [references/providers/azure-openai.md](references/providers/azure-openai.md)
 - AWS Bedrock: [references/providers/aws-bedrock.md](references/providers/aws-bedrock.md)
 - NVIDIA NIM: [references/providers/nvidia-nim.md](references/providers/nvidia-nim.md)
+- ModelScope API Inference: [references/providers/modelscope.md](references/providers/modelscope.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 
 ## Project status
@@ -134,6 +136,7 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - Azure OpenAI
 - AWS Bedrock
 - NVIDIA NIM
+- ModelScope API Inference
 
 ## Validation
 
