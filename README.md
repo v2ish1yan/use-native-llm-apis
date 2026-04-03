@@ -48,6 +48,7 @@ Stage 2 has started with:
 - PackyCode
 - Cubence
 - CrazyRouter
+- Xiaomi MiMo
 - Ai Go Code
 - AICodeMirror
 
@@ -129,6 +130,7 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - PackyCode: [references/providers/packycode.md](references/providers/packycode.md)
 - Cubence: [references/providers/cubence.md](references/providers/cubence.md)
 - CrazyRouter: [references/providers/crazyrouter.md](references/providers/crazyrouter.md)
+- Xiaomi MiMo: [references/providers/xiaomi-mimo.md](references/providers/xiaomi-mimo.md)
 - Ai Go Code: [references/providers/aigocode.md](references/providers/aigocode.md)
 - AICodeMirror: [references/providers/aicodemirror.md](references/providers/aicodemirror.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
@@ -169,6 +171,7 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - PackyCode
 - Cubence
 - CrazyRouter
+- Xiaomi MiMo
 - Ai Go Code
 - AICodeMirror
 

@@ -146,6 +146,21 @@ Purpose:
 - Bring your own key: <https://docs.github.com/en/copilot/how-tos/copilot-sdk/authenticate-copilot-sdk/bring-your-own-key>
 - Using your LLM provider API keys with Copilot: <https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/use-your-own-api-keys>
 
+## Xiaomi MiMo
+
+- Docs entry route provided by user: <https://platform.xiaomimimo.com/#/docs/welcome>
+- llms index: <https://platform.xiaomimimo.com/llms.txt>
+- First API call: <https://platform.xiaomimimo.com/docs/quick-start/first-api-call.md>
+- OpenAI API reference: <https://platform.xiaomimimo.com/docs/api/chat/openai-api.md>
+- Anthropic API reference: <https://platform.xiaomimimo.com/docs/api/chat/anthropic-api.md>
+- Codex integration guide: <https://platform.xiaomimimo.com/docs/integration/codex.md>
+- Claude Code integration guide: <https://platform.xiaomimimo.com/docs/integration/claudecode.md>
+- Web search tool calling: <https://platform.xiaomimimo.com/docs/usage-guide/tool-calling/web-search.md>
+- Image understanding: <https://platform.xiaomimimo.com/docs/usage-guide/multimodal-understanding/image-understanding.md>
+- Audio understanding: <https://platform.xiaomimimo.com/docs/usage-guide/multimodal-understanding/audio-understanding.md>
+- Video understanding: <https://platform.xiaomimimo.com/docs/usage-guide/multimodal-understanding/video-understanding.md>
+- Speech synthesis: <https://platform.xiaomimimo.com/docs/usage-guide/speech-synthesis.md>
+
 ## PackyCode
 
 - Docs root: <https://docs.packyapi.com/>

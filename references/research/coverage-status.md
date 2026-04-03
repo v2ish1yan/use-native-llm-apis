@@ -27,7 +27,7 @@ Status labels:
 | AWS Bedrock | covered | Official Claude Messages on Bedrock guidance |
 | NVIDIA NIM | covered | Official hosted LLM API reference |
 | ModelScope API Inference | covered | Official hosted OpenAI-compatible inference |
-| Xiaomi MiMo | blocked | Public official API docs not yet confirmed enough for a reliable provider reference |
+| Xiaomi MiMo | covered | Official docs route and llms index confirmed, including OpenAI and Anthropic API references |
 | BaiLing | blocked | Public official API docs not yet confirmed enough for a reliable provider reference |
 
 ## Gateway and aggregation layers

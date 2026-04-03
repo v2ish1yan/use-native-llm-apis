@@ -27,6 +27,7 @@ Use this file as the entry point for the skill.
 - PackyCode: [providers/packycode.md](providers/packycode.md)
 - Cubence: [providers/cubence.md](providers/cubence.md)
 - CrazyRouter: [providers/crazyrouter.md](providers/crazyrouter.md)
+- Xiaomi MiMo: [providers/xiaomi-mimo.md](providers/xiaomi-mimo.md)
 - Ai Go Code: [providers/aigocode.md](providers/aigocode.md)
 - AICodeMirror: [providers/aicodemirror.md](providers/aicodemirror.md)
 
@@ -80,6 +81,7 @@ Stage 2 expansion has started with:
 - PackyCode
 - Cubence
 - CrazyRouter
+- Xiaomi MiMo
 - Ai Go Code
 - AICodeMirror
 

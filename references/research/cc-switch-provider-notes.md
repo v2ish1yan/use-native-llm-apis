@@ -110,6 +110,7 @@ Current Stage 2 in progress:
 - PackyCode
 - Cubence
 - CrazyRouter
+- Xiaomi MiMo
 - Ai Go Code
 - AICodeMirror
 
