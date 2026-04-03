@@ -41,6 +41,8 @@ Stage 2 has started with:
 - ModelScope API Inference
 - OpenRouter
 - NewAPI
+- AiHubMix
+- SiliconFlow
 
 It also includes comparison guides for:
 
@@ -113,6 +115,8 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - ModelScope API Inference: [references/providers/modelscope.md](references/providers/modelscope.md)
 - OpenRouter: [references/providers/openrouter.md](references/providers/openrouter.md)
 - NewAPI: [references/providers/newapi.md](references/providers/newapi.md)
+- AiHubMix: [references/providers/aihubmix.md](references/providers/aihubmix.md)
+- SiliconFlow: [references/providers/siliconflow.md](references/providers/siliconflow.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 - Coverage tracker: [references/research/coverage-status.md](references/research/coverage-status.md)
 
@@ -144,6 +148,8 @@ Stage 2 is intended to expand toward the broader provider set surfaced by `cc-sw
 - ModelScope API Inference
 - OpenRouter
 - NewAPI
+- AiHubMix
+- SiliconFlow
 
 ## Validation
 

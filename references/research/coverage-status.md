@@ -36,8 +36,8 @@ Status labels:
 |---|---|---|
 | OpenRouter | covered | Dedicated gateway reference |
 | NewAPI | covered | Dedicated gateway reference |
-| AiHubMix | pending | Third-party relay; lower priority than native vendors |
-| SiliconFlow | pending | Third-party / hosted aggregation layer |
+| AiHubMix | covered | Dedicated aggregation-layer reference |
+| SiliconFlow | covered | Dedicated hosted aggregation-layer reference |
 | DMXAPI | pending | Third-party relay |
 | PackyCode | pending | Third-party relay |
 | Cubence | pending | Third-party relay |

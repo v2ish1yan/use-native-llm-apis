@@ -119,6 +119,19 @@ Purpose:
 - Quick start: <https://docs.newapi.pro/zh/docs>
 - Supported AI apps overview: <https://docs.newapi.pro/en/docs/apps>
 
+## AiHubMix
+
+- Docs root: <https://docs.aihubmix.com/en>
+- Intro and base URL notes: <https://docs.aihubmix.com/en/index>
+- Complete integration guide: <https://docs.aihubmix.com/en/api/Aihubmix-Integration>
+
+## SiliconFlow
+
+- Chat completions reference: <https://docs.siliconflow.com/en/api-reference/chat-completions/chat-completions>
+- Alternate text conversation page: <https://docs.siliconflow.com/en/api-reference/chat-completions/chat-completions_copy>
+- Messages endpoint reference: <https://docs.siliconflow.com/en/api-reference/chat-completions/messages>
+- Embeddings reference: <https://docs.siliconflow.com/en/api-reference/embeddings/create-embeddings>
+
 ## cc-switch research aid
 
 - Repository: <https://github.com/farion1231/cc-switch>

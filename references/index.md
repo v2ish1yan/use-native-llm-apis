@@ -20,6 +20,8 @@ Use this file as the entry point for the skill.
 - ModelScope API Inference: [providers/modelscope.md](providers/modelscope.md)
 - OpenRouter: [providers/openrouter.md](providers/openrouter.md)
 - NewAPI: [providers/newapi.md](providers/newapi.md)
+- AiHubMix: [providers/aihubmix.md](providers/aihubmix.md)
+- SiliconFlow: [providers/siliconflow.md](providers/siliconflow.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -64,6 +66,8 @@ Stage 2 expansion has started with:
 - ModelScope API Inference
 - OpenRouter
 - NewAPI
+- AiHubMix
+- SiliconFlow
 
 ## Stage 2 map
 

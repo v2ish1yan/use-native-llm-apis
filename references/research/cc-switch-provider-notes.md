@@ -103,6 +103,8 @@ Current Stage 2 in progress:
 - ModelScope API Inference
 - OpenRouter
 - NewAPI
+- AiHubMix
+- SiliconFlow
 
 ## Primary sources for the pilot
 
