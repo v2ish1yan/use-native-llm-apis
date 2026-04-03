@@ -93,6 +93,7 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - DeepSeek: [references/providers/deepseek.md](references/providers/deepseek.md)
 - Zhipu GLM: [references/providers/zhipu-glm.md](references/providers/zhipu-glm.md)
 - Alibaba Bailian / DashScope: [references/providers/alibaba-bailian.md](references/providers/alibaba-bailian.md)
+- Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
 
 ## Project status
 
@@ -126,3 +127,7 @@ python C:\Users\39473\.codex\skills\.system\skill-creator\scripts\quick_validate
 ```
 
 The current repository contents have already passed validation in both the project directory and the installed directory.
+
+## Maintenance rule
+
+When adding or updating provider coverage, save the documentation URLs used for research in [references/research/source-registry.md](references/research/source-registry.md). This keeps future refresh work fast and avoids rediscovering the same vendor docs repeatedly.

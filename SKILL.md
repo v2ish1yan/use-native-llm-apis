@@ -20,6 +20,7 @@ Use the references in this order:
 1. Open the provider file in `references/providers/` when implementing against one specific vendor.
 2. Open the topic file in `references/comparisons/` when migrating code, building an adapter, or debugging portability assumptions.
 3. Open [references/research/cc-switch-provider-notes.md](references/research/cc-switch-provider-notes.md) when you need the broader `cc-switch` coverage map for Stage 2 expansion.
+4. Open [references/research/source-registry.md](references/research/source-registry.md) when you need the saved official and reference documentation URLs for later refreshes.
 
 ## Workflow
 
@@ -41,6 +42,12 @@ If the user asks for JavaScript or TypeScript:
 - prefer native `fetch` examples over SDK-specific wrappers unless the user asked for a specific SDK
 - for streaming, provide a runnable `ReadableStream` or SSE parsing example instead of only describing event names
 - keep the code close to the provider's raw wire format so the mapping stays obvious
+
+When you add or revise provider coverage:
+
+- save every official doc URL and any high-value reference URL in `references/research/source-registry.md`
+- group links by provider so future updates do not require rediscovering the same docs
+- treat `cc-switch` as a discovery aid, not the final authority
 
 ### Migrate between providers
 

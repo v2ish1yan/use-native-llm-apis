@@ -48,3 +48,5 @@ Stage 2 expansion has started with:
 ## Stage 2 map
 
 For the broader expansion path based on `cc-switch`, see [research/cc-switch-provider-notes.md](research/cc-switch-provider-notes.md).
+
+For saved documentation URLs used during research and future refreshes, see [research/source-registry.md](research/source-registry.md).
