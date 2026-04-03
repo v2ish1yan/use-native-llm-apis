@@ -114,6 +114,7 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - OpenRouter: [references/providers/openrouter.md](references/providers/openrouter.md)
 - NewAPI: [references/providers/newapi.md](references/providers/newapi.md)
 - Saved source URLs: [references/research/source-registry.md](references/research/source-registry.md)
+- Coverage tracker: [references/research/coverage-status.md](references/research/coverage-status.md)
 
 ## Project status
 
@@ -157,3 +158,5 @@ The current repository contents have already passed validation in both the proje
 ## Maintenance rule
 
 When adding or updating provider coverage, save the documentation URLs used for research in [references/research/source-registry.md](references/research/source-registry.md). This keeps future refresh work fast and avoids rediscovering the same vendor docs repeatedly.
+
+Track which providers are already documented and which are still pending in [references/research/coverage-status.md](references/research/coverage-status.md).

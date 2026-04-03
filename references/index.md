@@ -70,3 +70,5 @@ Stage 2 expansion has started with:
 For the broader expansion path based on `cc-switch`, see [research/cc-switch-provider-notes.md](research/cc-switch-provider-notes.md).
 
 For saved documentation URLs used during research and future refreshes, see [research/source-registry.md](research/source-registry.md).
+
+For a live status view of what is already covered versus still pending, see [research/coverage-status.md](research/coverage-status.md).
