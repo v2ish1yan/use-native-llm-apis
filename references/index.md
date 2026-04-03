@@ -8,6 +8,8 @@ Use this file as the entry point for the skill.
 - Anthropic: [providers/anthropic.md](providers/anthropic.md)
 - Gemini: [providers/gemini.md](providers/gemini.md)
 - DeepSeek: [providers/deepseek.md](providers/deepseek.md)
+- Zhipu GLM: [providers/zhipu-glm.md](providers/zhipu-glm.md)
+- Alibaba Bailian / DashScope: [providers/alibaba-bailian.md](providers/alibaba-bailian.md)
 
 For JavaScript or TypeScript work, start from the provider file and translate the minimal HTTP example into `fetch` code before adding app-specific wrappers.
 
@@ -37,6 +39,11 @@ This pilot intentionally focuses on four representative providers:
 - Anthropic for Messages API and event-stream semantics
 - Gemini for `contents` and `parts` native structure
 - DeepSeek for an officially OpenAI-compatible API with provider-specific caveats
+
+Stage 2 expansion has started with:
+
+- Zhipu GLM
+- Alibaba Bailian / DashScope
 
 ## Stage 2 map
 

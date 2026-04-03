@@ -27,6 +27,11 @@ Stage 1 currently includes:
 - Gemini
 - DeepSeek
 
+Stage 2 has started with:
+
+- Zhipu GLM
+- Alibaba Bailian / DashScope
+
 It also includes comparison guides for:
 
 - request shape differences
@@ -86,6 +91,8 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 - Anthropic: [references/providers/anthropic.md](references/providers/anthropic.md)
 - Gemini: [references/providers/gemini.md](references/providers/gemini.md)
 - DeepSeek: [references/providers/deepseek.md](references/providers/deepseek.md)
+- Zhipu GLM: [references/providers/zhipu-glm.md](references/providers/zhipu-glm.md)
+- Alibaba Bailian / DashScope: [references/providers/alibaba-bailian.md](references/providers/alibaba-bailian.md)
 
 ## Project status
 

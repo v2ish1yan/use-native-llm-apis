@@ -89,6 +89,11 @@ Expand in this order:
 3. Major Chinese vendor-native APIs
 4. Aggregators and relays only after the native layer is solid
 
+Current Stage 2 in progress:
+
+- Zhipu GLM
+- Alibaba Bailian / DashScope
+
 ## Primary sources for the pilot
 
 - OpenAI docs: <https://platform.openai.com/docs/>
