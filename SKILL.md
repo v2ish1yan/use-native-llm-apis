@@ -17,10 +17,22 @@ Start with [references/index.md](references/index.md).
 
 Use the references in this order:
 
-1. Open the provider file in `references/providers/` when implementing against one specific vendor.
-2. Open the topic file in `references/comparisons/` when migrating code, building an adapter, or debugging portability assumptions.
-3. Open [references/research/cc-switch-provider-notes.md](references/research/cc-switch-provider-notes.md) when you need the broader `cc-switch` coverage map for Stage 2 expansion.
-4. Open [references/research/source-registry.md](references/research/source-registry.md) when you need the saved official and reference documentation URLs for later refreshes.
+1. Open the matching task recipe in `references/recipes/`.
+2. Open the provider file in `references/providers/`.
+3. Open the topic file in `references/comparisons/` if the task involves migration, streaming, tool use, or structured output.
+4. Open [references/research/source-registry.md](references/research/source-registry.md) only when bundled references are insufficient or a time-sensitive detail needs refresh.
+5. Open [references/research/cc-switch-provider-notes.md](references/research/cc-switch-provider-notes.md) only for expansion planning and coverage maintenance.
+
+## Task Routing
+
+Pick one path before coding:
+
+- New integration: start with `references/recipes/integrate-one-provider.md`
+- Provider migration: start with `references/recipes/migrate-between-providers.md`
+- Streaming work: start with `references/recipes/add-streaming.md`
+- Tool calling: start with `references/recipes/add-tool-calling.md`
+- Structured output: start with `references/recipes/add-structured-output.md`
+- Broken request: start with `references/recipes/debug-failed-request.md`
 
 ## Workflow
 
@@ -77,6 +89,14 @@ If a request fails with `400`, `401`, `403`, `404`, `415`, or `422`, check in th
 5. tool/schema field names
 6. streaming toggle and response parsing logic
 
+## Common Development Scenarios
+
+- When the user asks for a first working integration, keep the code close to raw HTTP and avoid premature abstraction.
+- When the user asks for a migration, compare the old request and the new request side by side instead of renaming fields mechanically.
+- When the user asks for streaming, do not assume the non-stream parser can be reused.
+- When the user asks for structured output, prefer native schema controls where available, then tools, then constrained JSON prompting.
+- When the user asks for tool calling, validate both the declaration schema and the tool-result continuation shape.
+
 ## Current Coverage
 
 ### Pilot coverage
@@ -100,3 +120,4 @@ See [references/research/cc-switch-provider-notes.md](references/research/cc-swi
 - Prefer official provider docs over community blog posts when bundled references are insufficient.
 - If a detail is time-sensitive and not covered here, verify it against official docs before coding.
 - For OpenAI-compatible providers, do not assume full behavioral compatibility. Check the provider-specific notes and the comparison docs first.
+- Do not add new provider claims from memory alone. Save the official source URLs before expanding coverage.

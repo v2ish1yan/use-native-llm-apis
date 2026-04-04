@@ -2,6 +2,22 @@
 
 Use this file as the entry point for the skill.
 
+## If you are starting from a task
+
+- Integrate one provider: [recipes/integrate-one-provider.md](recipes/integrate-one-provider.md)
+- Migrate between providers: [recipes/migrate-between-providers.md](recipes/migrate-between-providers.md)
+- Add streaming: [recipes/add-streaming.md](recipes/add-streaming.md)
+- Add tool calling: [recipes/add-tool-calling.md](recipes/add-tool-calling.md)
+- Add structured output: [recipes/add-structured-output.md](recipes/add-structured-output.md)
+- Debug a failed request: [recipes/debug-failed-request.md](recipes/debug-failed-request.md)
+
+Suggested flow:
+
+1. start from the matching recipe
+2. open the provider file
+3. open one comparison file if the code is being ported or extended
+4. only then write or patch code
+
 ## If you are integrating one provider
 
 - OpenAI: [providers/openai.md](providers/openai.md)

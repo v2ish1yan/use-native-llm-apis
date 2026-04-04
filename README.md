@@ -4,6 +4,18 @@ A Codex skill for provider-native LLM API development.
 
 This repository packages a reusable skill that helps agents and developers work with mainstream large-model APIs without repeatedly searching vendor docs during implementation. It focuses on native HTTP request and response formats, provider-specific differences, and cross-provider migration guidance.
 
+## 3-minute quick start
+
+Use the project in this order:
+
+1. Open [references/index.md](references/index.md).
+2. Start from the matching task recipe in `references/recipes/`.
+3. Open the provider reference for the target API.
+4. Open one comparison file if you are migrating code or adding advanced behavior.
+5. Only search the web again when the bundled material is missing a time-sensitive detail.
+
+If you only remember one rule, remember this one: start from the task recipe, not from the full provider list.
+
 ## What this skill is for
 
 Use this skill when you need to:
@@ -17,6 +29,17 @@ Use this skill when you need to:
 - debug request-shape mismatches between vendors
 
 The skill is designed for active development work, not broad market comparison.
+
+## Common usage paths
+
+Start from one of these recipes:
+
+- Integrate one provider: [references/recipes/integrate-one-provider.md](references/recipes/integrate-one-provider.md)
+- Migrate between providers: [references/recipes/migrate-between-providers.md](references/recipes/migrate-between-providers.md)
+- Add streaming: [references/recipes/add-streaming.md](references/recipes/add-streaming.md)
+- Add tool calling: [references/recipes/add-tool-calling.md](references/recipes/add-tool-calling.md)
+- Add structured output: [references/recipes/add-structured-output.md](references/recipes/add-structured-output.md)
+- Debug a failed request: [references/recipes/debug-failed-request.md](references/recipes/debug-failed-request.md)
 
 ## Current pilot coverage
 
@@ -74,6 +97,7 @@ It also includes comparison guides for:
 |   `-- openai.yaml
 `-- references/
     |-- index.md
+    |-- recipes/
     |-- comparisons/
     |-- providers/
     `-- research/
@@ -91,6 +115,20 @@ Or:
 
 ```text
 Use $use-native-llm-apis to convert an OpenAI request into Gemini native format.
+```
+
+More prompt ideas:
+
+```text
+Use $use-native-llm-apis to add streaming to an existing Anthropic fetch client.
+```
+
+```text
+Use $use-native-llm-apis to debug why this Gemini request returns 400.
+```
+
+```text
+Use $use-native-llm-apis to port this OpenAI tool-calling flow to DeepSeek.
 ```
 
 ## Install locally
@@ -112,6 +150,7 @@ After installing or updating the skill, restart Codex so it reloads the skill me
 ## Key references
 
 - Entry point: [references/index.md](references/index.md)
+- Recipes folder: [references/recipes](references/recipes)
 - OpenAI: [references/providers/openai.md](references/providers/openai.md)
 - Anthropic: [references/providers/anthropic.md](references/providers/anthropic.md)
 - Gemini: [references/providers/gemini.md](references/providers/gemini.md)
