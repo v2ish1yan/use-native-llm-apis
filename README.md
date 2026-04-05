@@ -274,6 +274,60 @@ Use $use-native-llm-apis to write a DeepSeek chat request example in TypeScript.
 
 If Codex can load the skill, it should route through this repository's recipes and provider references instead of treating it like a generic coding request.
 
+### Verify that Codex actually triggered the skill
+
+Installing the files is only step one. You also want to confirm that Codex is really using the skill during a live prompt.
+
+Use one of these test prompts in a fresh conversation:
+
+```text
+wo yao jie ru deepseek da mo xing api
+```
+
+```text
+Use $use-native-llm-apis to add streaming to an Anthropic fetch client.
+```
+
+```text
+ba OpenAI gai cheng Gemini yuan sheng ge shi
+```
+
+What successful triggering usually looks like:
+
+- the response quickly shifts into provider-native API guidance instead of broad model comparison
+- the answer starts from a task path such as integration, migration, streaming, or debugging
+- the answer references provider-specific details like auth headers, base URLs, request shape, stream format, or tool schema
+- the answer tends to route through files in `references/recipes/`, `references/providers/`, and `references/comparisons/`
+
+What a failed trigger usually looks like:
+
+- Codex gives generic coding advice without mentioning the provider's wire format
+- the answer treats the request as model selection or product comparison
+- the answer speaks in abstract terms without grounding in auth, endpoint, or request-body shape
+- the answer ignores the provider and gives a fake "universal LLM API" pattern
+
+### If the skill did not trigger
+
+Try these checks in order:
+
+1. Confirm the installed folder is exactly `~/.codex/skills/use-native-llm-apis`.
+2. Confirm the installed copy contains the latest `SKILL.md` and `references/recipes/prompt-patterns.md`.
+3. Restart Codex again.
+4. Retry with an explicit invocation such as:
+
+```text
+Use $use-native-llm-apis to help me integrate the DeepSeek API in this project.
+```
+
+5. If explicit invocation works but natural phrasing does not, test again with a prompt that includes both:
+   - a provider or model API name
+   - an implementation verb like `integrate`, `migrate`, `add streaming`, or `debug`
+
+That distinction matters:
+
+- explicit invocation confirms installation is working
+- natural-language triggering confirms discovery is working
+
 ### Common install mistakes
 
 - The folder name is wrong, such as `use-native-llm-apis-repo` instead of `use-native-llm-apis`.
