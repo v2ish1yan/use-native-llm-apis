@@ -2,6 +2,8 @@
 
 Use this file when porting requests between providers or designing an adapter layer.
 
+This comparison is strongest for the core providers explicitly listed below. Do not assume it fully covers every gateway or OpenAI-compatible relay in the registry.
+
 ## Top-level request key
 
 - OpenAI Responses: `input`

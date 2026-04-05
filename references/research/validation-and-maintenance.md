@@ -19,7 +19,7 @@ Keep five things healthy:
 - `references/routing-checklist.md` defines the final pre-coding self-check.
 - `references/recipes/prompt-patterns.md` gives trigger examples and few-shot routing examples.
 - `README.md` explains the project to humans and should not become a second source of trigger truth.
-- `references/research/coverage-status.md` is the source of truth for maturity labels such as `covered`, `partial`, `pending`, and `blocked`.
+- `references/research/coverage-status.md` is the source of truth for depth labels such as `gold`, `usable`, `skeleton`, `partial`, `pending`, and `blocked`.
 
 ## Update checklist
 

@@ -1,72 +1,87 @@
 # Coverage Status
 
-This file tracks current repository coverage against the provider and gateway families surfaced by `cc-switch`.
+This file tracks current repository depth against the provider and gateway families surfaced by `cc-switch`.
 
-Status labels:
+Depth labels:
 
-- `covered`: provider or gateway has a dedicated reference file
-- `partial`: covered indirectly or only through one access style
+- `gold`: strong end-to-end reference; usually enough for direct code generation
+- `usable`: enough detail for many integrations, but not yet a full native reference
+- `skeleton`: basic notes only; not enough to promise reliable code generation by themselves
+- `partial`: some public signals or one access style verified, but still incomplete
 - `pending`: intended for future coverage
 - `blocked`: no sufficiently reliable official public docs located yet for a proper reference
 
 ## Native and official provider families
 
-| Provider | Status | Notes |
+| Provider | Depth | Notes |
 |---|---|---|
-| OpenAI | covered | Native Responses-focused reference |
-| Anthropic | covered | Native Messages and streaming reference |
-| Gemini | covered | Native `contents` / `parts` reference |
-| DeepSeek | covered | Official OpenAI-compatible chat reference |
-| Zhipu GLM | covered | Official BigModel chat-completions-style reference |
-| Alibaba Bailian / DashScope | covered | Official compatible-mode reference |
-| Kimi / Moonshot | covered | Official chat, streaming, tools, JSON mode docs |
-| Doubao / Volcengine Ark | covered | Official Responses and compatibility docs |
-| MiniMax | covered | Official Anthropic/OpenAI-compatible docs |
-| StepFun | covered | Official chat-completions-style docs |
-| Azure OpenAI | covered | Official Azure v1 Responses guidance |
-| AWS Bedrock | covered | Official Claude Messages on Bedrock guidance |
-| NVIDIA NIM | covered | Official hosted LLM API reference |
-| ModelScope API Inference | covered | Official hosted OpenAI-compatible inference |
-| Xiaomi MiMo | covered | Official docs route and llms index confirmed, including OpenAI and Anthropic API references |
+| OpenAI | usable | Strong enough for many integrations, but not yet a full deep-reference peer to Anthropic or Gemini |
+| Anthropic | gold | Native Messages, streaming, tool use, and implementation example coverage |
+| Gemini | gold | Native `contents` / `parts` reference with rich implementation detail |
+| DeepSeek | gold | Deep request and streaming guidance for the official API shape in practice |
+| Zhipu GLM | usable | Good request-shape coverage, but not yet a top-tier deep reference |
+| Alibaba Bailian / DashScope | usable | Usable compatible-mode reference, but not full native-depth parity |
+| Kimi / Moonshot | usable | Good practical coverage, but still short of top-tier depth |
+| Doubao / Volcengine Ark | usable | Good practical guidance, still not a gold reference |
+| MiniMax | gold | Rich provider file with advanced-feature notes |
+| StepFun | usable | Solid starting reference, still thinner than core gold providers |
+| Azure OpenAI | usable | Deployment-specific guidance, not a full native-provider deep reference |
+| AWS Bedrock | usable | Useful deployment guidance, but not the same as a first-party native reference |
+| NVIDIA NIM | skeleton | Basic auth/base-url/endpoint notes only |
+| ModelScope API Inference | usable | Serviceable hosted OpenAI-compatible guidance |
+| Xiaomi MiMo | usable | Good routing and API-family notes, still not a gold reference |
 | BaiLing | blocked | Public official API docs not yet confirmed enough for a reliable provider reference |
 
 ## Gateway and aggregation layers
 
-| Provider | Status | Notes |
+| Provider | Depth | Notes |
 |---|---|---|
-| OpenRouter | covered | Dedicated gateway reference |
-| NewAPI | covered | Dedicated gateway reference |
-| AiHubMix | covered | Dedicated aggregation-layer reference |
-| SiliconFlow | covered | Dedicated hosted aggregation-layer reference |
-| Novita AI | covered | Dedicated aggregation-layer reference |
-| GitHub Copilot / Copilot SDK | covered | Special OAuth / BYOK reference |
-| PackyCode | covered | Dedicated relay reference with docs site |
-| Cubence | covered | Dedicated relay reference |
-| CrazyRouter | covered | Dedicated relay reference |
-| Ai Go Code | covered | Dedicated relay reference with docs center |
-| AICodeMirror | covered | Dedicated relay reference with public tutorial docs |
-| Right Code | covered | Dedicated relay reference with docs and curl examples |
-| X-Code API | covered | Dedicated relay reference with docs site |
-| DMXAPI | covered | Dedicated relay reference with docs site |
+| OpenRouter | usable | Dedicated gateway reference with practical integration value |
+| NewAPI | skeleton | Basic gateway notes, not deep enough for confident code generation by itself |
+| AiHubMix | usable | Dedicated aggregation-layer reference |
+| SiliconFlow | usable | One of the stronger gateway references, including request and feature notes |
+| Novita AI | skeleton | Has a file, but depth is still thin |
+| GitHub Copilot / Copilot SDK | usable | Special OAuth / BYOK reference with real integration value |
+| PackyCode | skeleton | Relay notes only |
+| Cubence | skeleton | Relay notes only |
+| CrazyRouter | skeleton | Relay notes only |
+| Ai Go Code | skeleton | Relay notes only |
+| AICodeMirror | skeleton | Relay/tutorial notes only |
+| Right Code | skeleton | Relay notes only |
+| X-Code API | skeleton | Relay notes only |
+| DMXAPI | skeleton | Relay notes only |
 | AICoding | pending | Third-party relay |
 | SSSAiCode | pending | Third-party relay |
-| Compshare | covered | Official Compshare / ModelVerse docs expose OpenAI, Responses, Anthropic, and Gemini protocol entries |
+| Compshare | skeleton | Public docs are useful, but local reference depth is still thin |
 | Micu | pending | Third-party relay |
-| CTok.ai | partial | Official API root and `/v1/models` are verified, but fully crawlable public protocol docs remain limited |
+| CTok.ai | partial | Official API root and `/v1/models` are verified, but public protocol docs remain limited |
 
 ## Cloud and managed variants
 
-| Provider | Status | Notes |
+| Provider | Depth | Notes |
 |---|---|---|
-| AWS Bedrock (AK/SK) | covered | Included in AWS Bedrock reference |
-| AWS Bedrock (API key) | covered | Covered as Bedrock deployment style note |
-| Azure OpenAI | covered | Included as separate official provider |
+| AWS Bedrock (AK/SK) | usable | Included in AWS Bedrock reference |
+| AWS Bedrock (API key) | usable | Covered as Bedrock deployment style note |
+| Azure OpenAI | usable | Included as separate official provider |
+
+## Comparison file honesty
+
+The comparison files are not 31-provider matrices.
+
+They are strongest for the core providers they explicitly discuss:
+
+- OpenAI
+- Anthropic
+- Gemini
+- DeepSeek
+
+For gateways, relays, and OpenAI-compatible services, prefer the provider file first and treat comparison docs as partial guidance.
 
 ## Maintenance rule
 
-When a provider moves from `pending` or `blocked` to `covered`, also update:
+When a provider changes depth, also update:
 
-- `references/index.md`
+- `references/providers/index.md`
 - `references/research/source-registry.md`
 - `README.md`
 - `references/research/cc-switch-provider-notes.md` when the change affects expansion planning

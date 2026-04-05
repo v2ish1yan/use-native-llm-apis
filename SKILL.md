@@ -7,6 +7,8 @@ description: Use when implementing, integrating, migrating, or debugging provide
 
 Use this skill for provider-native API implementation work, not pricing research, prompt writing, or generic AI product planning.
 
+This skill covers a broad provider registry, but the provider files are not all equally deep. Some are gold references, some are usable notes, and some are skeletons. Check [references/research/coverage-status.md](references/research/coverage-status.md) before relying on a provider file.
+
 ## Trigger Boundary
 
 Trigger when both are true:
@@ -61,6 +63,7 @@ Examples:
 
 - Keep the work provider-native unless the user explicitly wants an abstraction layer.
 - Resolve provider paths through `references/providers/index.md`, not from memory.
+- Treat skeleton provider files as starting notes, not authoritative end-to-end references.
 - Prefer raw HTTP examples over abstraction-heavy wrappers.
 - Prefer official docs over memory when bundled references are insufficient.
 - Do not assume OpenAI-compatible means fully behavior-compatible.
