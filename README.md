@@ -2,11 +2,13 @@
 
 # use-native-llm-apis
 
-**LLM API 原生集成参考库**
+**Provider-Native LLM API Integration Reference**
 
-一次写入，31 家厂商原生 API 请求格式尽在掌握。
+31 providers, one repo. Auth, endpoints, request shapes, streaming, tool calling — all at the wire-format level.
 
-[Supported Providers](#supported-providers-31) · [Install](#install) · [Usage](#usage)
+**[中文文档](README_CN.md)**
+
+[Providers](#supported-providers-31) · [Install](#install) · [Usage](#usage)
 
 </div>
 
@@ -14,11 +16,11 @@
 
 ## Why this exists
 
-每次接入一个新的 LLM API，你都在重复同一件事：翻文档、查 base URL、对 auth header、调试 request body 格式。不同厂商的接口长得不一样，却又不够不一样到让你一眼记住区别。
+Every time you integrate a new LLM API, you repeat the same cycle: dig through docs, find the base URL, figure out the auth header, debug the request body format. Different providers look similar enough to confuse you, but different enough to break your code.
 
-这个仓库把 33 家主流 LLM 厂商的原生 API 协议打包成结构化参考——auth、endpoint、request shape、response shape、streaming、tool calling、structured output，开箱即用。
+This repo packages 31 providers' native API protocols into structured references — auth, endpoint, request shape, response shape, streaming, tool calling, structured output — ready to use.
 
-它不是一个通用 SDK，而是一份**精确到字段级别的协议对照表**。
+Not a universal SDK. A **field-level protocol reference**.
 
 ---
 
@@ -32,13 +34,13 @@
 | Anthropic (Claude) | [docs.anthropic.com](https://docs.anthropic.com/) | [anthropic.md](references/providers/anthropic.md) |
 | Google Gemini | [ai.google.dev](https://ai.google.dev/gemini-api/docs) | [gemini.md](references/providers/gemini.md) |
 | DeepSeek | [api-docs.deepseek.com](https://api-docs.deepseek.com/) | [deepseek.md](references/providers/deepseek.md) |
-| Zhipu GLM / 智谱 | [docs.bigmodel.cn](https://docs.bigmodel.cn/) | [zhipu-glm.md](references/providers/zhipu-glm.md) |
-| Alibaba Bailian / 阿里百炼 | [help.aliyun.com](https://help.aliyun.com/zh/model-studio/) | [alibaba-bailian.md](references/providers/alibaba-bailian.md) |
-| Kimi / Moonshot / 月之暗面 | [platform.moonshot.cn](https://platform.moonshot.cn/docs/introduction) | [kimi-moonshot.md](references/providers/kimi-moonshot.md) |
-| Doubao / 豆包 / 火山引擎 | [volcengine.com](https://www.volcengine.com/docs/82379) | [doubao-volcengine-ark.md](references/providers/doubao-volcengine-ark.md) |
+| Zhipu GLM | [docs.bigmodel.cn](https://docs.bigmodel.cn/) | [zhipu-glm.md](references/providers/zhipu-glm.md) |
+| Alibaba Bailian / DashScope | [help.aliyun.com](https://help.aliyun.com/zh/model-studio/) | [alibaba-bailian.md](references/providers/alibaba-bailian.md) |
+| Kimi / Moonshot | [platform.moonshot.cn](https://platform.moonshot.cn/docs/introduction) | [kimi-moonshot.md](references/providers/kimi-moonshot.md) |
+| Doubao / Volcengine Ark | [volcengine.com](https://www.volcengine.com/docs/82379) | [doubao-volcengine-ark.md](references/providers/doubao-volcengine-ark.md) |
 | MiniMax | [platform.minimax.io](https://platform.minimax.io/docs/api-reference/api-overview) | [minimax.md](references/providers/minimax.md) |
-| StepFun / 阶跃星辰 | [platform.stepfun.com](https://platform.stepfun.com/docs/api-reference/chat/chat-completion-create) | [stepfun.md](references/providers/stepfun.md) |
-| Xiaomi MiMo / 小米 | [platform.xiaomimimo.com](https://platform.xiaomimimo.com/#/docs/welcome) | [xiaomi-mimo.md](references/providers/xiaomi-mimo.md) |
+| StepFun | [platform.stepfun.com](https://platform.stepfun.com/docs/api-reference/chat/chat-completion-create) | [stepfun.md](references/providers/stepfun.md) |
+| Xiaomi MiMo | [platform.xiaomimimo.com](https://platform.xiaomimimo.com/#/docs/welcome) | [xiaomi-mimo.md](references/providers/xiaomi-mimo.md) |
 
 ### Cloud & Managed Platforms
 
@@ -47,7 +49,7 @@
 | Azure OpenAI | [learn.microsoft.com](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/work-with-code) | [azure-openai.md](references/providers/azure-openai.md) |
 | AWS Bedrock | [docs.aws.amazon.com](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html) | [aws-bedrock.md](references/providers/aws-bedrock.md) |
 | NVIDIA NIM | [docs.api.nvidia.com](https://docs.api.nvidia.com/nim/reference/llm-apis) | [nvidia-nim.md](references/providers/nvidia-nim.md) |
-| ModelScope / 魔搭 | [modelscope.cn](https://modelscope.cn/docs/model-service/API-Inference/intro) | [modelscope.md](references/providers/modelscope.md) |
+| ModelScope | [modelscope.cn](https://modelscope.cn/docs/model-service/API-Inference/intro) | [modelscope.md](references/providers/modelscope.md) |
 | GitHub Copilot / Copilot SDK | [docs.github.com](https://docs.github.com/en/copilot/concepts/agents/openai-codex) | [github-copilot.md](references/providers/github-copilot.md) |
 
 ### Gateway & Aggregation Layers
@@ -55,7 +57,7 @@
 | Provider | Docs | Reference |
 |----------|------|-----------|
 | OpenRouter | [openrouter.ai](https://openrouter.ai/docs/api/reference/overview/) | [openrouter.md](references/providers/openrouter.md) |
-| SiliconFlow / 硅基流动 | [docs.siliconflow.com](https://docs.siliconflow.com/en/api-reference/chat-completions/chat-completions) | [siliconflow.md](references/providers/siliconflow.md) |
+| SiliconFlow | [docs.siliconflow.com](https://docs.siliconflow.com/en/api-reference/chat-completions/chat-completions) | [siliconflow.md](references/providers/siliconflow.md) |
 | AiHubMix | [docs.aihubmix.com](https://docs.aihubmix.com/en) | [aihubmix.md](references/providers/aihubmix.md) |
 | Novita AI | [novita.ai](https://novita.ai/docs/api-reference) | [novita-ai.md](references/providers/novita-ai.md) |
 | NewAPI | [docs.newapi.pro](https://docs.newapi.pro/en/) | [newapi.md](references/providers/newapi.md) |
@@ -155,17 +157,24 @@ Use $use-native-llm-apis to convert an OpenAI request into Gemini native format.
 Use $use-native-llm-apis to debug why this Gemini request returns 400.
 ```
 
-### Chinese Trigger Phrases
+```
+I want to build an AI agent using MiniMax as the model.
+```
 
-以下中文表达会自动触发此 skill：
+```
+帮我搭一个聊天机器人，底层用 DeepSeek
+```
 
-- "我要接入 DeepSeek 大模型 API"
-- "帮我对接 Anthropic API"
-- "把 OpenAI 改成 Gemini 原生格式"
-- "给这个项目加上流式输出"
-- "帮我加工具调用"
-- "让模型返回结构化 JSON"
-- "排查这个模型接口为什么 400/401"
+### Natural-Language Triggers
+
+This skill activates on natural phrasing, not just explicit "integrate API" keywords. Examples that trigger it:
+
+- "I need to build an AI agent with MiniMax"
+- "Add AI chat to my app, using DeepSeek"
+- "Create a RAG pipeline powered by Claude"
+- "我要写一个 AI agent，用 MiniMax 的大模型"
+- "做一个知识库问答，模型用智谱"
+- "从 GPT 换成 DeepSeek"
 
 ---
 
@@ -175,12 +184,12 @@ Use $use-native-llm-apis to debug why this Gemini request returns 400.
 use-native-llm-apis/
 ├── SKILL.md              # Skill definition & trigger rules
 ├── CLAUDE.md             # Claude Code specific guidance
-├── agents/
-│   └── openai.yaml       # Agent interface config
+├── README.md             # English docs (this file)
+├── README_CN.md          # 中文文档
 └── references/
     ├── index.md           # Entry point
     ├── recipes/           # Task workflow guides
-    ├── providers/         # Per-provider API references (33)
+    ├── providers/         # Per-provider API references (31)
     ├── comparisons/       # Cross-provider diff guides (4)
     └── research/          # Coverage status & source registry
 ```
