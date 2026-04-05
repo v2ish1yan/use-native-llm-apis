@@ -178,6 +178,19 @@ use-native-llm-apis/
     └── research/          # Coverage status & source registry
 ```
 
+## Maintaining the skill
+
+If you are updating the skill itself rather than adding application code, start with:
+
+- [validation-and-maintenance.md](references/research/validation-and-maintenance.md)
+
+That file documents:
+
+- the single-source rules for trigger behavior
+- the update order for `SKILL.md`, recipes, and README
+- the Windows UTF-8 validation command
+- the quality bar for skill-level changes
+
 ---
 
 <div align="center">

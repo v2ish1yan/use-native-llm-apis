@@ -2,85 +2,96 @@
 
 This file provides Claude Code-specific guidance for using the `use-native-llm-apis` skill.
 
-## Coverage: 31 Providers
+## What this skill is for
 
-Native LLM: OpenAI, Anthropic, Gemini, DeepSeek, Zhipu GLM, Alibaba Bailian, Kimi, Doubao, MiniMax, StepFun, Xiaomi MiMo
-Cloud/Managed: Azure OpenAI, AWS Bedrock, NVIDIA NIM, ModelScope, GitHub Copilot
-Gateway/Agg: OpenRouter, SiliconFlow, AiHubMix, Novita AI, NewAPI
-Relay/Proxy: PackyCode, Cubence, CrazyRouter, Compshare, CTok.ai, Right Code, X-Code API, Ai Go Code, AICodeMirror, DMXAPI
+Use this skill for **provider-native API implementation work**:
 
-Cross-provider comparisons: request shape, streaming, tool calling, structured output
+- integrating a provider API
+- migrating between providers
+- adding streaming, tool calling, or structured output
+- debugging auth, endpoint, or request-shape failures
 
-Status: [coverage-status.md](references/research/coverage-status.md)
+Do not load it for:
 
-## Quick Start
+- pure model comparison
+- pricing research
+- prompt engineering only
+- generic AI product design without provider API implementation
 
-When a user asks to integrate, migrate, or debug an LLM API:
+## Quick route
 
-1. **Check if this skill applies** - See [references/recipes/prompt-patterns.md](references/recipes/prompt-patterns.md)
-2. **Route to the right recipe** - Pick one:
-   - `references/recipes/integrate-one-provider.md`
-   - `references/recipes/migrate-between-providers.md`
-   - `references/recipes/add-streaming.md`
-   - `references/recipes/add-tool-calling.md`
-   - `references/recipes/add-structured-output.md`
-   - `references/recipes/debug-failed-request.md`
-3. **Load provider reference** - From `references/providers/`
-4. **Load comparison if needed** - From `references/comparisons/`
+When a user asks to implement or debug an LLM API:
 
-## Claude Code Specific Behaviors
+1. Check [references/recipes/prompt-patterns.md](references/recipes/prompt-patterns.md).
+2. Pick the right task recipe from `references/recipes/`.
+3. Load the target provider file from `references/providers/`.
+4. Load a comparison file from `references/comparisons/` only when needed.
 
-### File Reading
+## Trigger boundary
 
-Use `Read` tool to load reference files. Prefer targeted reads over full directory listings:
+Trigger immediately when the request includes:
 
-```
-Read: references/providers/deepseek.md
-Read: references/recipes/add-streaming.md
-```
+- a provider name
+- an API implementation action
 
-### Code Generation
-
-When generating code for the user:
-
-- Prefer native `fetch` examples over SDK wrappers
-- Keep code close to the provider's raw wire format
-- Include complete working examples, not fragments
-- For streaming, provide full `ReadableStream` or SSE parsing examples
-
-### Provider Status Check
-
-Before claiming a provider is covered, verify in [references/research/coverage-status.md](references/research/coverage-status.md).
-
-### Source Documentation
-
-When bundled references are insufficient, check [references/research/source-registry.md](references/research/source-registry.md) for official doc URLs before web search.
-
-## Trigger Phrases (Chinese)
-
-Common user phrases that should activate this skill:
+Examples:
 
 - "我要接入 DeepSeek 大模型 API"
 - "帮我对接 Anthropic API"
 - "把 OpenAI 改成 Gemini 原生格式"
-- "给这个项目加上流式输出"
-- "帮我加工具调用"
-- "让模型返回结构化 JSON"
 - "排查这个模型接口为什么 400/401"
-- "接入智谱/阿里百炼/豆包/Kimi/MiniMax/阶跃星辰/小米MiMo API"
 
-## Exit Criteria for Tasks
+If the request only mentions:
 
-A task is complete when:
+- a provider with no API action
+- an API action with no provider
+- a broad AI feature like chatbot, RAG, or assistant
 
-1. One verified request path works (non-streaming base case)
-2. Auth headers and base URL are correct
-3. Request body shape matches provider's documented format
-4. Response parsing extracts the expected fields
-5. Provider-specific caveats are noted in comments
+confirm intent first instead of auto-routing.
 
-## Maintenance Notes
+## Claude Code usage guidance
 
-- Update `references/research/source-registry.md` when adding new official doc URLs
-- Update `references/research/coverage-status.md` when provider status changes
-- Prefer official provider docs over community blog posts
+### File reading
+
+Use targeted reads instead of loading everything:
+
+```text
+Read: references/recipes/integrate-one-provider.md
+Read: references/providers/deepseek.md
+Read: references/comparisons/streaming-differences.md
+```
+
+### Code generation
+
+When generating code:
+
+- prefer raw HTTP shape over abstraction-heavy wrappers
+- prefer native `fetch` examples unless the user asks for an SDK
+- make streaming examples runnable, not just descriptive
+- keep provider-specific fields visible until the request path is proven correct
+
+### Coverage claims
+
+Before claiming a provider is covered, verify against:
+
+- [references/research/coverage-status.md](references/research/coverage-status.md)
+
+Before claiming a detail is current, verify against:
+
+- [references/research/source-registry.md](references/research/source-registry.md)
+
+## Task completion bar
+
+A provider integration task is complete when:
+
+1. One non-stream request path works.
+2. Auth header and base URL are correct.
+3. Request shape matches the provider reference.
+4. Response parsing reads the expected output fields.
+5. Provider-specific caveats are reflected in the delivered code or explanation.
+
+## Maintenance notes
+
+- Keep trigger rules aligned with `SKILL.md`.
+- Keep routing examples aligned with `references/recipes/prompt-patterns.md`.
+- Prefer narrowing ambiguous routes over broadening triggers.
