@@ -1,6 +1,6 @@
 ---
 name: use-native-llm-apis
-description: Use when implementing, integrating, migrating, or debugging provider-native LLM APIs in code, especially auth, request shapes, streaming, tool calling, structured output, or provider switching. Covers 31 providers across native LLM, cloud/managed, gateway, and relay categories.
+description: Use when implementing, integrating, migrating, or debugging provider-native LLM APIs in code, especially auth, request shapes, streaming, tool calling, structured output, or provider switching.
 ---
 
 # Use Native LLM APIs

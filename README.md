@@ -6,7 +6,7 @@
 
 Auth · Endpoints · Request Shapes · Streaming · Tool Calling · Structured Output
 
-31 providers at the wire-format level — not a universal SDK, a field-level protocol reference.
+31 provider and gateway references for wire-format integration work — not a universal SDK, a field-level protocol reference.
 
 <p>
 <a href="README_CN.md">📝 中文文档</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#install">Install</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#usage">Usage</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#supported-providers-31">Providers</a>
@@ -24,7 +24,7 @@ Auth · Endpoints · Request Shapes · Streaming · Tool Calling · Structured O
 
 Every time you integrate a new LLM API, you repeat the same cycle: dig through docs, find the base URL, figure out the auth header, debug the request body. Different providers look similar enough to confuse you, but different enough to break your code.
 
-This repo packages **31 providers' native API protocols** into structured references. Open the right file, get the exact request shape, and move on.
+This repo packages **31 provider and gateway references** into structured implementation notes. Coverage depth is not identical across every entry, so check the live status file when you need to distinguish covered, partial, pending, or blocked entries.
 
 ---
 
@@ -89,6 +89,8 @@ This repo packages **31 providers' native API protocols** into structured refere
 | Streaming differences | [streaming-differences.md](references/comparisons/streaming-differences.md) |
 | Tool-calling differences | [tool-calling-differences.md](references/comparisons/tool-calling-differences.md) |
 | Structured-output differences | [structured-output-differences.md](references/comparisons/structured-output-differences.md) |
+
+For live coverage maturity, see [coverage-status.md](references/research/coverage-status.md).
 
 ---
 

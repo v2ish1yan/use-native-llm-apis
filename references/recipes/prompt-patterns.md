@@ -94,7 +94,11 @@ User:
 
 > 让模型调用本地函数查天气
 
-Route: `add-tool-calling.md` → target provider file + `comparisons/tool-calling-differences.md`
+This is not enough to trigger provider-native routing by itself because no provider is named.
+
+Confirm first: "你要接哪个模型或 provider 的 API？"
+
+If the user names a provider, then route to `add-tool-calling.md` → target provider file + `comparisons/tool-calling-differences.md`.
 
 ### Example 5 — debug request
 
@@ -128,3 +132,9 @@ Trigger if the request contains:
 2. An API implementation verb: 接入, 对接, 调用, 集成, 迁移, 切换, 排查, integrate, connect, call, switch, migrate, debug, hook up, wire
 
 If only one of the two is present, check context before triggering.
+
+Safe default:
+
+- provider + API action → trigger immediately
+- provider only → confirm whether the user needs implementation work
+- API action only → confirm which provider
