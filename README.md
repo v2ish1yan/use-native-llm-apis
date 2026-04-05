@@ -202,6 +202,163 @@ For live coverage status, see [references/research/coverage-status.md](reference
 - [references/providers/aicodemirror.md](references/providers/aicodemirror.md)
 - [references/providers/dmxapi.md](references/providers/dmxapi.md)
 
+## Install in Claude Code
+
+Claude Code discovers skills from your local skills directory. For this skill to load correctly, the final folder name must be exactly:
+
+```text
+use-native-llm-apis
+```
+
+The target install path is:
+
+```text
+~/.claude/skills/use-native-llm-apis
+```
+
+On this machine, that path is:
+
+```text
+C:\Users\39473\.claude\skills\use-native-llm-apis
+```
+
+### Method 1: install from the current local repository
+
+Use this when you already have the repo on disk and want to copy it into Claude Code.
+
+PowerShell:
+
+```powershell
+$source = "E:\AI\SKILL\use-api\use-native-llm-apis-repo"
+$target = "$HOME\.claude\skills\use-native-llm-apis"
+
+New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
+Remove-Item -Recurse -Force $target -ErrorAction SilentlyContinue
+Copy-Item -Recurse -Force $source $target
+```
+
+Bash (macOS/Linux):
+
+```bash
+SOURCE="/path/to/use-native-llm-apis-repo"
+TARGET="$HOME/.claude/skills/use-native-llm-apis"
+
+mkdir -p "$HOME/.claude/skills"
+rm -rf "$TARGET"
+cp -r "$SOURCE" "$TARGET"
+```
+
+### Method 2: clone directly into the Claude Code skills directory
+
+Use this when installing on a new machine.
+
+PowerShell:
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
+git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.claude\skills\use-native-llm-apis"
+```
+
+Bash (macOS/Linux):
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME/.claude/skills/use-native-llm-apis"
+```
+
+### Method 3: update an existing installation
+
+If the skill is already installed and that folder is a git clone:
+
+```powershell
+git -C "$HOME\.claude\skills\use-native-llm-apis" pull
+```
+
+Or using Bash:
+
+```bash
+git -C "$HOME/.claude/skills/use-native-llm-apis" pull
+```
+
+If the installed folder is only a copied snapshot, overwrite it again with Method 1.
+
+### Restart Claude Code
+
+After installing or updating the skill, restart Claude Code so it reloads skill metadata and file contents.
+
+### Verify the install
+
+1. Confirm that `SKILL.md` exists at `~/.claude/skills/use-native-llm-apis/SKILL.md`.
+2. Restart Claude Code.
+3. In a new conversation, try:
+
+```text
+Use $use-native-llm-apis to write a DeepSeek chat request example in TypeScript.
+```
+
+If Claude Code can load the skill, it should route through this repository's recipes and provider references instead of treating it like a generic coding request.
+
+### Verify that Claude Code actually triggered the skill
+
+Installing the files is only step one. You also want to confirm that Claude Code is really using the skill during a live prompt.
+
+Use one of these test prompts in a fresh conversation:
+
+```text
+wo yao jie ru deepseek da mo xing api
+```
+
+```text
+Use $use-native-llm-apis to add streaming to an Anthropic fetch client.
+```
+
+```text
+ba OpenAI gai cheng Gemini yuan sheng ge shi
+```
+
+What successful triggering usually looks like:
+
+- the response quickly shifts into provider-native API guidance instead of broad model comparison
+- the answer starts from a task path such as integration, migration, streaming, or debugging
+- the answer references provider-specific details like auth headers, base URLs, request shape, stream format, or tool schema
+- the answer tends to route through files in `references/recipes/`, `references/providers/`, and `references/comparisons/`
+
+What a failed trigger usually looks like:
+
+- Claude Code gives generic coding advice without mentioning the provider's wire format
+- the answer treats the request as model selection or product comparison
+- the answer speaks in abstract terms without grounding in auth, endpoint, or request-body shape
+- the answer ignores the provider and gives a fake "universal LLM API" pattern
+
+### If the skill did not trigger
+
+Try these checks in order:
+
+1. Confirm the installed folder is exactly `~/.claude/skills/use-native-llm-apis`.
+2. Confirm the installed copy contains the latest `SKILL.md` and `references/recipes/prompt-patterns.md`.
+3. Restart Claude Code again.
+4. Retry with an explicit invocation such as:
+
+```text
+Use $use-native-llm-apis to help me integrate the DeepSeek API in this project.
+```
+
+5. If explicit invocation works but natural phrasing does not, test again with a prompt that includes both:
+   - a provider or model API name
+   - an implementation verb like `integrate`, `migrate`, `add streaming`, or `debug`
+
+That distinction matters:
+
+- explicit invocation confirms installation is working
+- natural-language triggering confirms discovery is working
+
+### Common install mistakes
+
+- The folder name is wrong, such as `use-native-llm-apis-repo` instead of `use-native-llm-apis`.
+- The repo was copied one level too deep, producing `~/.claude/skills/use-native-llm-apis/use-native-llm-apis-repo/SKILL.md`.
+- Claude Code was not restarted after copying files.
+- The installed copy is outdated while the repo version has newer docs.
+
 ## Install in Codex
 
 Codex discovers personal skills from your local skills directory. For this skill to load correctly, the final folder name must be exactly:
@@ -337,6 +494,21 @@ That distinction matters:
 
 ## Validation
 
+### For Claude Code
+
+Claude Code validates skills automatically on load. To manually verify skill structure:
+
+```bash
+# Check skill structure
+ls -la ~/.claude/skills/use-native-llm-apis/SKILL.md
+ls -la ~/.claude/skills/use-native-llm-apis/references/
+
+# Verify GitHub sync (if installed from git)
+git -C ~/.claude/skills/use-native-llm-apis status
+```
+
+### For Codex
+
 Validate the skill with:
 
 ```text
@@ -344,6 +516,14 @@ python C:\Users\39473\.codex\skills\.system\skill-creator\scripts\quick_validate
 ```
 
 The repository version and the installed version have both been validated during development.
+
+## Quick Reference: Claude Code vs Codex Paths
+
+| Platform | Skills Directory |
+|----------|------------------|
+| Claude Code (Windows) | `%USERPROFILE%\.claude\skills\` or `%APPDATA%\Claude\skills\` |
+| Claude Code (macOS/Linux) | `~/.claude/skills/` |
+| Codex | `~/.codex/skills/` |
 
 ## Maintenance rules
 
