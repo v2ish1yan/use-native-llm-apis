@@ -202,21 +202,84 @@ For live coverage status, see [references/research/coverage-status.md](reference
 - [references/providers/aicodemirror.md](references/providers/aicodemirror.md)
 - [references/providers/dmxapi.md](references/providers/dmxapi.md)
 
-## Install locally
+## Install in Codex
 
-Copy this repository into your Codex skills directory so the final folder path is:
+Codex discovers personal skills from your local skills directory. For this skill to load correctly, the final folder name must be exactly:
+
+```text
+use-native-llm-apis
+```
+
+The target install path is:
 
 ```text
 ~/.codex/skills/use-native-llm-apis
 ```
 
-On this machine, the installed path is:
+On this machine, that path is:
 
 ```text
 C:\Users\39473\.codex\skills\use-native-llm-apis
 ```
 
-After installing or updating the skill, restart Codex so it reloads the skill metadata.
+### Method 1: install from the current local repository
+
+Use this when you already have the repo on disk and want to copy it into Codex.
+
+PowerShell:
+
+```powershell
+$source = "E:\AI\SKILL\use-api\use-native-llm-apis-repo"
+$target = "$HOME\.codex\skills\use-native-llm-apis"
+
+New-Item -ItemType Directory -Force -Path "$HOME\.codex\skills" | Out-Null
+Remove-Item -Recurse -Force $target -ErrorAction SilentlyContinue
+Copy-Item -Recurse -Force $source $target
+```
+
+### Method 2: clone directly into the Codex skills directory
+
+Use this when installing on a new machine.
+
+PowerShell:
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$HOME\.codex\skills" | Out-Null
+git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.codex\skills\use-native-llm-apis"
+```
+
+### Method 3: update an existing installation
+
+If the skill is already installed and that folder is a git clone:
+
+```powershell
+git -C "$HOME\.codex\skills\use-native-llm-apis" pull
+```
+
+If the installed folder is only a copied snapshot, overwrite it again with Method 1.
+
+### Restart Codex
+
+After installing or updating the skill, restart Codex so it reloads skill metadata and file contents.
+
+### Verify the install
+
+1. Confirm that `SKILL.md` exists at `~/.codex/skills/use-native-llm-apis/SKILL.md`.
+2. Restart Codex.
+3. In a new prompt, try:
+
+```text
+Use $use-native-llm-apis to write a DeepSeek chat request example in TypeScript.
+```
+
+If Codex can load the skill, it should route through this repository's recipes and provider references instead of treating it like a generic coding request.
+
+### Common install mistakes
+
+- The folder name is wrong, such as `use-native-llm-apis-repo` instead of `use-native-llm-apis`.
+- The repo was copied one level too deep, producing `~/.codex/skills/use-native-llm-apis/use-native-llm-apis-repo/SKILL.md`.
+- Codex was not restarted after copying files.
+- The installed copy is outdated while the repo version has newer docs.
 
 ## Validation
 
