@@ -10,7 +10,8 @@ If you are using this skill during coding work, start with [start-here.md](start
 2. open exactly one task recipe
 3. open [providers/index.md](providers/index.md) and click the exact provider file
 4. open one comparison file only when the task requires it
-5. only then write or patch code
+5. run [routing-checklist.md](routing-checklist.md)
+6. only then write or patch code
 
 Do not guess provider file paths from memory when the provider name is available in this repo.
 

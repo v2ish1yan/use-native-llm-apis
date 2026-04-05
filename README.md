@@ -26,7 +26,8 @@ When this skill is triggered, the intended path is:
 2. choose exactly one task recipe
 3. resolve the provider file through [references/providers/index.md](references/providers/index.md)
 4. open one comparison file only when the task requires it
-5. then write code
+5. run [references/routing-checklist.md](references/routing-checklist.md)
+6. then write code
 
 ## Task recipes
 
@@ -82,6 +83,7 @@ use-native-llm-apis/
 |-- README.md
 `-- references/
     |-- start-here.md
+    |-- routing-checklist.md
     |-- index.md
     |-- recipes/
     |-- providers/

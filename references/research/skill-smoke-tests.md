@@ -16,7 +16,7 @@ These should trigger the skill and route immediately:
 
 ## Ambiguous prompts
 
-These should not guess silently. They should ask one small clarification question:
+These should ask one small clarification question instead of guessing:
 
 - "给项目加 AI 对话"
 - "从 GPT 换成 DeepSeek"
@@ -45,6 +45,7 @@ When a provider is known, the route should always go through:
 1. `references/start-here.md`
 2. one task recipe
 3. `references/providers/index.md`
-4. the exact provider file
+4. `references/routing-checklist.md`
+5. the exact provider file
 
 It should never jump straight from `SKILL.md` to a guessed provider slug.
