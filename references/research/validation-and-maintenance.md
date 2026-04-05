@@ -4,17 +4,19 @@ Use this file when updating the skill itself, not when using provider references
 
 ## Maintenance goals
 
-Keep four things healthy:
+Keep five things healthy:
 
 1. trigger boundaries stay precise
-2. routing docs stay consistent
+2. routing stays mechanical
 3. provider status stays honest
 4. validation stays runnable on the maintainer's machine
+5. ambiguous prompts do not silently route down the wrong path
 
 ## Single-source rules
 
-- `SKILL.md` defines when the skill should load.
-- `references/recipes/prompt-patterns.md` gives trigger examples and routing examples.
+- `SKILL.md` defines when the skill should load and how the top-level execution protocol works.
+- `references/start-here.md` defines the first routing path after the skill loads.
+- `references/recipes/prompt-patterns.md` gives trigger examples and few-shot routing examples.
 - `README.md` explains the project to humans and should not become a second source of trigger truth.
 - `references/research/coverage-status.md` is the source of truth for maturity labels such as `covered`, `partial`, `pending`, and `blocked`.
 
@@ -22,12 +24,13 @@ Keep four things healthy:
 
 When changing the skill itself:
 
-1. Check whether the change affects trigger rules, routing, or maintenance behavior.
-2. Update `SKILL.md` first if trigger boundaries changed.
-3. Update `references/recipes/prompt-patterns.md` if trigger examples or routing changed.
-4. Update `README.md` only after the above files are correct.
-5. If provider maturity changed, update `references/research/coverage-status.md`.
-6. If new official docs were used, update `references/research/source-registry.md`.
+1. Decide whether the change affects trigger rules, routing, or maintainer workflow.
+2. Update `SKILL.md` first if trigger boundaries or execution protocol changed.
+3. Update `references/start-here.md` if the first routing path changed.
+4. Update `references/recipes/prompt-patterns.md` if trigger examples or routing examples changed.
+5. Update `README.md` only after the above files are correct.
+6. If provider maturity changed, update `references/research/coverage-status.md`.
+7. If new official docs were used, update `references/research/source-registry.md`.
 
 ## Validation
 
@@ -57,14 +60,25 @@ The validator should print:
 Skill is valid!
 ```
 
+## Smoke-test bar
+
+Before calling a routing change "good", run the prompt set in [skill-smoke-tests.md](skill-smoke-tests.md).
+
+A routing change is not complete unless it passes all three buckets:
+
+- direct trigger prompts
+- ambiguous prompts that should ask one clarification question
+- non-trigger prompts that should stay out of this skill
+
 ## Quality bar for changes
 
 Do not merge a skill-quality change unless:
 
 - trigger wording became clearer or at least not broader without justification
-- `SKILL.md`, `prompt-patterns.md`, and `README.md` still agree on boundaries
+- `SKILL.md`, `start-here.md`, `prompt-patterns.md`, and `README.md` still agree on boundaries
 - examples do not smuggle in unverified architecture assumptions
 - coverage marketing does not overstate maturity compared with `coverage-status.md`
+- the first 30 seconds of use feel easier, not harder
 
 ## Common failure modes
 
@@ -72,4 +86,5 @@ Do not merge a skill-quality change unless:
 - README repeats rules that already live in `SKILL.md`
 - few-shot examples route ambiguous requests too aggressively
 - provider counts are advertised without clarifying maturity differences
+- a new routing page is added but not linked from `SKILL.md`
 - Windows validation breaks because UTF-8 mode was not enabled

@@ -13,10 +13,11 @@ Get to one verified request path quickly:
 
 ## What to open first
 
-1. `references/index.md`
-2. `references/providers/index.md`
-3. the exact target file linked from `references/providers/index.md`
-4. `references/comparisons/request-shape-differences.md` if the code was copied from another provider
+You should already have come through `references/start-here.md`.
+
+1. `references/providers/index.md`
+2. the exact target file linked from `references/providers/index.md`
+3. `references/comparisons/request-shape-differences.md` if the code was copied from another provider
 
 If you know the provider name but not the file path, use `references/providers/index.md` instead of guessing.
 

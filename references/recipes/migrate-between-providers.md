@@ -8,12 +8,13 @@ Preserve behavior while changing the wire format as little as necessary.
 
 ## What to open first
 
-1. `references/index.md`
-2. `references/providers/index.md`
-3. the source provider file linked from `references/providers/index.md`
-4. the target provider file linked from `references/providers/index.md`
-5. `references/comparisons/request-shape-differences.md`
-6. one of the other comparison files if the task also involves streaming, tools, or structured output
+You should already have come through `references/start-here.md`.
+
+1. `references/providers/index.md`
+2. the source provider file linked from `references/providers/index.md`
+3. the target provider file linked from `references/providers/index.md`
+4. `references/comparisons/request-shape-differences.md`
+5. one of the other comparison files if the task also involves streaming, tools, or structured output
 
 If either provider file is unclear, return to `references/providers/index.md` instead of guessing.
 

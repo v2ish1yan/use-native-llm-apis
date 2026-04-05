@@ -2,13 +2,43 @@
 
 Use this file to decide whether a user's request should trigger the `use-native-llm-apis` skill.
 
-## Trigger rule
+## Core trigger rule
 
-Trigger when the user wants to implement, integrate, call, migrate, or debug a provider-native LLM API in code.
+Trigger when both are true:
 
-Do not trigger for: market comparison, pricing research, model benchmarking, prompt engineering, or general AI architecture advice unless the user also asks to implement code against a specific provider API.
+1. the user names a provider or clearly implies a provider-native API
+2. the user asks for implementation work in code
 
-## Chinese trigger phrases
+Implementation work includes:
+
+- integrate
+- connect
+- call
+- migrate
+- switch
+- debug
+- stream
+- tool calling
+- structured output
+- 接入
+- 对接
+- 调用
+- 迁移
+- 切换
+- 排查
+
+Do not trigger for comparison, pricing, prompt writing, or general AI planning unless the request also asks to implement against a specific provider API.
+
+## Fast decision rules
+
+- provider + API action -> trigger immediately
+- provider only -> confirm whether the user needs implementation work
+- API action only -> confirm which provider
+- neither -> do not trigger
+
+Ask at most one clarification question before routing.
+
+## Chinese trigger examples
 
 - "我要接入 DeepSeek 大模型 API"
 - "帮我对接 Anthropic / Claude API"
@@ -20,11 +50,8 @@ Do not trigger for: market comparison, pricing research, model benchmarking, pro
 - "这个模型接口为什么一直 400"
 - "帮我排查 401，是不是鉴权格式错了"
 - "我要把 LLM 接口从 OpenAI 切到 DeepSeek"
-- "项目里需要接大模型接口"
-- "这里需要调用模型 API"
-- "接入智谱 GLM / 阿里百炼 / 豆包 / Kimi / MiniMax / 阶跃星辰 / 小米 MiMo / 硅基流动 API"
 
-## English trigger phrases
+## English trigger examples
 
 - "I need to integrate the DeepSeek API"
 - "Hook up Anthropic/Claude in this project"
@@ -34,21 +61,16 @@ Do not trigger for: market comparison, pricing research, model benchmarking, pro
 - "Make the model return structured JSON"
 - "Debug why this provider request is returning 400"
 - "Switch this project from OpenAI to DeepSeek"
-- "Port this to Zhipu/Bailian/Doubao/Kimi/MiniMax/StepFun/MiMo"
-- "Connect to SiliconFlow/OpenRouter/AWS Bedrock/Azure OpenAI"
-- "How do I authenticate against the Anthropic API"
-- "What's the correct request body for Gemini"
-- "The streaming is broken, help me fix it"
 
-## Ambiguous phrasing - confirm before routing
+## Ambiguous prompts
 
-These phrases may or may not involve provider-native API work. Check whether the user is asking about a specific provider API before loading the skill. If unclear, ask:
+These should ask one clarification question instead of guessing:
 
-- "项目里需要 AI 对话功能" -> may need provider integration, confirm which provider
-- "从 GPT 换成 DeepSeek" -> likely a migration, confirm whether they need the request body changed
-- "Add AI chat to this app" -> confirm which provider before routing
-
-If the user names a specific provider and an API action, trigger immediately.
+- "给项目加 AI 对话"
+- "从 GPT 换成 DeepSeek"
+- "让模型查天气"
+- "Add AI chat to this app"
+- "Hook up Claude"
 
 ## Non-trigger examples
 
@@ -70,7 +92,12 @@ User:
 
 > 我要接入 DeepSeek 大模型 API
 
-Route: `integrate-one-provider.md` -> `providers/index.md` -> `providers/deepseek.md`
+Route:
+
+1. `references/start-here.md`
+2. `integrate-one-provider.md`
+3. `providers/index.md`
+4. `providers/deepseek.md`
 
 ### Example 2 - provider migration
 
@@ -78,7 +105,14 @@ User:
 
 > 把现在的 OpenAI 接口改成 Gemini 原生格式
 
-Route: `migrate-between-providers.md` -> `providers/index.md` -> `providers/openai.md` + `providers/gemini.md` + `comparisons/request-shape-differences.md`
+Route:
+
+1. `references/start-here.md`
+2. `migrate-between-providers.md`
+3. `providers/index.md`
+4. `providers/openai.md`
+5. `providers/gemini.md`
+6. `comparisons/request-shape-differences.md`
 
 ### Example 3 - add streaming
 
@@ -86,19 +120,24 @@ User:
 
 > 给这个项目加 Claude 流式输出
 
-Route: `add-streaming.md` -> `providers/index.md` -> `providers/anthropic.md` + `comparisons/streaming-differences.md`
+Route:
 
-### Example 4 - tool calling
+1. `references/start-here.md`
+2. `add-streaming.md`
+3. `providers/index.md`
+4. `providers/anthropic.md`
+5. `comparisons/streaming-differences.md`
+
+### Example 4 - tool calling with missing provider
 
 User:
 
 > 让模型调用本地函数查天气
 
-This is not enough to trigger provider-native routing by itself because no provider is named.
+Behavior:
 
-Confirm first: "你要接哪个模型或 provider 的 API？"
-
-If the user names a provider, then route to `add-tool-calling.md` -> `providers/index.md` -> target provider file + `comparisons/tool-calling-differences.md`.
+- do not route yet
+- ask one question: "你要接哪个 provider 的 API？"
 
 ### Example 5 - debug request
 
@@ -106,7 +145,12 @@ User:
 
 > 这个 DeepSeek 请求一直报 401
 
-Route: `debug-failed-request.md` -> `providers/index.md` -> `providers/deepseek.md`
+Route:
+
+1. `references/start-here.md`
+2. `debug-failed-request.md`
+3. `providers/index.md`
+4. `providers/deepseek.md`
 
 ### Example 6 - English direct
 
@@ -114,27 +158,20 @@ User:
 
 > I need to hook up Zhipu GLM in this project
 
-Route: `integrate-one-provider.md` -> `providers/index.md` -> `providers/zhipu-glm.md`
+Route:
 
-### Example 7 - ambiguous
+1. `references/start-here.md`
+2. `integrate-one-provider.md`
+3. `providers/index.md`
+4. `providers/zhipu-glm.md`
+
+### Example 7 - ambiguous but likely integration
 
 User:
 
 > 帮我搭一个聊天机器人，底层用 DeepSeek
 
-This mentions a specific provider and implies API integration. Confirm: "你要接入 DeepSeek 的原生 API，对吗？" If yes, route to `integrate-one-provider.md` -> `providers/index.md` -> `providers/deepseek.md`.
+Behavior:
 
-## Detection heuristic
-
-Trigger if the request contains:
-
-1. A provider name: OpenAI, Anthropic, Claude, Gemini, DeepSeek, 智谱, GLM, 阿里百炼, 通义千问, 豆包, 火山引擎, Kimi, Moonshot, MiniMax, 阶跃星辰, StepFun, 小米 MiMo, 硅基流动, SiliconFlow, etc.
-2. An API implementation verb: 接入, 对接, 调用, 集成, 迁移, 切换, 排查, integrate, connect, call, switch, migrate, debug, hook up, wire
-
-If only one of the two is present, check context before triggering.
-
-Safe default:
-
-- provider + API action -> trigger immediately
-- provider only -> confirm whether the user needs implementation work
-- API action only -> confirm which provider
+- ask one question: "你要接入 DeepSeek 的原生 API，对吗？"
+- if yes, route through `references/start-here.md` -> `integrate-one-provider.md` -> `providers/index.md` -> `providers/deepseek.md`

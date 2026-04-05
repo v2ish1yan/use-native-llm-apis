@@ -4,24 +4,24 @@
 
 Provider-native API implementation work: integrating, migrating, adding streaming, adding tool calling, adding structured output, and debugging auth or request-shape failures.
 
-Not for: model comparison, pricing research, prompt engineering, or generic AI product design that does not require provider-native API work.
+Not for: pricing research, model comparison, prompt engineering, or generic AI product design without provider-native API work.
 
 ## Quick route
 
-1. Check trigger applicability in [references/recipes/prompt-patterns.md](references/recipes/prompt-patterns.md)
-2. Pick a task recipe in `references/recipes/`
+1. Start at [references/start-here.md](references/start-here.md)
+2. Pick exactly one task recipe
 3. Resolve the exact provider file through [references/providers/index.md](references/providers/index.md)
-4. Load a comparison file from `references/comparisons/` only when migrating or extending behavior
+4. Open one comparison file only when the task requires it
 
 ## File reading
 
-Use targeted reads. Do not load the entire references directory upfront.
+Use targeted reads. Do not load the entire references tree upfront.
 
 ```text
+Read: references/start-here.md
 Read: references/recipes/integrate-one-provider.md
 Read: references/providers/index.md
 Read: references/providers/deepseek.md
-Read: references/comparisons/streaming-differences.md
 ```
 
 ## Code generation
@@ -35,20 +35,14 @@ Read: references/comparisons/streaming-differences.md
 
 A provider integration task is complete when:
 
-1. One non-stream request path works
-2. Auth header and base URL are correct
-3. Request shape matches the provider reference
-4. Response parsing reads the expected output fields
-5. Provider-specific caveats are reflected in the delivered code
-
-## Coverage claims
-
-Before claiming a provider is covered, verify in [coverage-status.md](references/research/coverage-status.md).
-
-Before claiming a detail is current, verify in [source-registry.md](references/research/source-registry.md).
+1. one non-stream request path works
+2. auth header and base URL are correct
+3. request shape matches the provider reference
+4. response parsing reads the expected output fields
+5. provider-specific caveats are reflected in the delivered code
 
 ## Maintenance
 
 - Keep trigger rules aligned with `SKILL.md`
-- Keep routing examples aligned with `references/recipes/prompt-patterns.md`
-- Prefer narrowing ambiguous routes over broadening triggers
+- Keep start routing aligned with `references/start-here.md`
+- Keep few-shot routing aligned with `references/recipes/prompt-patterns.md`

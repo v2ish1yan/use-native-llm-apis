@@ -2,14 +2,15 @@
 
 Entry point for the skill's reference files.
 
+If you are using this skill during coding work, start with [start-here.md](start-here.md).
+
 ## Recommended flow
 
-Use this order unless the task is already fully specified:
-
-1. start from the matching task recipe
-2. open [providers/index.md](providers/index.md) and click the exact provider file
-3. open one comparison file if the task involves migration, streaming, tool calling, or structured output
-4. only then write or patch code
+1. open [start-here.md](start-here.md)
+2. open exactly one task recipe
+3. open [providers/index.md](providers/index.md) and click the exact provider file
+4. open one comparison file only when the task requires it
+5. only then write or patch code
 
 Do not guess provider file paths from memory when the provider name is available in this repo.
 
@@ -17,12 +18,12 @@ Do not guess provider file paths from memory when the provider name is available
 
 | Task | Recipe |
 |------|--------|
-| Integrate one provider | [integrate-one-provider.md](recipes/integrate-one-provider.md) |
-| Migrate between providers | [migrate-between-providers.md](recipes/migrate-between-providers.md) |
-| Add streaming | [add-streaming.md](recipes/add-streaming.md) |
-| Add tool calling | [add-tool-calling.md](recipes/add-tool-calling.md) |
-| Add structured output | [add-structured-output.md](recipes/add-structured-output.md) |
-| Debug a failed request | [debug-failed-request.md](recipes/debug-failed-request.md) |
+| Integrate one provider | [recipes/integrate-one-provider.md](recipes/integrate-one-provider.md) |
+| Migrate between providers | [recipes/migrate-between-providers.md](recipes/migrate-between-providers.md) |
+| Add streaming | [recipes/add-streaming.md](recipes/add-streaming.md) |
+| Add tool calling | [recipes/add-tool-calling.md](recipes/add-tool-calling.md) |
+| Add structured output | [recipes/add-structured-output.md](recipes/add-structured-output.md) |
+| Debug a failed request | [recipes/debug-failed-request.md](recipes/debug-failed-request.md) |
 
 ## By provider
 
@@ -71,18 +72,10 @@ Need an exact provider path fast? Start from [providers/index.md](providers/inde
 | Tool-calling differences | [comparisons/tool-calling-differences.md](comparisons/tool-calling-differences.md) |
 | Structured-output differences | [comparisons/structured-output-differences.md](comparisons/structured-output-differences.md) |
 
-## Debugging triage
-
-1. Check provider file for auth and base URL
-2. Check request-shape comparison for nesting differences
-3. Check streaming comparison if the bug only appears in stream mode
-4. Check tool-calling or structured-output comparison if the failure is schema-related
-
-For streaming bugs, also check whether the code is incorrectly parsing SSE as raw JSON lines or as another provider's delta format.
-
 ## Research and maintenance
 
+- Start guide for maintainers: [research/validation-and-maintenance.md](research/validation-and-maintenance.md)
+- Skill smoke tests: [research/skill-smoke-tests.md](research/skill-smoke-tests.md)
 - Coverage maturity by provider: [research/coverage-status.md](research/coverage-status.md)
 - Official doc URLs by provider: [research/source-registry.md](research/source-registry.md)
 - Expansion planning notes: [research/cc-switch-provider-notes.md](research/cc-switch-provider-notes.md)
-- Skill maintenance and UTF-8-safe validation: [research/validation-and-maintenance.md](research/validation-and-maintenance.md)
