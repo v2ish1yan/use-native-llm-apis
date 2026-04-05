@@ -92,51 +92,67 @@ Use $use-native-llm-apis to debug why this Gemini request returns 400.
 Use $use-native-llm-apis to port this OpenAI tool-calling flow to DeepSeek.
 ```
 
-## Coverage at a glance
+## Supported Providers (33)
 
-### Stage 1 pilot providers
+### Native LLM Providers
 
-- OpenAI
-- Anthropic
-- Gemini
-- DeepSeek
+| Provider | Docs | Reference |
+|----------|------|-----------|
+| OpenAI | [platform.openai.com](https://platform.openai.com/docs/) | [openai.md](references/providers/openai.md) |
+| Anthropic (Claude) | [docs.anthropic.com](https://docs.anthropic.com/) | [anthropic.md](references/providers/anthropic.md) |
+| Google Gemini | [ai.google.dev](https://ai.google.dev/gemini-api/docs) | [gemini.md](references/providers/gemini.md) |
+| DeepSeek | [api-docs.deepseek.com](https://api-docs.deepseek.com/) | [deepseek.md](references/providers/deepseek.md) |
+| Zhipu GLM (智谱) | [docs.bigmodel.cn](https://docs.bigmodel.cn/) | [zhipu-glm.md](references/providers/zhipu-glm.md) |
+| Alibaba Bailian / DashScope (阿里百炼) | [help.aliyun.com](https://help.aliyun.com/zh/model-studio/) | [alibaba-bailian.md](references/providers/alibaba-bailian.md) |
+| Kimi / Moonshot (月之暗面) | [platform.moonshot.cn](https://platform.moonshot.cn/docs/introduction) | [kimi-moonshot.md](references/providers/kimi-moonshot.md) |
+| Doubao / Volcengine Ark (豆包/火山引擎) | [volcengine.com](https://www.volcengine.com/docs/82379) | [doubao-volcengine-ark.md](references/providers/doubao-volcengine-ark.md) |
+| MiniMax | [platform.minimax.io](https://platform.minimax.io/docs/api-reference/api-overview) | [minimax.md](references/providers/minimax.md) |
+| StepFun (阶跃星辰) | [platform.stepfun.com](https://platform.stepfun.com/docs/api-reference/chat/chat-completion-create) | [stepfun.md](references/providers/stepfun.md) |
+| Xiaomi MiMo (小米) | [platform.xiaomimimo.com](https://platform.xiaomimimo.com/#/docs/welcome) | [xiaomi-mimo.md](references/providers/xiaomi-mimo.md) |
 
-### Stage 2 expanded providers and gateways
+### Cloud & Managed Platforms
 
-- Zhipu GLM
-- Alibaba Bailian / DashScope
-- Kimi / Moonshot
-- Doubao / Volcengine Ark
-- MiniMax
-- StepFun
-- Azure OpenAI
-- AWS Bedrock
-- NVIDIA NIM
-- ModelScope API Inference
-- OpenRouter
-- NewAPI
-- AiHubMix
-- SiliconFlow
-- Novita AI
-- GitHub Copilot / Copilot SDK
-- PackyCode
-- Cubence
-- CrazyRouter
-- Xiaomi MiMo
-- Compshare
-- CTok.ai
-- Right Code
-- X-Code API
-- Ai Go Code
-- AICodeMirror
-- DMXAPI
+| Provider | Docs | Reference |
+|----------|------|-----------|
+| Azure OpenAI | [learn.microsoft.com](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/work-with-code) | [azure-openai.md](references/providers/azure-openai.md) |
+| AWS Bedrock | [docs.aws.amazon.com](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html) | [aws-bedrock.md](references/providers/aws-bedrock.md) |
+| NVIDIA NIM | [docs.api.nvidia.com](https://docs.api.nvidia.com/nim/reference/llm-apis) | [nvidia-nim.md](references/providers/nvidia-nim.md) |
+| ModelScope API Inference (魔搭) | [modelscope.cn](https://modelscope.cn/docs/model-service/API-Inference/intro) | [modelscope.md](references/providers/modelscope.md) |
+| GitHub Copilot / Copilot SDK | [docs.github.com](https://docs.github.com/en/copilot/concepts/agents/openai-codex) | [github-copilot.md](references/providers/github-copilot.md) |
 
-### Cross-provider comparison guides
+### Gateway & Aggregation Layers
 
-- request shape differences
-- streaming differences
-- tool-calling differences
-- structured-output differences
+| Provider | Docs | Reference |
+|----------|------|-----------|
+| OpenRouter | [openrouter.ai](https://openrouter.ai/docs/api/reference/overview/) | [openrouter.md](references/providers/openrouter.md) |
+| SiliconFlow (硅基流动) | [docs.siliconflow.com](https://docs.siliconflow.com/en/api-reference/chat-completions/chat-completions) | [siliconflow.md](references/providers/siliconflow.md) |
+| AiHubMix | [docs.aihubmix.com](https://docs.aihubmix.com/en) | [aihubmix.md](references/providers/aihubmix.md) |
+| Novita AI | [novita.ai](https://novita.ai/docs/api-reference) | [novita-ai.md](references/providers/novita-ai.md) |
+| NewAPI | [docs.newapi.pro](https://docs.newapi.pro/en/) | [newapi.md](references/providers/newapi.md) |
+
+### Relay / Proxy Services
+
+| Provider | Docs | Reference |
+|----------|------|-----------|
+| PackyCode | [docs.packyapi.com](https://docs.packyapi.com/) | [packycode.md](references/providers/packycode.md) |
+| Cubence | [docs.cubence.com](https://docs.cubence.com/) | [cubence.md](references/providers/cubence.md) |
+| CrazyRouter | [crazyrouter.com](https://crazyrouter.com/) | [crazyrouter.md](references/providers/crazyrouter.md) |
+| Compshare | [compshare.cn](https://www.compshare.cn/docs) | [compshare.md](references/providers/compshare.md) |
+| CTok.ai | [ctok.ai](https://ctok.ai/) | [ctok-ai.md](references/providers/ctok-ai.md) |
+| Right Code | [docs.right.codes](https://docs.right.codes/) | [rightcode.md](references/providers/rightcode.md) |
+| X-Code API | [docs.x-code.cc](https://docs.x-code.cc/) | [xcode-api.md](references/providers/xcode-api.md) |
+| Ai Go Code | [aigocode.com](https://www.aigocode.com/docs) | [aigocode.md](references/providers/aigocode.md) |
+| AICodeMirror | [aicodemirror.com](https://www.aicodemirror.com/docs) | [aicodemirror.md](references/providers/aicodemirror.md) |
+| DMXAPI | [doc.dmxapi.com](https://doc.dmxapi.com/) | [dmxapi.md](references/providers/dmxapi.md) |
+
+### Cross-Provider Comparison Guides
+
+| Topic | Reference |
+|-------|-----------|
+| Request shape differences | [request-shape-differences.md](references/comparisons/request-shape-differences.md) |
+| Streaming differences | [streaming-differences.md](references/comparisons/streaming-differences.md) |
+| Tool-calling differences | [tool-calling-differences.md](references/comparisons/tool-calling-differences.md) |
+| Structured-output differences | [structured-output-differences.md](references/comparisons/structured-output-differences.md) |
 
 For live coverage status, see [references/research/coverage-status.md](references/research/coverage-status.md).
 
@@ -164,43 +180,6 @@ For live coverage status, see [references/research/coverage-status.md](reference
 - [references/recipes](references/recipes)
 - [references/research/source-registry.md](references/research/source-registry.md)
 - [references/research/coverage-status.md](references/research/coverage-status.md)
-
-### Core native providers
-
-- [references/providers/openai.md](references/providers/openai.md)
-- [references/providers/anthropic.md](references/providers/anthropic.md)
-- [references/providers/gemini.md](references/providers/gemini.md)
-- [references/providers/deepseek.md](references/providers/deepseek.md)
-
-### Additional providers and gateways
-
-- [references/providers/zhipu-glm.md](references/providers/zhipu-glm.md)
-- [references/providers/alibaba-bailian.md](references/providers/alibaba-bailian.md)
-- [references/providers/kimi-moonshot.md](references/providers/kimi-moonshot.md)
-- [references/providers/doubao-volcengine-ark.md](references/providers/doubao-volcengine-ark.md)
-- [references/providers/minimax.md](references/providers/minimax.md)
-- [references/providers/stepfun.md](references/providers/stepfun.md)
-- [references/providers/azure-openai.md](references/providers/azure-openai.md)
-- [references/providers/aws-bedrock.md](references/providers/aws-bedrock.md)
-- [references/providers/nvidia-nim.md](references/providers/nvidia-nim.md)
-- [references/providers/modelscope.md](references/providers/modelscope.md)
-- [references/providers/openrouter.md](references/providers/openrouter.md)
-- [references/providers/newapi.md](references/providers/newapi.md)
-- [references/providers/aihubmix.md](references/providers/aihubmix.md)
-- [references/providers/siliconflow.md](references/providers/siliconflow.md)
-- [references/providers/novita-ai.md](references/providers/novita-ai.md)
-- [references/providers/github-copilot.md](references/providers/github-copilot.md)
-- [references/providers/packycode.md](references/providers/packycode.md)
-- [references/providers/cubence.md](references/providers/cubence.md)
-- [references/providers/crazyrouter.md](references/providers/crazyrouter.md)
-- [references/providers/xiaomi-mimo.md](references/providers/xiaomi-mimo.md)
-- [references/providers/compshare.md](references/providers/compshare.md)
-- [references/providers/ctok-ai.md](references/providers/ctok-ai.md)
-- [references/providers/rightcode.md](references/providers/rightcode.md)
-- [references/providers/xcode-api.md](references/providers/xcode-api.md)
-- [references/providers/aigocode.md](references/providers/aigocode.md)
-- [references/providers/aicodemirror.md](references/providers/aicodemirror.md)
-- [references/providers/dmxapi.md](references/providers/dmxapi.md)
 
 ## Install in Claude Code
 
