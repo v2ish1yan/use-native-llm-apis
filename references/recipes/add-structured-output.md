@@ -8,8 +8,9 @@ Make the output reliably parseable without pretending all providers expose the s
 
 ## What to open first
 
-1. the target provider file
-2. `references/comparisons/structured-output-differences.md`
+1. `references/index.md`
+2. the target provider file from the provider table in `references/index.md`
+3. `references/comparisons/structured-output-differences.md`
 
 ## Decision rule
 

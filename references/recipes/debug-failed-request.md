@@ -8,8 +8,11 @@ Find the first wrong assumption in the request path.
 
 ## What to open first
 
-1. the target provider file
-2. the relevant comparison file if the code came from another provider
+1. `references/index.md`
+2. the target provider file from the provider table in `references/index.md`
+3. the relevant comparison file if the code came from another provider
+
+If the failing code does not clearly identify the provider yet, confirm the provider before assuming a file.
 
 ## Debug order
 

@@ -8,10 +8,13 @@ Preserve behavior while changing the wire format as little as necessary.
 
 ## What to open first
 
-1. the source provider file
-2. the target provider file
-3. `references/comparisons/request-shape-differences.md`
-4. one of the other comparison files if the task also involves streaming, tools, or structured output
+1. `references/index.md`
+2. the source provider file from the provider table in `references/index.md`
+3. the target provider file from the provider table in `references/index.md`
+4. `references/comparisons/request-shape-differences.md`
+5. one of the other comparison files if the task also involves streaming, tools, or structured output
+
+If either provider file is unclear, return to `references/index.md` instead of guessing.
 
 ## Migration order
 

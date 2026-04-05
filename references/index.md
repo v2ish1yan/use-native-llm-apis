@@ -2,6 +2,17 @@
 
 Entry point for the skill's reference files.
 
+## Recommended flow
+
+Use this order unless the task is already fully specified:
+
+1. start from the matching task recipe
+2. return to this file and pick the exact provider file from the provider table
+3. open one comparison file if the task involves migration, streaming, tool calling, or structured output
+4. only then write or patch code
+
+Do not guess provider file paths from memory when the provider name is available in this file.
+
 ## By task
 
 | Task | Recipe |
@@ -72,3 +83,4 @@ For streaming bugs, also check whether the code is incorrectly parsing SSE as ra
 - Coverage maturity by provider: [research/coverage-status.md](research/coverage-status.md)
 - Official doc URLs by provider: [research/source-registry.md](research/source-registry.md)
 - Expansion planning notes: [research/cc-switch-provider-notes.md](research/cc-switch-provider-notes.md)
+- Skill maintenance and UTF-8-safe validation: [research/validation-and-maintenance.md](research/validation-and-maintenance.md)
