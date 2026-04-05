@@ -153,23 +153,10 @@ Use $use-native-llm-apis to convert an OpenAI request into Gemini native format.
 ```
 
 ```
-I want to build an AI agent using MiniMax as the model.
+我要把 OpenAI 接口切换成 DeepSeek
 ```
 
-```
-我要写一个 AI agent，用 MiniMax 的大模型
-```
-
-### Natural-Language Triggers
-
-This skill activates on natural phrasing — no "integrate API" keyword needed:
-
-- "I need to build an AI agent with MiniMax"
-- "Add AI chat to my app, using DeepSeek"
-- "Create a RAG pipeline powered by Claude"
-- "我要写一个 AI agent，用 MiniMax 的大模型"
-- "做一个知识库问答，模型用智谱"
-- "从 GPT 换成 DeepSeek"
+For the full list of trigger phrases and routing rules, see [prompt-patterns.md](references/recipes/prompt-patterns.md).
 
 ---
 

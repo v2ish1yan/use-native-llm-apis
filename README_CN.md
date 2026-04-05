@@ -149,26 +149,14 @@ Use $use-native-llm-apis to write an Anthropic streaming request in TypeScript.
 ```
 
 ```
-我要写一个 AI agent，用 MiniMax 的大模型
+我要把 OpenAI 接口切换成 DeepSeek
 ```
 
 ```
-帮我搭一个聊天机器人，底层用 DeepSeek
+帮我排查这个 DeepSeek 请求为什么一直 401
 ```
 
-### 自然语言触发
-
-此 skill 支持自然语言触发，不需要显式提到 "API"：
-
-- "我要写一个 AI agent，用 MiniMax 的大模型"
-- "帮我搭一个聊天机器人，底层用 DeepSeek"
-- "做一个知识库问答系统，模型用智谱"
-- "项目里需要 AI 对话功能"
-- "从 GPT 换成 DeepSeek/Claude/Gemini"
-- "模型回复太慢了帮我优化一下"
-- "I want to build an AI agent using MiniMax"
-- "Add AI chat to my app, using DeepSeek"
-- "Create a RAG pipeline powered by Claude"
+完整的触发短语和路由规则见 [prompt-patterns.md](references/recipes/prompt-patterns.md)。
 
 ---
 
