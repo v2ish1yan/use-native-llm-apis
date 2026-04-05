@@ -14,42 +14,70 @@ This skill should be loaded when the user is clearly asking to:
 
 If the user's request is about using a model API in code, assume this skill is relevant unless the task is clearly only product comparison or pricing research.
 
-## Real user phrasing that should trigger this skill
+## Chinese trigger phrases
 
-- "`wo yao jie ru deepseek da mo xing api`"
-- "`bang wo jie yi xia Anthropic api`"
-- "`zhe ge xiang mu yao yong OpenAI API`"
-- "`ba xian zai de OpenAI qing qiu gai cheng Gemini yuan sheng ge shi`"
-- "`wo yao zai cha jian li jie ru Claude API`"
-- "`gei zhe ge xiang mu jia da mo xing liu shi shu chu`"
-- "`bang wo ba gong ju diao yong jie shang`"
-- "`wo yao rang mo xing fan hui jie gou hua JSON`"
-- "`zhe ge mo xing jie kou wei shen me yi zhi 400`"
-- "`bang wo pai cha 401, shi bu shi jian quan ge shi cuo le`"
-- "`wo yao ba xian zai de LLM jie kou cong OpenAI qie dao DeepSeek`"
-- "`xiang mu li xu yao jie da mo xing jie kou`"
-- "`zhe li xu yao diao yong mo xing API`"
-- "`jie ru duo mo tai mo xing jie kou`"
-- "`xie yi ge DeepSeek de fetch qing qiu`"
+- "我要接入 DeepSeek 大模型 API"
+- "帮我对接一下 Anthropic/Claude API"
+- "这个项目要用 OpenAI API"
+- "把现在的 OpenAI 请求改成 Gemini 原生格式"
+- "我要在插件里接入 Claude API"
+- "给这个项目加大模型流式输出"
+- "帮我把工具调用接上"
+- "我要让模型返回结构化 JSON"
+- "这个模型接口为什么一直 400"
+- "帮我排查 401，是不是鉴权格式错了"
+- "我要把现在的 LLM 接口从 OpenAI 切到 DeepSeek"
+- "项目里需要接大模型接口"
+- "这里需要调用模型 API"
+- "接入多模态模型接口"
+- "写一个 DeepSeek 的 fetch 请求"
+- "接入智谱 GLM API"
+- "对接阿里百炼/通义千问 API"
+- "调用豆包/火山引擎 API"
+- "把接口改成 Kimi/Moonshot"
+- "接入 MiniMax API"
+- "对接阶跃星辰/StepFun API"
+- "调用小米 MiMo API"
+- "接入硅基流动/SiliconFlow API"
+- "通过火山方舟调用模型"
+- "用魔搭 ModelScope 推理 API"
 
-## Equivalent English phrasing
+## English trigger phrases
 
 - "I need to integrate the DeepSeek API"
-- "Hook up Anthropic in this project"
+- "Hook up Anthropic/Claude in this project"
 - "Convert this OpenAI request to Gemini native format"
 - "Add streaming to our LLM client"
 - "Wire tool calling into this model request"
 - "Make the model return structured JSON"
 - "Debug why this provider request is returning 400"
 - "Switch this project from OpenAI to DeepSeek"
+- "Port this from OpenAI to Zhipu GLM"
+- "Connect to Alibaba Bailian / DashScope API"
+- "Call the Doubao / Volcengine Ark API"
+- "Integrate Kimi / Moonshot API"
+- "Use MiniMax API in this project"
+- "Add StepFun as a provider"
+- "Wire up Xiaomi MiMo API"
+- "Connect via SiliconFlow"
+- "Migrate to OpenRouter"
+- "Use AWS Bedrock for Claude"
+- "Set up Azure OpenAI endpoint"
+- "Call model through NVIDIA NIM"
+- "Use ModelScope inference API"
+- "Write a fetch request for DeepSeek"
+- "How do I authenticate against the Anthropic API"
+- "What's the correct request body for Gemini"
+- "The streaming is broken, help me fix it"
+- "Add function calling to this LLM request"
 
 ## Few-shot routing examples
 
-### Example 1
+### Example 1 — new integration
 
 User:
 
-> `wo yao jie ru deepseek da mo xing api`
+> 我要接入 DeepSeek 大模型 API
 
 Correct interpretation:
 
@@ -57,11 +85,11 @@ Correct interpretation:
 - Start with `references/recipes/integrate-one-provider.md`.
 - Then open `references/providers/deepseek.md`.
 
-### Example 2
+### Example 2 — provider migration
 
 User:
 
-> `ba xian zai de OpenAI jie kou gai cheng Gemini yuan sheng ge shi`
+> 把现在的 OpenAI 接口改成 Gemini 原生格式
 
 Correct interpretation:
 
@@ -69,11 +97,11 @@ Correct interpretation:
 - Start with `references/recipes/migrate-between-providers.md`.
 - Then open `references/providers/openai.md`, `references/providers/gemini.md`, and `references/comparisons/request-shape-differences.md`.
 
-### Example 3
+### Example 3 — add streaming
 
 User:
 
-> `gei zhe ge xiang mu jia Claude liu shi shu chu`
+> 给这个项目加 Claude 流式输出
 
 Correct interpretation:
 
@@ -81,11 +109,11 @@ Correct interpretation:
 - Start with `references/recipes/add-streaming.md`.
 - Then open `references/providers/anthropic.md` and `references/comparisons/streaming-differences.md`.
 
-### Example 4
+### Example 4 — tool calling
 
 User:
 
-> `rang mo xing diao yong ben di han shu cha tian qi`
+> 让模型调用本地函数查天气
 
 Correct interpretation:
 
@@ -93,11 +121,11 @@ Correct interpretation:
 - Start with `references/recipes/add-tool-calling.md`.
 - Then open the target provider file and `references/comparisons/tool-calling-differences.md`.
 
-### Example 5
+### Example 5 — debug request
 
 User:
 
-> `zhe ge DeepSeek qing qiu yi zhi bao 401`
+> 这个 DeepSeek 请求一直报 401
 
 Correct interpretation:
 
@@ -105,13 +133,27 @@ Correct interpretation:
 - Start with `references/recipes/debug-failed-request.md`.
 - Then open `references/providers/deepseek.md`.
 
+### Example 6 — English integration
+
+User:
+
+> I need to hook up Zhipu GLM in this project
+
+Correct interpretation:
+
+- This is a provider-native integration task.
+- Start with `references/recipes/integrate-one-provider.md`.
+- Then open `references/providers/zhipu-glm.md`.
+
 ## Non-trigger examples
 
 These requests do not automatically require this skill:
 
-- "`na ge da mo xing geng pian yi`"
-- "`bang wo bi jiao yi xia OpenAI he Gemini na ge geng qiang`"
-- "`zui jin you na xie da mo xing fa bu le`"
+- "哪个大模型更便宜"
+- "帮我比较一下 OpenAI 和 Gemini 哪个更强"
+- "最近有哪些大模型发布了"
+- "Which LLM is the best"
+- "Compare GPT-4 vs Claude pricing"
 
 Those are research or recommendation tasks unless the user also asks to implement code against the API.
 
@@ -119,7 +161,7 @@ Those are research or recommendation tasks unless the user also asks to implemen
 
 If the request contains both:
 
-1. a provider or model API idea such as `OpenAI`, `Anthropic`, `Claude`, `Gemini`, `DeepSeek`, `LLM API`, `large-model API`, `model API`
-2. an implementation verb such as `jie ru`, `dui jie`, `diao yong`, `ji cheng`, `qian yi`, `gai zao`, `jia shang`, `debug`, `pai cha`
+1. a provider or model API name: OpenAI, Anthropic, Claude, Gemini, DeepSeek, 智谱, GLM, 阿里百炼, 通义千问, 豆包, 火山引擎, Kimi, Moonshot, MiniMax, 阶跃星辰, StepFun, 小米 MiMo, 硅基流动, SiliconFlow, LLM API, 大模型 API, 模型 API, AI API
+2. an implementation verb: 接入, 对接, 调用, 集成, 迁移, 切换, 改成, 加上, 排查, 调试, integrate, connect, call, use, switch, migrate, port, wire, hook up, add, debug
 
 then this skill should usually be loaded.

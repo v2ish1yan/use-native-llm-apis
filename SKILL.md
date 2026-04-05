@@ -1,6 +1,27 @@
 ---
 name: use-native-llm-apis
-description: Use when a user is implementing, integrating, connecting, migrating, or debugging a large-model API or provider-native LLM request, including prompts like "ji ru DeepSeek API", "dui jie Anthropic API", "switch OpenAI to Gemini", "add streaming", "add tool calling", or "debug model API 400/401". Covers auth, base URLs, request and response shapes, streaming, tool calling, structured output, multimodal inputs, and provider migration.
+description: >
+  Trigger when a user wants to implement, integrate, connect, migrate, or debug a
+  large-model / LLM / AI API in code. Covers provider-native request and response
+  shapes, auth, base URLs, streaming, tool calling, structured output, multimodal
+  inputs, and migration between vendors.
+
+  Chinese triggers: 接入/对接/集成/调用/切换/迁移/加上 大模型/模型/LLM/AI API,
+  接入 DeepSeek API, 对接 Anthropic/Claude API, 调用 OpenAI API,
+  把 OpenAI 改成 Gemini, 切换到 DeepSeek, 迁移到 Claude, 加流式输出,
+  加工具调用/函数调用, 返回结构化 JSON, 排查/调试 模型接口 400/401/403,
+  智谱 GLM API, 阿里百炼/通义千问 API, 豆包/火山引擎 API, Kimi/Moonshot API,
+  MiniMax API, 阶跃星辰/StepFun API, 小米 MiMo API, 硅基流动/SiliconFlow API,
+  火山方舟, 魔搭 ModelScope.
+
+  English triggers: integrate/connect/call/use/switch/migrate/port/wire/hook up
+  DeepSeek/Anthropic/Claude/OpenAI/Gemini/Zhipu/Bailian/Doubao/Kimi/MiniMax/StepFun/
+  MiMo/SiliconFlow/OpenRouter/AWS Bedrock/Azure OpenAI/NVIDIA/ModelScope API,
+  add streaming/tool calling/function calling/structured output/JSON mode,
+  convert/migrate OpenAI to Gemini, debug model API request 400/401/403/422,
+  LLM API integration, large model API, AI model API request.
+
+  Do NOT trigger for market comparison, pricing research, or model benchmarking.
 ---
 
 # Use Native LLM APIs
@@ -29,16 +50,35 @@ Before coding, also scan [references/recipes/prompt-patterns.md](references/reci
 
 Load this skill whenever the user is asking to build against a model API in code, even if they do not name the skill.
 
-Common trigger phrases include:
+Common Chinese trigger phrases:
 
-- "`wo yao jie ru deepseek da mo xing api`"
-- "`bang wo dui jie Anthropic api`"
-- "`zhe ge xiang mu yao diao yong OpenAI API`"
-- "`ba OpenAI gai cheng Gemini yuan sheng ge shi`"
-- "`gei zhe ge xiang mu jia liu shi shu chu`"
-- "`bang wo jie gong ju diao yong`"
-- "`rang mo xing fan hui jie gou hua JSON`"
-- "`pai cha zhe ge mo xing jie kou wei shen me 400/401`"
+- "我要接入 DeepSeek 大模型 API"
+- "帮我对接 Anthropic/Claude API"
+- "这个项目要调用 OpenAI API"
+- "把 OpenAI 改成 Gemini 原生格式"
+- "给这个项目加上流式输出"
+- "帮我加工具调用/函数调用"
+- "让模型返回结构化 JSON"
+- "排查这个模型接口为什么 400/401"
+- "接入智谱 GLM API"
+- "对接阿里百炼/通义千问 API"
+- "调用豆包/火山引擎 API"
+- "把 LLM 接口从 OpenAI 切到 DeepSeek"
+- "接入 Kimi/Moonshot API"
+- "调用 MiniMax/阶跃星辰/小米 MiMo/硅基流动 API"
+
+Common English trigger phrases:
+
+- "I need to integrate the DeepSeek API"
+- "Hook up Anthropic/Claude in this project"
+- "Convert this OpenAI request to Gemini native format"
+- "Add streaming to our LLM client"
+- "Wire tool calling into this model request"
+- "Make the model return structured JSON"
+- "Debug why this provider request is returning 400"
+- "Switch this project from OpenAI to DeepSeek"
+- "Port this to Zhipu/Bailian/Doubao/Kimi/MiniMax/StepFun/MiMo"
+- "Connect to SiliconFlow/OpenRouter/AWS Bedrock/Azure OpenAI"
 
 If the request is about implementation rather than market comparison, bias toward loading this skill.
 
