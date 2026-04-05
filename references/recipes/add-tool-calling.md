@@ -24,29 +24,110 @@ Get one full tool loop working:
 4. Execute the tool outside the model loop first if needed.
 5. Return the result using the provider's native continuation shape.
 
+## Tool declaration shapes by provider
+
+The three major tool declaration formats:
+
+```jsonc
+// OpenAI / DeepSeek / OpenAI-compatible providers
+{
+  "tools": [{
+    "type": "function",
+    "function": {
+      "name": "get_weather",
+      "description": "Get the weather for a city",
+      "parameters": {          // ← note: "parameters"
+        "type": "object",
+        "properties": {
+          "city": { "type": "string" }
+        },
+        "required": ["city"]
+      }
+    }
+  }]
+}
+
+// Anthropic
+{
+  "tools": [{
+    "name": "get_weather",
+    "description": "Get the weather for a city",
+    "input_schema": {          // ← note: "input_schema"
+      "type": "object",
+      "properties": {
+        "city": { "type": "string" }
+      },
+      "required": ["city"]
+    }
+  }]
+}
+
+// Gemini
+{
+  "tools": [{
+    "function_declarations": [{  // ← note: nested array
+      "name": "get_weather",
+      "description": "Get the weather for a city",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": { "type": "string" }
+        },
+        "required": ["city"]
+      }
+    }]
+  }]
+}
+```
+
+## Tool result continuation shapes
+
+How to return a tool result back to the model:
+
+```jsonc
+// OpenAI / DeepSeek — role: "tool" message
+{
+  "messages": [
+    { "role": "user", "content": "What's the weather in Tokyo?" },
+    { "role": "assistant", "content": null,
+      "tool_calls": [{ "id": "call_abc", "function": { "name": "get_weather", "arguments": "{\"city\":\"Tokyo\"}" } }] },
+    { "role": "tool", "tool_call_id": "call_abc",
+      "content": "{\"temperature_c\": 22}" }
+  ]
+}
+
+// Anthropic — tool_result content block in a user message
+{
+  "messages": [
+    { "role": "user", "content": "What's the weather in Tokyo?" },
+    { "role": "assistant", "content": [
+        { "type": "text", "text": "Let me check." },
+        { "type": "tool_use", "id": "toolu_abc", "name": "get_weather", "input": { "city": "Tokyo" } }
+    ]},
+    { "role": "user", "content": [
+        { "type": "tool_result", "tool_use_id": "toolu_abc",
+          "content": "{\"temperature_c\": 22}" }
+    ]}
+  ]
+}
+```
+
 ## High-risk differences
 
-- `parameters` vs `input_schema`
-- OpenAI or DeepSeek `role: "tool"` continuation vs Anthropic `tool_result`
-- Gemini function declarations and function-response flow
-
-## Common mistakes
-
-- Copying OpenAI tool schema directly into Anthropic
-- Returning tool output in the wrong role or block type
-- Letting the tool return large unbounded payloads
-- Trying to debug tool declarations and tool continuation in the same step
+- `parameters` vs `input_schema` — easy to miss, silent failure
+- OpenAI `role: "tool"` continuation vs Anthropic `tool_result` content block
+- Gemini `functionResponse` part vs function-call part
+- Tool call IDs: `call_*` (OpenAI) vs `toolu_*` (Anthropic)
 
 ## Minimal success test
 
 Use one deterministic tool, such as:
 
-- `get_weather(city)`
-- `lookup_order(id)`
-- `read_file(path)`
+- `get_weather(city)` → returns `{ temperature_c: 22 }`
+- `lookup_order(id)` → returns `{ status: "shipped" }`
 
 The model should produce exactly one tool call and then answer using the tool result.
 
 ## Exit criteria
 
-This recipe is complete when one full request -> tool call -> tool result -> final answer loop works with the provider's native schema.
+This recipe is complete when one full request → tool call → tool result → final answer loop works with the provider's native schema.

@@ -24,20 +24,50 @@ Get to one verified request path quickly:
 4. Confirm which field your app should read for generated text.
 5. Only then add retries, streaming, tools, or response schemas.
 
+## Minimal integration pattern (TypeScript)
+
+This skeleton works for any provider — swap the auth header, base URL, and body shape according to the provider file.
+
+```ts
+async function callProvider(prompt: string): Promise<string> {
+  const response = await fetch("https://PROVIDER_BASE_URL/ENDPOINT_PATH", {
+    method: "POST",
+    headers: {
+      // Fill these from the provider file
+      "authorization": "Bearer $PROVIDER_API_KEY",  // or x-api-key, or api-key
+      "content-type": "application/json",
+      // Some providers require version headers — check the provider file
+    },
+    body: JSON.stringify({
+      // Fill the request shape from the provider file
+      model: "MODEL_NAME",
+      messages: [{ role: "user", content: prompt }],
+      // Some providers use: input, contents, prompt — check the provider file
+    }),
+  });
+
+  if (!response.ok) {
+    const errorBody = await response.text();
+    console.error("Request failed:", response.status, errorBody);
+    throw new Error(`Provider returned ${response.status}`);
+  }
+
+  const data = await response.json();
+  // Extract text — check the provider file for the correct field path:
+  //   OpenAI-style:   data.choices[0].message.content
+  //   Anthropic-style: data.content.find(b => b.type === "text")?.text
+  //   Gemini-style:   data.candidates[0].content.parts[0].text
+  return data.choices?.[0]?.message?.content ?? JSON.stringify(data);
+}
+```
+
 ## What to extract from the provider file
 
-- auth header format
-- base URL
-- primary endpoint
-- minimal request body
-- response fields that contain text
+- auth header format and any required version headers
+- base URL and endpoint path
+- minimal request body shape (top-level keys, message format)
+- response field that contains generated text
 - provider-specific caveats about streaming, tools, or JSON mode
-
-## Safe implementation pattern
-
-- Keep the first implementation close to raw HTTP.
-- Prefer `fetch` plus explicit headers over hiding the request behind a large SDK wrapper.
-- Keep provider-specific field names visible in the code until the request is proven correct.
 
 ## Do not do this first
 

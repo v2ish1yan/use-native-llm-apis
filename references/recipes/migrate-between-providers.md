@@ -8,7 +8,7 @@ Preserve behavior while changing the wire format as little as necessary.
 
 ## What to open first
 
-1. the current provider file
+1. the source provider file
 2. the target provider file
 3. `references/comparisons/request-shape-differences.md`
 4. one of the other comparison files if the task also involves streaming, tools, or structured output
@@ -22,14 +22,42 @@ Preserve behavior while changing the wire format as little as necessary.
 5. Remap response parsing.
 6. Remap advanced features such as streaming, tools, or schemas.
 
-## High-risk areas
+## Side-by-side migration map
 
-- `input` vs `messages` vs `contents`
-- top-level `system` vs `role: "system"` vs inline config
-- content blocks vs parts vs plain strings
-- tool declaration keywords
-- schema or JSON-mode controls
-- stream event semantics
+Before renaming fields, lay out source and target:
+
+```text
+Source (OpenAI Chat Completions)     Target (Anthropic Messages)
+─────────────────────────────────    ──────────────────────────────
+POST /v1/chat/completions            POST /v1/messages
+Authorization: Bearer $KEY           x-api-key: $KEY
+(no version header)                  anthropic-version: 2023-06-01
+
+Body:                                Body:
+{                                    {
+  "model": "gpt-4o",                  "model": "claude-sonnet-4-5",
+  "messages": [                       "max_tokens": 1024,
+    {"role": "system",                "system": "You are helpful.",
+     "content": "You are helpful."},  "messages": [
+    {"role": "user",                    {"role": "user",
+     "content": "Hello"}                 "content": "Hello"}
+  ]                                    ]
+}                                    }
+
+Response text:                       Response text:
+choices[0].message.content           content.find(b => b.type === "text").text
+```
+
+## High-risk mapping table
+
+| Concern | OpenAI | Anthropic | Gemini |
+|---------|--------|-----------|--------|
+| System prompt | `messages[0].role: "system"` | top-level `system` field | `systemInstruction` or first turn |
+| User content | `messages[].content` (string or array) | `messages[].content` (block array) | `contents[].parts[].text` |
+| Tool schema field | `tools[].parameters` | `tools[].input_schema` | `tools[].functionDeclarations[]` |
+| Tool result | `role: "tool"` message | `tool_result` content block | `functionResponse` part |
+| Stream events | `data: {"choices":[{"delta":...}]}` | named SSE events | chunked JSON or SSE |
+| JSON mode | `response_format.type` | tool-mediated or constrained | `responseMimeType` |
 
 ## Safe migration pattern
 
@@ -37,10 +65,6 @@ Preserve behavior while changing the wire format as little as necessary.
 - Change one concern at a time.
 - Compare raw requests and raw responses, not only post-processed app objects.
 - If the old code used an abstraction layer, temporarily peel it back until the new wire format is correct.
-
-## Common trap
-
-Mechanical renames are not enough. A provider migration is a shape migration, not a search-and-replace exercise.
 
 ## Exit criteria
 
