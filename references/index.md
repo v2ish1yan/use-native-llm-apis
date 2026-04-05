@@ -7,11 +7,11 @@ Entry point for the skill's reference files.
 Use this order unless the task is already fully specified:
 
 1. start from the matching task recipe
-2. return to this file and pick the exact provider file from the provider table
+2. open [providers/index.md](providers/index.md) and click the exact provider file
 3. open one comparison file if the task involves migration, streaming, tool calling, or structured output
 4. only then write or patch code
 
-Do not guess provider file paths from memory when the provider name is available in this file.
+Do not guess provider file paths from memory when the provider name is available in this repo.
 
 ## By task
 
@@ -25,6 +25,8 @@ Do not guess provider file paths from memory when the provider name is available
 | Debug a failed request | [debug-failed-request.md](recipes/debug-failed-request.md) |
 
 ## By provider
+
+Need an exact provider path fast? Start from [providers/index.md](providers/index.md).
 
 | Provider | File |
 |----------|------|

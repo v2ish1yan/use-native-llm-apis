@@ -144,6 +144,8 @@ git -C ~/.codex/skills/use-native-llm-apis pull     # Codex
 | Add structured JSON output | [add-structured-output.md](references/recipes/add-structured-output.md) |
 | Debug a failed request | [debug-failed-request.md](references/recipes/debug-failed-request.md) |
 
+After picking a recipe, resolve the exact provider path through [providers/index.md](references/providers/index.md). This avoids slug guessing like `moonshot` vs `kimi-moonshot` or `ark` vs `doubao-volcengine-ark`.
+
 ### Example Prompts
 
 ```

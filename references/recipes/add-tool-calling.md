@@ -14,8 +14,9 @@ Get one full tool loop working:
 ## What to open first
 
 1. `references/index.md`
-2. the target provider file from the provider table in `references/index.md`
-3. `references/comparisons/tool-calling-differences.md`
+2. `references/providers/index.md`
+3. the target provider file linked from `references/providers/index.md`
+4. `references/comparisons/tool-calling-differences.md`
 
 If the provider is still unknown, stop and confirm it before continuing.
 

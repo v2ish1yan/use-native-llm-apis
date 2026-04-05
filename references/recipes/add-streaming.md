@@ -9,8 +9,9 @@ Add streaming without breaking text assembly or finish detection.
 ## What to open first
 
 1. `references/index.md`
-2. the target provider file from the provider table in `references/index.md`
-3. `references/comparisons/streaming-differences.md`
+2. `references/providers/index.md`
+3. the target provider file linked from `references/providers/index.md`
+4. `references/comparisons/streaming-differences.md`
 
 ## Safe order
 

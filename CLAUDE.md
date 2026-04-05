@@ -2,23 +2,24 @@
 
 ## What this skill is for
 
-Provider-native API implementation work: integrating, migrating, adding streaming/tool-calling/structured-output, debugging auth/request-shape failures.
+Provider-native API implementation work: integrating, migrating, adding streaming, adding tool calling, adding structured output, and debugging auth or request-shape failures.
 
-Not for: model comparison, pricing research, prompt engineering, generic AI product design without provider API work.
+Not for: model comparison, pricing research, prompt engineering, or generic AI product design that does not require provider-native API work.
 
 ## Quick route
 
-1. Check trigger applicability → [references/recipes/prompt-patterns.md](references/recipes/prompt-patterns.md)
-2. Pick a task recipe → `references/recipes/`
-3. Load the target provider → `references/providers/`
-4. Load a comparison file → `references/comparisons/` (only when migrating or extending)
+1. Check trigger applicability in [references/recipes/prompt-patterns.md](references/recipes/prompt-patterns.md)
+2. Pick a task recipe in `references/recipes/`
+3. Resolve the exact provider file through [references/providers/index.md](references/providers/index.md)
+4. Load a comparison file from `references/comparisons/` only when migrating or extending behavior
 
 ## File reading
 
-Use targeted reads — do not load the entire references directory upfront:
+Use targeted reads. Do not load the entire references directory upfront.
 
 ```text
 Read: references/recipes/integrate-one-provider.md
+Read: references/providers/index.md
 Read: references/providers/deepseek.md
 Read: references/comparisons/streaming-differences.md
 ```

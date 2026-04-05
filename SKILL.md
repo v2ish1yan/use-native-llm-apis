@@ -35,7 +35,7 @@ Pick one recipe before coding:
 | Debug a failed request | [debug-failed-request.md](references/recipes/debug-failed-request.md) |
 
 Then load:
-1. The matching provider file from `references/providers/`
+1. The matching provider file through [references/providers/index.md](references/providers/index.md)
 2. The matching comparison file from `references/comparisons/` if migrating or adding streaming/tools/schema
 
 ## Code Generation Defaults
