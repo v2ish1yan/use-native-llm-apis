@@ -1,27 +1,45 @@
 ---
 name: use-native-llm-apis
 description: >
-  Trigger when a user wants to implement, integrate, connect, migrate, or debug a
-  large-model / LLM / AI API in code. Covers provider-native request and response
-  shapes, auth, base URLs, streaming, tool calling, structured output, multimodal
-  inputs, and migration between vendors.
+  Trigger when a user's request involves writing code that talks to a large-model / LLM / AI
+  provider in any way — not just explicit "integrate API" phrasing. Also trigger when the user
+  is building an AI-powered feature (agent, chatbot, RAG, copilot, assistant) that needs a
+  model backend, or when they mention a specific model vendor in a coding context.
 
-  Chinese triggers: 接入/对接/集成/调用/切换/迁移/加上 大模型/模型/LLM/AI API,
+  Direct API triggers (Chinese): 接入/对接/集成/调用/切换/迁移/加上 大模型/模型/LLM/AI API,
   接入 DeepSeek API, 对接 Anthropic/Claude API, 调用 OpenAI API,
   把 OpenAI 改成 Gemini, 切换到 DeepSeek, 迁移到 Claude, 加流式输出,
   加工具调用/函数调用, 返回结构化 JSON, 排查/调试 模型接口 400/401/403,
   智谱 GLM API, 阿里百炼/通义千问 API, 豆包/火山引擎 API, Kimi/Moonshot API,
-  MiniMax API, 阶跃星辰/StepFun API, 小米 MiMo API, 硅基流动/SiliconFlow API,
-  火山方舟, 魔搭 ModelScope.
+  MiniMax API, 阶跃星辰/StepFun API, 小米 MiMo API, 硅基流动/SiliconFlow API.
 
-  English triggers: integrate/connect/call/use/switch/migrate/port/wire/hook up
+  Natural-language triggers (Chinese — user describes WHAT they build, not the API call):
+  写一个 AI agent, 搭建 AI 助手/机器人/chatbot, 做一个对话机器人, 写个智能客服,
+  用 MiniMax 的大模型, 底层用智谱, 后端接 Claude, 模型选 DeepSeek,
+  搭一个 RAG 系统, 建一个知识库问答, 做一个 AI copilot,
+  项目里需要 AI 对话功能, 加一个聊天窗口跟大模型对话,
+  我的 agent 要能调用工具, 让 AI 能联网搜索/查数据库/发邮件,
+  写个 prompt 让模型, 帮我调一下模型参数/temperature/top_p,
+  用大模型做文本摘要/翻译/情感分析/代码生成,
+  帮我看看这个模型调用为什么慢/报错/超时,
+  从 GPT 换成 DeepSeek/Claude/Gemini.
+
+  Direct API triggers (English): integrate/connect/call/use/switch/migrate/port/wire/hook up
   DeepSeek/Anthropic/Claude/OpenAI/Gemini/Zhipu/Bailian/Doubao/Kimi/MiniMax/StepFun/
   MiMo/SiliconFlow/OpenRouter/AWS Bedrock/Azure OpenAI/NVIDIA/ModelScope API,
   add streaming/tool calling/function calling/structured output/JSON mode,
-  convert/migrate OpenAI to Gemini, debug model API request 400/401/403/422,
-  LLM API integration, large model API, AI model API request.
+  convert/migrate OpenAI to Gemini, debug model API request 400/401/403/422.
 
-  Do NOT trigger for market comparison, pricing research, or model benchmarking.
+  Natural-language triggers (English — user describes WHAT they build):
+  build an AI agent/chatbot/assistant/copilot, create a RAG pipeline,
+  my agent needs to use MiniMax/DeepSeek/Claude as the model,
+  the app should talk to an LLM, add AI chat to this project,
+  let the AI call tools/functions, build a knowledge-base Q&A,
+  write a prompt that makes the model, switch the model from GPT to DeepSeek,
+  the model response is slow/erroring/timeout, use an LLM for summarization/translation/coding.
+
+  Do NOT trigger for market comparison, pricing research, or model benchmarking
+  unless the user also asks to implement code.
 ---
 
 # Use Native LLM APIs
@@ -48,9 +66,9 @@ Before coding, also scan [references/recipes/prompt-patterns.md](references/reci
 
 ## When To Trigger
 
-Load this skill whenever the user is asking to build against a model API in code, even if they do not name the skill.
+Load this skill whenever the user is asking to build against a model API in code, even if they do not name the skill or the API. Users often describe WHAT they want to build without saying "API" explicitly — learn to recognize these patterns.
 
-Common Chinese trigger phrases:
+### Direct API calls (Chinese)
 
 - "我要接入 DeepSeek 大模型 API"
 - "帮我对接 Anthropic/Claude API"
@@ -60,14 +78,25 @@ Common Chinese trigger phrases:
 - "帮我加工具调用/函数调用"
 - "让模型返回结构化 JSON"
 - "排查这个模型接口为什么 400/401"
-- "接入智谱 GLM API"
-- "对接阿里百炼/通义千问 API"
-- "调用豆包/火山引擎 API"
-- "把 LLM 接口从 OpenAI 切到 DeepSeek"
-- "接入 Kimi/Moonshot API"
-- "调用 MiniMax/阶跃星辰/小米 MiMo/硅基流动 API"
+- "接入智谱 GLM / 阿里百炼 / 豆包 / Kimi / MiniMax / 阶跃星辰 / 小米 MiMo / 硅基流动 API"
 
-Common English trigger phrases:
+### Natural-language intent (Chinese — no "API" mentioned but still triggers)
+
+- "我要写一个 AI agent，用 MiniMax 的大模型"
+- "帮我搭一个聊天机器人，底层用 DeepSeek"
+- "做一个知识库问答系统，模型用智谱"
+- "项目里需要 AI 对话功能"
+- "帮我写个智能客服，接大模型"
+- "我要搭一个 RAG，用 Claude 做后端"
+- "这个 agent 要能调用工具/搜索/查数据库"
+- "帮我建一个 AI 助手/coplilot"
+- "用大模型做文本摘要/翻译/代码生成"
+- "帮我调一下模型参数 temperature/top_p"
+- "从 GPT 换成 DeepSeek/Claude/Gemini"
+- "模型回复太慢了帮我优化一下"
+- "我的 AI 应用需要加多轮对话记忆"
+
+### Direct API calls (English)
 
 - "I need to integrate the DeepSeek API"
 - "Hook up Anthropic/Claude in this project"
@@ -80,7 +109,20 @@ Common English trigger phrases:
 - "Port this to Zhipu/Bailian/Doubao/Kimi/MiniMax/StepFun/MiMo"
 - "Connect to SiliconFlow/OpenRouter/AWS Bedrock/Azure OpenAI"
 
-If the request is about implementation rather than market comparison, bias toward loading this skill.
+### Natural-language intent (English — no "API" mentioned but still triggers)
+
+- "Build an AI agent that uses MiniMax as the model"
+- "I want to create a chatbot powered by DeepSeek"
+- "Add AI chat functionality to this app"
+- "My agent needs to call tools and search the web"
+- "Build a RAG pipeline with Claude as the backend"
+- "Create an AI copilot/assistant for this project"
+- "The model response is slow, help me optimize"
+- "Switch the model from GPT to Gemini"
+- "I need multi-turn conversation memory for my AI app"
+- "Use an LLM for text summarization/translation/coding"
+
+If the request involves building something that talks to a model in code, bias toward loading this skill.
 
 ## Task Routing
 
