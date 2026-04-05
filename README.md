@@ -34,12 +34,28 @@ The skill is designed for active development work, not broad market comparison.
 
 Start from one of these recipes:
 
+- Decide whether this skill should trigger: [references/recipes/prompt-patterns.md](references/recipes/prompt-patterns.md)
 - Integrate one provider: [references/recipes/integrate-one-provider.md](references/recipes/integrate-one-provider.md)
 - Migrate between providers: [references/recipes/migrate-between-providers.md](references/recipes/migrate-between-providers.md)
 - Add streaming: [references/recipes/add-streaming.md](references/recipes/add-streaming.md)
 - Add tool calling: [references/recipes/add-tool-calling.md](references/recipes/add-tool-calling.md)
 - Add structured output: [references/recipes/add-structured-output.md](references/recipes/add-structured-output.md)
 - Debug a failed request: [references/recipes/debug-failed-request.md](references/recipes/debug-failed-request.md)
+
+## Prompts that should trigger this skill
+
+Typical user requests that should cause an agent to load this skill:
+
+- "`wo yao jie ru deepseek da mo xing api`"
+- "`bang wo dui jie Anthropic api`"
+- "`zhe ge xiang mu yao diao yong OpenAI API`"
+- "`ba OpenAI gai cheng Gemini yuan sheng ge shi`"
+- "`gei zhe ge xiang mu jia liu shi shu chu`"
+- "`bang wo jie gong ju diao yong`"
+- "`rang mo xing fan hui jie gou hua JSON`"
+- "`pai cha zhe ge mo xing jie kou wei shen me 400/401`"
+
+More trigger examples and few-shot routing notes live in [references/recipes/prompt-patterns.md](references/recipes/prompt-patterns.md).
 
 ## Current pilot coverage
 

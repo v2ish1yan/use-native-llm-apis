@@ -4,6 +4,7 @@ Use this file as the entry point for the skill.
 
 ## If you are starting from a task
 
+- Decide whether this skill applies: [recipes/prompt-patterns.md](recipes/prompt-patterns.md)
 - Integrate one provider: [recipes/integrate-one-provider.md](recipes/integrate-one-provider.md)
 - Migrate between providers: [recipes/migrate-between-providers.md](recipes/migrate-between-providers.md)
 - Add streaming: [recipes/add-streaming.md](recipes/add-streaming.md)

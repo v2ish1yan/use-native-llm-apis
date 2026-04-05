@@ -1,6 +1,6 @@
 ---
 name: use-native-llm-apis
-description: Use when an agent needs provider-native LLM API details during implementation or migration work. Covers native API request and response formats, auth, base URLs, streaming, tool calling, structured output, multimodal inputs, and embeddings for mainstream providers. Especially useful when integrating OpenAI, Anthropic, Gemini, DeepSeek, or when adapting code between providers without re-searching vendor docs.
+description: Use when a user is implementing, integrating, connecting, migrating, or debugging a large-model API or provider-native LLM request, including prompts like "ji ru DeepSeek API", "dui jie Anthropic API", "switch OpenAI to Gemini", "add streaming", "add tool calling", or "debug model API 400/401". Covers auth, base URLs, request and response shapes, streaming, tool calling, structured output, multimodal inputs, and provider migration.
 ---
 
 # Use Native LLM APIs
@@ -23,6 +23,25 @@ Use the references in this order:
 4. Open [references/research/source-registry.md](references/research/source-registry.md) only when bundled references are insufficient or a time-sensitive detail needs refresh.
 5. Open [references/research/cc-switch-provider-notes.md](references/research/cc-switch-provider-notes.md) only for expansion planning and coverage maintenance.
 
+Before coding, also scan [references/recipes/prompt-patterns.md](references/recipes/prompt-patterns.md) if the user phrasing is ambiguous and you need to decide whether this skill applies.
+
+## When To Trigger
+
+Load this skill whenever the user is asking to build against a model API in code, even if they do not name the skill.
+
+Common trigger phrases include:
+
+- "`wo yao jie ru deepseek da mo xing api`"
+- "`bang wo dui jie Anthropic api`"
+- "`zhe ge xiang mu yao diao yong OpenAI API`"
+- "`ba OpenAI gai cheng Gemini yuan sheng ge shi`"
+- "`gei zhe ge xiang mu jia liu shi shu chu`"
+- "`bang wo jie gong ju diao yong`"
+- "`rang mo xing fan hui jie gou hua JSON`"
+- "`pai cha zhe ge mo xing jie kou wei shen me 400/401`"
+
+If the request is about implementation rather than market comparison, bias toward loading this skill.
+
 ## Task Routing
 
 Pick one path before coding:
@@ -33,6 +52,8 @@ Pick one path before coding:
 - Tool calling: start with `references/recipes/add-tool-calling.md`
 - Structured output: start with `references/recipes/add-structured-output.md`
 - Broken request: start with `references/recipes/debug-failed-request.md`
+
+For more real user phrasing and few-shot routing examples, see `references/recipes/prompt-patterns.md`.
 
 ## Workflow
 
