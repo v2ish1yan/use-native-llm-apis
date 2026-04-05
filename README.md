@@ -4,11 +4,17 @@
 
 **Provider-Native LLM API Integration Reference**
 
-31 providers, one repo. Auth, endpoints, request shapes, streaming, tool calling — all at the wire-format level.
+Auth · Endpoints · Request Shapes · Streaming · Tool Calling · Structured Output
 
-**[中文文档](README_CN.md)**
+31 providers at the wire-format level — not a universal SDK, a field-level protocol reference.
 
-[Providers](#supported-providers-31) · [Install](#install) · [Usage](#usage)
+<p>
+<a href="README_CN.md">📝 中文文档</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#install">Install</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#usage">Usage</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#supported-providers-31">Providers</a>
+</p>
+
+[![GitHub stars](https://img.shields.io/github/stars/v2ish1yan/use-native-llm-apis?style=social)](https://github.com/v2ish1yan/use-native-llm-apis)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Providers](https://img.shields.io/badge/providers-31-green.svg)](#supported-providers-31)
 
 </div>
 
@@ -16,11 +22,9 @@
 
 ## Why this exists
 
-Every time you integrate a new LLM API, you repeat the same cycle: dig through docs, find the base URL, figure out the auth header, debug the request body format. Different providers look similar enough to confuse you, but different enough to break your code.
+Every time you integrate a new LLM API, you repeat the same cycle: dig through docs, find the base URL, figure out the auth header, debug the request body. Different providers look similar enough to confuse you, but different enough to break your code.
 
-This repo packages 31 providers' native API protocols into structured references — auth, endpoint, request shape, response shape, streaming, tool calling, structured output — ready to use.
-
-Not a universal SDK. A **field-level protocol reference**.
+This repo packages **31 providers' native API protocols** into structured references. Open the right file, get the exact request shape, and move on.
 
 ---
 
@@ -50,7 +54,7 @@ Not a universal SDK. A **field-level protocol reference**.
 | AWS Bedrock | [docs.aws.amazon.com](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html) | [aws-bedrock.md](references/providers/aws-bedrock.md) |
 | NVIDIA NIM | [docs.api.nvidia.com](https://docs.api.nvidia.com/nim/reference/llm-apis) | [nvidia-nim.md](references/providers/nvidia-nim.md) |
 | ModelScope | [modelscope.cn](https://modelscope.cn/docs/model-service/API-Inference/intro) | [modelscope.md](references/providers/modelscope.md) |
-| GitHub Copilot / Copilot SDK | [docs.github.com](https://docs.github.com/en/copilot/concepts/agents/openai-codex) | [github-copilot.md](references/providers/github-copilot.md) |
+| GitHub Copilot SDK | [docs.github.com](https://docs.github.com/en/copilot/concepts/agents/openai-codex) | [github-copilot.md](references/providers/github-copilot.md) |
 
 ### Gateway & Aggregation Layers
 
@@ -102,12 +106,6 @@ New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
 git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.claude\skills\use-native-llm-apis"
 ```
 
-Update:
-
-```bash
-git -C ~/.claude/skills/use-native-llm-apis pull
-```
-
 ### Codex
 
 ```bash
@@ -123,10 +121,11 @@ git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.codex\ski
 Update:
 
 ```bash
-git -C ~/.codex/skills/use-native-llm-apis pull
+git -C ~/.claude/skills/use-native-llm-apis pull   # Claude Code
+git -C ~/.codex/skills/use-native-llm-apis pull     # Codex
 ```
 
-> **Note**: Folder name must be exactly `use-native-llm-apis`. Restart the agent after install.
+> Folder name must be `use-native-llm-apis`. Restart the agent after install.
 
 ---
 
@@ -154,20 +153,16 @@ Use $use-native-llm-apis to convert an OpenAI request into Gemini native format.
 ```
 
 ```
-Use $use-native-llm-apis to debug why this Gemini request returns 400.
-```
-
-```
 I want to build an AI agent using MiniMax as the model.
 ```
 
 ```
-帮我搭一个聊天机器人，底层用 DeepSeek
+我要写一个 AI agent，用 MiniMax 的大模型
 ```
 
 ### Natural-Language Triggers
 
-This skill activates on natural phrasing, not just explicit "integrate API" keywords. Examples that trigger it:
+This skill activates on natural phrasing — no "integrate API" keyword needed:
 
 - "I need to build an AI agent with MiniMax"
 - "Add AI chat to my app, using DeepSeek"
@@ -198,6 +193,6 @@ use-native-llm-apis/
 
 <div align="center">
 
-MIT License · [Coverage Status](references/research/coverage-status.md) · [Source Registry](references/research/source-registry.md)
+**MIT License** · [Coverage Status](references/research/coverage-status.md) · [Source Registry](references/research/source-registry.md)
 
 </div>

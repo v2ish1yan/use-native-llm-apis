@@ -4,11 +4,17 @@
 
 **LLM API 原生集成参考库**
 
-31 家厂商，一次写入。Auth、endpoint、request shape、streaming、tool calling——精确到字段级别。
+Auth · Endpoint · Request Shape · Streaming · Tool Calling · Structured Output
 
-**[English](README.md)**
+31 家厂商，精确到字段级别的协议对照表——不是通用 SDK，是开箱即用的 wire-format 参考。
 
-[厂商列表](#支持的厂商-31) · [安装](#安装) · [使用方法](#使用方法)
+<p>
+<a href="README.md">📝 English Docs</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#安装">安装</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#使用方法">使用方法</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="#支持的厂商-31">厂商列表</a>
+</p>
+
+[![GitHub stars](https://img.shields.io/github/stars/v2ish1yan/use-native-llm-apis?style=social)](https://github.com/v2ish1yan/use-native-llm-apis)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Providers](https://img.shields.io/badge/providers-31-green.svg)](#支持的厂商-31)
 
 </div>
 
@@ -16,11 +22,9 @@
 
 ## 为什么做这个
 
-每次接入一个新的 LLM API，你都在重复同一件事：翻文档、查 base URL、对 auth header、调试 request body 格式。不同厂商的接口长得不一样，却又不够不一样到让你一眼记住区别。
+每次接入一个新的 LLM API，你都在重复同一件事：翻文档、查 base URL、对 auth header、调试 request body。不同厂商的接口长得不一样，却又不够不一样到让你一眼记住区别。
 
-这个仓库把 31 家主流 LLM 厂商的原生 API 协议打包成结构化参考——auth、endpoint、request shape、response shape、streaming、tool calling、structured output——开箱即用。
-
-不是通用 SDK，是一份**精确到字段级别的协议对照表**。
+这个仓库把 **31 家厂商的原生 API 协议**打包成结构化参考。打开对应的文件，拿到精确的请求格式，继续写代码。
 
 ---
 
@@ -50,7 +54,7 @@
 | AWS Bedrock | [docs.aws.amazon.com](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html) | [aws-bedrock.md](references/providers/aws-bedrock.md) |
 | NVIDIA NIM | [docs.api.nvidia.com](https://docs.api.nvidia.com/nim/reference/llm-apis) | [nvidia-nim.md](references/providers/nvidia-nim.md) |
 | 魔搭 ModelScope | [modelscope.cn](https://modelscope.cn/docs/model-service/API-Inference/intro) | [modelscope.md](references/providers/modelscope.md) |
-| GitHub Copilot / Copilot SDK | [docs.github.com](https://docs.github.com/en/copilot/concepts/agents/openai-codex) | [github-copilot.md](references/providers/github-copilot.md) |
+| GitHub Copilot SDK | [docs.github.com](https://docs.github.com/en/copilot/concepts/agents/openai-codex) | [github-copilot.md](references/providers/github-copilot.md) |
 
 ### 网关 & 聚合平台
 
@@ -102,12 +106,6 @@ New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
 git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.claude\skills\use-native-llm-apis"
 ```
 
-更新：
-
-```bash
-git -C ~/.claude/skills/use-native-llm-apis pull
-```
-
 ### Codex
 
 ```bash
@@ -123,10 +121,11 @@ git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.codex\ski
 更新：
 
 ```bash
-git -C ~/.codex/skills/use-native-llm-apis pull
+git -C ~/.claude/skills/use-native-llm-apis pull   # Claude Code
+git -C ~/.codex/skills/use-native-llm-apis pull     # Codex
 ```
 
-> **注意**：文件夹名必须是 `use-native-llm-apis`。安装后重启 agent。
+> 文件夹名必须是 `use-native-llm-apis`。安装后重启 agent。
 
 ---
 
@@ -147,10 +146,6 @@ git -C ~/.codex/skills/use-native-llm-apis pull
 
 ```
 Use $use-native-llm-apis to write an Anthropic streaming request in TypeScript.
-```
-
-```
-Use $use-native-llm-apis to convert an OpenAI request into Gemini native format.
 ```
 
 ```
@@ -185,8 +180,6 @@ use-native-llm-apis/
 ├── CLAUDE.md             # Claude Code 专用指南
 ├── README.md             # 英文文档
 ├── README_CN.md          # 中文文档（本文件）
-├── agents/
-│   └── openai.yaml       # Agent 接口配置
 └── references/
     ├── index.md           # 入口
     ├── recipes/           # 任务工作流指南
@@ -199,6 +192,6 @@ use-native-llm-apis/
 
 <div align="center">
 
-MIT License · [覆盖状态](references/research/coverage-status.md) · [来源注册](references/research/source-registry.md)
+**MIT License** · [覆盖状态](references/research/coverage-status.md) · [来源注册](references/research/source-registry.md)
 
 </div>
