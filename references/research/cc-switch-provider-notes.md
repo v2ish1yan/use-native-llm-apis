@@ -89,7 +89,7 @@ Expand in this order:
 3. Major Chinese vendor-native APIs
 4. Aggregators and relays only after the native layer is solid
 
-Current Stage 2 in progress:
+Stage 2 completed. The following providers now have dedicated reference files:
 
 - Zhipu GLM
 - Alibaba Bailian / DashScope

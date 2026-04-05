@@ -4,9 +4,9 @@
 
 **LLM API 原生集成参考库**
 
-一次写入，33 家厂商原生 API 请求格式尽在掌握。
+一次写入，31 家厂商原生 API 请求格式尽在掌握。
 
-[Supported Providers](#supported-providers-33) · [Install](#install) · [Usage](#usage)
+[Supported Providers](#supported-providers-31) · [Install](#install) · [Usage](#usage)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 ---
 
-## Supported Providers (33)
+## Supported Providers (31)
 
 ### Native LLM Providers
 

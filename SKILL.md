@@ -160,20 +160,19 @@ If a request fails with `400`, `401`, `403`, `404`, `415`, or `422`, check in th
 
 ## Current Coverage
 
-### Pilot coverage
+31 provider reference files across four categories:
 
-The Stage 1 pilot covers:
+**Native LLM Providers (11):** OpenAI, Anthropic, Gemini, DeepSeek, Zhipu GLM, Alibaba Bailian/DashScope, Kimi/Moonshot, Doubao/Volcengine Ark, MiniMax, StepFun, Xiaomi MiMo
 
-- OpenAI
-- Anthropic
-- Gemini
-- DeepSeek
+**Cloud & Managed Platforms (5):** Azure OpenAI, AWS Bedrock, NVIDIA NIM, ModelScope, GitHub Copilot
 
-### Planned expansion
+**Gateway & Aggregation Layers (5):** OpenRouter, SiliconFlow, AiHubMix, Novita AI, NewAPI
 
-Stage 2 should expand toward all provider families and gateways surfaced by `cc-switch`, with priority on native vendors first and third-party relays second.
+**Relay / Proxy Services (10):** PackyCode, Cubence, CrazyRouter, Compshare, CTok.ai, Right Code, X-Code API, Ai Go Code, AICodeMirror, DMXAPI
 
-See [references/research/cc-switch-provider-notes.md](references/research/cc-switch-provider-notes.md).
+**Cross-Provider Comparisons (4):** request shape, streaming, tool calling, structured output
+
+See [references/research/coverage-status.md](references/research/coverage-status.md) for live status and [references/research/cc-switch-provider-notes.md](references/research/cc-switch-provider-notes.md) for expansion planning.
 
 ## Guardrails
 

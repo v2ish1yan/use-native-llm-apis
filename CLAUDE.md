@@ -2,6 +2,17 @@
 
 This file provides Claude Code-specific guidance for using the `use-native-llm-apis` skill.
 
+## Coverage: 31 Providers
+
+Native LLM: OpenAI, Anthropic, Gemini, DeepSeek, Zhipu GLM, Alibaba Bailian, Kimi, Doubao, MiniMax, StepFun, Xiaomi MiMo
+Cloud/Managed: Azure OpenAI, AWS Bedrock, NVIDIA NIM, ModelScope, GitHub Copilot
+Gateway/Agg: OpenRouter, SiliconFlow, AiHubMix, Novita AI, NewAPI
+Relay/Proxy: PackyCode, Cubence, CrazyRouter, Compshare, CTok.ai, Right Code, X-Code API, Ai Go Code, AICodeMirror, DMXAPI
+
+Cross-provider comparisons: request shape, streaming, tool calling, structured output
+
+Status: [coverage-status.md](references/research/coverage-status.md)
+
 ## Quick Start
 
 When a user asks to integrate, migrate, or debug an LLM API:
@@ -56,6 +67,7 @@ Common user phrases that should activate this skill:
 - "帮我加工具调用"
 - "让模型返回结构化 JSON"
 - "排查这个模型接口为什么 400/401"
+- "接入智谱/阿里百炼/豆包/Kimi/MiniMax/阶跃星辰/小米MiMo API"
 
 ## Exit Criteria for Tasks
 
