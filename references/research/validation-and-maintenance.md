@@ -64,6 +64,27 @@ The validator should print:
 Skill is valid!
 ```
 
+### Provider example health check
+
+Use the provider example validator when changing provider files, curl snippets, or documented base URLs.
+
+It does not call real APIs. Instead, it checks:
+
+- whether documented `curl` examples still parse cleanly
+- whether JSON request bodies inside those examples are structurally valid
+- whether documented base URLs and curl hosts still resolve via DNS
+
+Command:
+
+```powershell
+python E:\AI\SKILL\use-api\use-native-llm-apis-repo\scripts\validate_provider_examples.py --providers-dir E:\AI\SKILL\use-api\use-native-llm-apis-repo\references\providers
+```
+
+Expected behavior:
+
+- exit code `0` when no curl or DNS failures are found
+- placeholder hosts such as `YOUR-RESOURCE-NAME...` may be reported as skipped instead of failed
+
 ## Smoke-test bar
 
 Before calling a routing change "good", run the prompt set in [skill-smoke-tests.md](skill-smoke-tests.md).
