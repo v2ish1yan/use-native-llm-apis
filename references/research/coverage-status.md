@@ -37,7 +37,7 @@ Depth labels:
 | Provider | Depth | Notes |
 |---|---|---|
 | OpenRouter | usable | Dedicated gateway reference with practical integration value |
-| NewAPI | skeleton | Basic gateway notes, not deep enough for confident code generation by itself |
+| NewAPI | usable | Public docs now support a practical gateway reference across chat and responses routes |
 | AiHubMix | usable | Dedicated aggregation-layer reference |
 | SiliconFlow | usable | One of the stronger gateway references, including request and feature notes |
 | Novita AI | skeleton | Has a file, but depth is still thin |
@@ -47,7 +47,7 @@ Depth labels:
 | CrazyRouter | skeleton | Relay notes only |
 | Ai Go Code | skeleton | Relay notes only |
 | AICodeMirror | skeleton | Relay/tutorial notes only |
-| Right Code | skeleton | Relay notes only |
+| Right Code | usable | Public curl examples make the relay's protocol families concrete enough for practical integration |
 | X-Code API | skeleton | Relay notes only |
 | DMXAPI | skeleton | Relay notes only |
 | AICoding | pending | Third-party relay |

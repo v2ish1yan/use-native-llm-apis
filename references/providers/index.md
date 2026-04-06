@@ -47,13 +47,13 @@ If the provider is not in this table, return to the main task and say coverage i
 | SiliconFlow | usable | Silicon Flow | [siliconflow.md](siliconflow.md) |
 | AiHubMix | usable | AIHubMix | [aihubmix.md](aihubmix.md) |
 | Novita AI | skeleton | Novita | [novita-ai.md](novita-ai.md) |
-| NewAPI | skeleton | New API | [newapi.md](newapi.md) |
+| NewAPI | usable | New API | [newapi.md](newapi.md) |
 | PackyCode | skeleton | Packy API | [packycode.md](packycode.md) |
 | Cubence | skeleton | Cubence API | [cubence.md](cubence.md) |
 | CrazyRouter | skeleton | Crazy Router | [crazyrouter.md](crazyrouter.md) |
 | Compshare | skeleton | Compshare API | [compshare.md](compshare.md) |
 | CTok.ai | skeleton | CTok | [ctok-ai.md](ctok-ai.md) |
-| Right Code | skeleton | RightCode, Right Codes | [rightcode.md](rightcode.md) |
+| Right Code | usable | RightCode, Right Codes | [rightcode.md](rightcode.md) |
 | X-Code API | skeleton | XCode, X-Code | [xcode-api.md](xcode-api.md) |
 | Ai Go Code | skeleton | AIGoCode, AI Go Code | [aigocode.md](aigocode.md) |
 | AICodeMirror | skeleton | AI Code Mirror | [aicodemirror.md](aicodemirror.md) |

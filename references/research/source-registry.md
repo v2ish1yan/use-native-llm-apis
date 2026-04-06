@@ -120,6 +120,10 @@ Purpose:
 - Docs root: <https://docs.newapi.pro/en/>
 - Quick start: <https://docs.newapi.pro/zh/docs>
 - Supported AI apps overview: <https://docs.newapi.pro/en/docs/apps>
+- API overview: <https://docs.newapi.pro/api/>
+- OpenAI chat docs: <https://docs.newapi.pro/api/openai-chat/>
+- OpenAI responses docs: <https://docs.newapi.pro/api/openai-responses/>
+- Newer Responses docs page: <https://docs.newapi.pro/en/docs/api/ai-model/chat/openai/createresponse>
 
 ## AiHubMix
 
