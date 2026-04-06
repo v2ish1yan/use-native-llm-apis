@@ -31,7 +31,7 @@ If you know the provider name but not the file path, use `references/providers/i
 
 ## Minimal integration pattern (TypeScript)
 
-This skeleton works for any provider — swap the auth header, base URL, and body shape according to the provider file.
+This skeleton works for any provider - swap the auth header, base URL, and body shape according to the provider file.
 
 ```ts
 async function callProvider(prompt: string): Promise<string> {
@@ -39,15 +39,15 @@ async function callProvider(prompt: string): Promise<string> {
     method: "POST",
     headers: {
       // Fill these from the provider file
-      "authorization": "Bearer $PROVIDER_API_KEY",  // or x-api-key, or api-key
+      "authorization": "Bearer $PROVIDER_API_KEY", // or x-api-key, or api-key
       "content-type": "application/json",
-      // Some providers require version headers — check the provider file
+      // Some providers require version headers - check the provider file
     },
     body: JSON.stringify({
       // Fill the request shape from the provider file
       model: "MODEL_NAME",
       messages: [{ role: "user", content: prompt }],
-      // Some providers use: input, contents, prompt — check the provider file
+      // Some providers use: input, contents, prompt - check the provider file
     }),
   });
 
@@ -58,11 +58,22 @@ async function callProvider(prompt: string): Promise<string> {
   }
 
   const data = await response.json();
-  // Extract text — check the provider file for the correct field path:
+  // Extract text - check the provider file for the correct field path:
   //   OpenAI-style:   data.choices[0].message.content
   //   Anthropic-style: data.content.find(b => b.type === "text")?.text
   //   Gemini-style:   data.candidates[0].content.parts[0].text
-  return data.choices?.[0]?.message?.content ?? JSON.stringify(data);
+  const text =
+    data.choices?.[0]?.message?.content ??
+    data.content?.find?.((b: { type?: string; text?: string }) => b.type === "text")?.text ??
+    data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+  if (typeof text !== "string" || text.length === 0) {
+    throw new Error(
+      "Text extraction path is not configured for this provider yet. Check the provider file and update the response parser."
+    );
+  }
+
+  return text;
 }
 ```
 
