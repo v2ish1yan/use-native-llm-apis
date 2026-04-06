@@ -6,10 +6,13 @@ Depth labels:
 
 - `gold`: strong end-to-end reference; usually enough for direct code generation
 - `usable`: enough detail for many integrations, but not yet a full native reference
-- `skeleton`: basic notes only; not enough to promise reliable code generation by themselves
 - `partial`: some public signals or one access style verified, but still incomplete
 - `pending`: intended for future coverage
 - `blocked`: no sufficiently reliable official public docs located yet for a proper reference
+
+Reserved or historical depth labels:
+
+- `skeleton`: basic notes only; not enough to promise reliable code generation by themselves
 
 ## Current snapshot
 

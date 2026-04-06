@@ -13,7 +13,8 @@ Use the `Depth` column:
 - `gold`: strong end-to-end reference
 - `usable`: enough detail for many integrations
 - `partial`: some public signals are verified, but not enough to promise reliable end-to-end coding guidance
-- `skeleton`: basic notes only; expect to verify against official docs before shipping
+
+`skeleton` is a reserved or historical depth label. If it reappears in future maintenance work, treat it as "basic notes only" and verify against official docs before shipping.
 
 If the provider is not in this table, return to the main task and say coverage is missing instead of inventing a path.
 

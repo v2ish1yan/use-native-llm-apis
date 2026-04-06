@@ -7,7 +7,7 @@ description: Use when implementing, integrating, migrating, or debugging provide
 
 Use this skill for provider-native API implementation work, not pricing research, prompt writing, or generic AI product planning.
 
-This skill covers a broad provider registry, but the provider files are not all equally deep. Some are gold references, some are usable notes, some are partial, and some are skeletons. Check [references/research/coverage-status.md](references/research/coverage-status.md) before relying on a provider file.
+This skill covers a broad provider registry, but the provider files are not all equally deep. Some are gold references, some are usable notes, and some are partial. Historical or reserved depth labels such as `skeleton` may still appear in maintenance docs, but the live snapshot in [references/research/coverage-status.md](references/research/coverage-status.md) is the source of truth.
 
 ## Trigger Boundary
 
@@ -38,10 +38,11 @@ Always use this order:
 
 1. open [references/start-here.md](references/start-here.md)
 2. choose exactly one task recipe
-3. resolve the provider file through [references/providers/index.md](references/providers/index.md)
-4. open one comparison file only if the task requires it
-5. check [references/routing-checklist.md](references/routing-checklist.md)
-6. then write or patch code
+3. resolve the provider path through [references/providers/index.md](references/providers/index.md)
+4. open the exact provider file
+5. open one comparison file only if the task requires it
+6. check [references/routing-checklist.md](references/routing-checklist.md)
+7. then write or patch code
 
 Do not jump directly from `SKILL.md` to a guessed provider file.
 
@@ -63,7 +64,8 @@ Examples:
 
 - Keep the work provider-native unless the user explicitly wants an abstraction layer.
 - Resolve provider paths through `references/providers/index.md`, not from memory.
-- Treat partial and skeleton provider files as starting notes, not authoritative end-to-end references.
+- Treat partial provider files as starting notes, not authoritative end-to-end references.
+- Treat `skeleton` as a reserved or historical depth label unless the live coverage snapshot says otherwise.
 - Prefer raw HTTP examples over abstraction-heavy wrappers.
 - Prefer official docs over memory when bundled references are insufficient.
 - Do not assume OpenAI-compatible means fully behavior-compatible.
