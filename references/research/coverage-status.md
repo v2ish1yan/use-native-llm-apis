@@ -40,12 +40,12 @@ Depth labels:
 | NewAPI | usable | Public docs now support a practical gateway reference across chat and responses routes |
 | AiHubMix | usable | Dedicated aggregation-layer reference |
 | SiliconFlow | usable | One of the stronger gateway references, including request and feature notes |
-| Novita AI | skeleton | Has a file, but depth is still thin |
+| Novita AI | usable | Official OpenAI-compatible docs now support a practical hosted-platform reference |
 | GitHub Copilot / Copilot SDK | usable | Special OAuth / BYOK reference with real integration value |
 | PackyCode | usable | Public client guides now support a practical coding-tool relay reference |
 | Cubence | usable | Public setup docs now support a practical multi-client coding relay reference |
 | CrazyRouter | usable | Public docs now support a practical OpenAI-compatible gateway reference with streaming guidance |
-| Ai Go Code | skeleton | Relay notes only |
+| Ai Go Code | usable | Public client guides now support a practical multi-client coding relay reference |
 | AICodeMirror | skeleton | Relay/tutorial notes only |
 | Right Code | usable | Public curl examples make the relay's protocol families concrete enough for practical integration |
 | X-Code API | skeleton | Relay notes only |

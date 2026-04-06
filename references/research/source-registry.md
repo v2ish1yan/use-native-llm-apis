@@ -143,6 +143,9 @@ Purpose:
 - API reference overview: <https://novita.ai/docs/api-reference>
 - Authentication: <https://novita.ai/docs/api-reference/basic-authentication>
 - Model APIs introduction: <https://novita.ai/docs/api-reference/model-apis-introduction>
+- Create chat completion: <https://novita.ai/docs/api-reference/model-apis-llm-create-chat-completion>
+- LLM API guide: <https://novita.ai/docs/guides/llm-api>
+- Function calling guide: <https://novita.ai/docs/guides/llm-function-calling>
 - OWL guide mentioning OpenAI-compatible endpoint: <https://novita.ai/docs/guides/owl>
 
 ## GitHub Copilot / Copilot SDK

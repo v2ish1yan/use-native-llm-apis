@@ -46,7 +46,7 @@ If the provider is not in this table, return to the main task and say coverage i
 | OpenRouter | usable | OpenRouter API | [openrouter.md](openrouter.md) |
 | SiliconFlow | usable | Silicon Flow | [siliconflow.md](siliconflow.md) |
 | AiHubMix | usable | AIHubMix | [aihubmix.md](aihubmix.md) |
-| Novita AI | skeleton | Novita | [novita-ai.md](novita-ai.md) |
+| Novita AI | usable | Novita | [novita-ai.md](novita-ai.md) |
 | NewAPI | usable | New API | [newapi.md](newapi.md) |
 | PackyCode | usable | Packy API | [packycode.md](packycode.md) |
 | Cubence | usable | Cubence API | [cubence.md](cubence.md) |
@@ -55,7 +55,7 @@ If the provider is not in this table, return to the main task and say coverage i
 | CTok.ai | skeleton | CTok | [ctok-ai.md](ctok-ai.md) |
 | Right Code | usable | RightCode, Right Codes | [rightcode.md](rightcode.md) |
 | X-Code API | skeleton | XCode, X-Code | [xcode-api.md](xcode-api.md) |
-| Ai Go Code | skeleton | AIGoCode, AI Go Code | [aigocode.md](aigocode.md) |
+| Ai Go Code | usable | AIGoCode, AI Go Code | [aigocode.md](aigocode.md) |
 | AICodeMirror | skeleton | AI Code Mirror | [aicodemirror.md](aicodemirror.md) |
 | DMXAPI | usable | DMX API | [dmxapi.md](dmxapi.md) |
 
