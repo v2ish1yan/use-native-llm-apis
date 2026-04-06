@@ -4,7 +4,18 @@
 
 Use AICodeMirror when the project needs a hosted relay for Claude Code, Codex, Gemini, and related coding-tool scenarios. AICodeMirror is a relay platform, not a native model vendor API.
 
-Treat it as a tool-specific relay with tutorial-heavy public docs.
+Treat it as a setup-oriented relay with partially verified public evidence, not as a full protocol reference.
+
+## What is publicly verified
+
+From the public docs plus `cc-switch` presets, the following signals are real:
+
+- AICodeMirror has public setup/tutorial docs
+- the platform intentionally keeps a stable API domain
+- public endpoint patterns exist for multiple coding clients
+- supported client families include Claude Code, Codex, and Gemini
+
+That is enough to say the platform is real and practically usable for setup. It is not enough to promise one fully documented wire protocol across every route.
 
 ## Auth and Base URL
 
@@ -18,6 +29,11 @@ Auth:
 
 - AICodeMirror platform API key
 
+Practical rule:
+
+- choose the exact client path first
+- do not assume one endpoint pattern covers every client family
+
 ## Primary access pattern
 
 Public documentation is still tutorial-oriented rather than a consolidated API reference. The practical pattern is:
@@ -25,6 +41,7 @@ Public documentation is still tutorial-oriented rather than a consolidated API r
 1. choose the target coding client
 2. use the matching AICodeMirror endpoint path
 3. authenticate with the platform-issued key
+4. keep request and response handling aligned with that client's expected protocol
 
 Supported client families visible in public materials:
 
@@ -42,16 +59,35 @@ Because the public docs are not a full protocol reference, treat AICodeMirror as
 
 ## Operational notes
 
-The public site also explains that the stable domain is intentional so existing API integrations and configuration paths do not break when branding or platform details evolve.
+The public site explains that the stable domain is intentional so existing API integrations and configuration paths do not break when branding or platform details evolve.
 
-That makes the platform operationally useful, but it does not by itself prove that every endpoint family has equally rich public API docs.
+That matters operationally because it suggests:
+
+- endpoint continuity is part of the platform promise
+- old integrations may keep working across branding or product changes
+
+Useful operational signal, but still not equal to protocol-depth docs.
+
+## Why this file is `partial`, not `usable`
+
+This file is stronger than a bare skeleton because:
+
+- public setup docs exist
+- multiple client families are visible
+- endpoint patterns are externally observable
+
+This file is still not `usable` because:
+
+- public docs are tutorial-heavy
+- protocol-level request and response contracts are still thin
+- there is not yet enough evidence here to promise reliable end-to-end code generation
 
 ## Common pitfalls
 
 - Assuming one single endpoint path across Claude, Codex, and Gemini access
 - Treating AICodeMirror as a native provider instead of a relay
 - Assuming public tutorials imply a fully uniform vendor-independent feature set
-- Over-trusting this file as an end-to-end protocol reference; the public docs are still thinner than the stronger relay entries in this repo
+- Over-trusting this file as an end-to-end protocol reference
 
 ## Sources
 

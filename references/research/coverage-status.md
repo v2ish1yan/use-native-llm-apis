@@ -17,8 +17,7 @@ Current depth distribution across entries in this file:
 
 - `gold`: 4
 - `usable`: 28
-- `partial`: 1
-- `skeleton`: 1
+- `partial`: 2
 - `pending`: 3
 - `blocked`: 1
 
@@ -29,13 +28,13 @@ This means the repository is no longer "a few deep files plus many empty placeho
 The most important non-usable entries are now:
 
 - `CTok.ai` (`partial`): public API root and `/v1/models` are verified, but protocol docs are still too limited
-- `AICodeMirror` (`skeleton`): public setup/tutorial docs exist, but protocol-level evidence is still thin
+- `AICodeMirror` (`partial`): public setup/tutorial docs and endpoint patterns are verified, but protocol-level evidence is still thin
 - `AICoding`, `SSSAiCode`, `Micu` (`pending`): no maintained provider files yet
 - `BaiLing` (`blocked`): still lacks sufficiently reliable public official docs
 
 The practical implication:
 
-- the strongest next wins come from either upgrading `CTok.ai` or `AICodeMirror`
+- the strongest next wins now come from upgrading `CTok.ai` or `AICodeMirror`
 - after that, the next step is deciding whether `pending` entries are worth active expansion at all
 
 ## Native and official provider families
@@ -73,7 +72,7 @@ The practical implication:
 | Cubence | usable | Public setup docs now support a practical multi-client coding relay reference |
 | CrazyRouter | usable | Public docs now support a practical OpenAI-compatible gateway reference with streaming guidance |
 | Ai Go Code | usable | Public client guides now support a practical multi-client coding relay reference |
-| AICodeMirror | skeleton | Relay/tutorial notes only |
+| AICodeMirror | partial | Public setup/tutorial docs and observable endpoint patterns exist, but protocol detail is still too thin for `usable` |
 | Right Code | usable | Public curl examples make the relay's protocol families concrete enough for practical integration |
 | X-Code API | usable | Public guides now support a practical multi-client coding relay reference |
 | DMXAPI | usable | Public docs support practical guidance across chat, responses, Claude, and Gemini surfaces |
@@ -112,3 +111,4 @@ When a provider changes depth, also update:
 - `references/research/source-registry.md`
 - `README.md`
 - `references/research/cc-switch-provider-notes.md` when the change affects expansion planning
+

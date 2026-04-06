@@ -57,7 +57,7 @@ If the provider is not in this table, return to the main task and say coverage i
 | Right Code | usable | RightCode, Right Codes | [rightcode.md](rightcode.md) |
 | X-Code API | usable | XCode, X-Code | [xcode-api.md](xcode-api.md) |
 | Ai Go Code | usable | AIGoCode, AI Go Code | [aigocode.md](aigocode.md) |
-| AICodeMirror | skeleton | AI Code Mirror | [aicodemirror.md](aicodemirror.md) |
+| AICodeMirror | partial | AI Code Mirror | [aicodemirror.md](aicodemirror.md) |
 | DMXAPI | usable | DMX API | [dmxapi.md](dmxapi.md) |
 
 ## Notes
