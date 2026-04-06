@@ -6,6 +6,12 @@ Use this recipe when the response must be consumed by code rather than read by a
 
 Make the output reliably parseable without pretending all providers expose the same schema feature.
 
+## When to switch recipes
+
+- the user wants the model to call a real function, not only return JSON -> switch to `add-tool-calling.md`
+- the base provider request is not working yet -> switch to `integrate-one-provider.md`
+- the response is malformed because the request itself is invalid -> use `debug-failed-request.md`
+
 ## What to open first
 
 You should already have come through `references/start-here.md`.
@@ -21,6 +27,12 @@ Use the strongest supported boundary in this order:
 1. native schema controls (if the provider supports `response_format.json_schema` or equivalent)
 2. tool or function calling as the schema boundary (declare a "response" tool with your schema)
 3. tightly constrained JSON prompts (system instruction + explicit format examples)
+
+## Minimum questions to answer before coding
+
+- Does this provider support a native schema boundary?
+- If not, is tool calling the safer schema boundary?
+- Where will the code validate the model output immediately after receipt?
 
 ## Structured output by provider
 
@@ -139,6 +151,7 @@ function parseTaskOutput(raw: string): Task {
 - Reusing OpenAI `json_schema` fields in Gemini unchanged - Gemini uses `responseMimeType` + `responseSchema`
 - Relying on prompt wording alone when strict parsing matters
 - Skipping runtime validation because the provider "usually" returns valid JSON
+- mixing "return JSON" and "call tools" into one vague implementation step
 
 ## Exit criteria
 

@@ -16,6 +16,7 @@ Keep five things healthy:
 
 - `SKILL.md` defines when the skill should load and how the top-level execution protocol works.
 - `references/start-here.md` defines the first routing path after the skill loads.
+- `references/recipes/choose-the-right-recipe.md` is the task disambiguation page when provider or task language is fuzzy.
 - `references/routing-checklist.md` defines the final pre-coding self-check.
 - `references/recipes/prompt-patterns.md` gives trigger examples and few-shot routing examples.
 - `README.md` is the Chinese human-facing entry document and should not become a second source of trigger truth.
@@ -29,12 +30,13 @@ When changing the skill itself:
 1. Decide whether the change affects trigger rules, routing, or maintainer workflow.
 2. Update `SKILL.md` first if trigger boundaries or execution protocol changed.
 3. Update `references/start-here.md` if the first routing path changed.
-4. Update `references/routing-checklist.md` if the pre-coding contract changed.
-5. Update `references/recipes/prompt-patterns.md` if trigger examples or routing examples changed.
-6. Update `README.md` only after the above files are correct.
-7. Update `README-EN.md` after `README.md` if the human-facing explanation changed.
-8. If provider maturity changed, update `references/research/coverage-status.md`.
-9. If new official docs were used, update `references/research/source-registry.md`.
+4. Update `references/recipes/choose-the-right-recipe.md` if task disambiguation changed.
+5. Update `references/routing-checklist.md` if the pre-coding contract changed.
+6. Update `references/recipes/prompt-patterns.md` if trigger examples or routing examples changed.
+7. Update `README.md` only after the above files are correct.
+8. Update `README-EN.md` after `README.md` if the human-facing explanation changed.
+9. If provider maturity changed, update `references/research/coverage-status.md`.
+10. If new official docs were used, update `references/research/source-registry.md`.
 
 ## Validation
 
@@ -100,7 +102,7 @@ A routing change is not complete unless it passes all three buckets:
 Do not merge a skill-quality change unless:
 
 - trigger wording became clearer or at least not broader without justification
-- `SKILL.md`, `start-here.md`, `routing-checklist.md`, `prompt-patterns.md`, `README.md`, and `README-EN.md` still agree on boundaries
+- `SKILL.md`, `start-here.md`, `choose-the-right-recipe.md`, `routing-checklist.md`, `prompt-patterns.md`, `README.md`, and `README-EN.md` still agree on boundaries
 - examples do not smuggle in unverified architecture assumptions
 - coverage marketing does not overstate maturity compared with `coverage-status.md`
 - the first 30 seconds of use feel easier, not harder
@@ -112,4 +114,5 @@ Do not merge a skill-quality change unless:
 - few-shot examples route ambiguous requests too aggressively
 - provider counts are advertised without clarifying maturity differences
 - a new routing page is added but not linked from `SKILL.md`
+- a new routing page exists but is missing from `start-here.md`, `references/index.md`, or smoke tests
 - Windows validation breaks because UTF-8 mode was not enabled

@@ -6,6 +6,12 @@ Use this recipe when existing code already works for one provider and must be po
 
 Preserve behavior while changing the wire format as little as necessary.
 
+## When to switch recipes
+
+- there is no working source provider integration yet -> switch to `integrate-one-provider.md`
+- the main failure is now `429` or intermittent `5xx` -> switch to `handle-rate-limits-and-errors.md`
+- the migration is blocked on `400` / `401` / `422` -> stay focused on request correctness and use `debug-failed-request.md` if needed
+
 ## What to open first
 
 You should already have come through `references/start-here.md`.
@@ -26,6 +32,12 @@ If either provider file is unclear, return to `references/providers/index.md` in
 4. Remap user content nesting.
 5. Remap response parsing.
 6. Remap advanced features such as streaming, tools, or schemas.
+
+## Minimum questions to answer before coding
+
+- What is changing first: auth, endpoint, body shape, or response parser?
+- Which provider-specific feature names must be renamed?
+- Which old assumptions are no longer valid on the target provider?
 
 ## Side-by-side migration map
 
@@ -70,6 +82,12 @@ choices[0].message.content           content.find(b => b.type === "text").text
 - Change one concern at a time.
 - Compare raw requests and raw responses, not only post-processed app objects.
 - If the old code used an abstraction layer, temporarily peel it back until the new wire format is correct.
+
+## Common wrong moves
+
+- renaming advanced fields before auth and endpoint are correct
+- keeping the old response parser and assuming the target shape is close enough
+- migrating stream parsing before the base non-stream request is green
 
 ## Exit criteria
 

@@ -6,6 +6,12 @@ Use this recipe when a non-stream request already works and the next step is inc
 
 Add streaming without breaking text assembly or finish detection.
 
+## When to switch recipes
+
+- no working non-stream request yet -> switch to `integrate-one-provider.md`
+- stream request is failing because auth or body shape is wrong -> use `debug-failed-request.md`
+- stream request is mostly correct but load spikes cause `429` or `5xx` -> use `handle-rate-limits-and-errors.md`
+
 ## What to open first
 
 You should already have come through `references/start-here.md`.
@@ -21,6 +27,13 @@ You should already have come through `references/start-here.md`.
 3. Log raw stream events before transforming them.
 4. Write a provider-aware parser.
 5. Add text assembly and stop handling.
+
+## Minimum questions to answer before coding
+
+- What enables streaming for this provider?
+- What transport is actually used?
+- Which field carries incremental text chunks?
+- How does the provider signal completion?
 
 ## Generic SSE stream parser (TypeScript)
 
@@ -132,6 +145,7 @@ const anthropicExtractors = {
 - Treating Anthropic named events as anonymous JSON lines
 - Assuming Gemini stream parts match Anthropic content blocks
 - Using the non-stream response parser on stream chunks
+- adding stream parsing before the plain request path is verified
 
 ## Exit criteria
 

@@ -38,6 +38,16 @@ Do not trigger for comparison, pricing, prompt writing, or general AI planning u
 
 Ask at most one clarification question before routing.
 
+## Task-router hints
+
+- "接入 / 对接 / 调用 / integrate / hook up" -> usually `integrate-one-provider.md`
+- "迁移 / 改成 / switch / convert" -> usually `migrate-between-providers.md`
+- "流式 / streaming / SSE" -> usually `add-streaming.md`
+- "工具调用 / function call / tool use" -> usually `add-tool-calling.md`
+- "结构化 JSON / schema / structured output" -> usually `add-structured-output.md`
+- "`400` / `401` / `422` / request invalid" -> usually `debug-failed-request.md`
+- "`429` / `5xx` / retry / backoff / Retry-After" -> usually `handle-rate-limits-and-errors.md`
+
 ## Chinese trigger examples
 
 - "我要接入 DeepSeek 大模型 API"
@@ -73,6 +83,8 @@ These should ask one clarification question instead of guessing:
 - "让模型查天气"
 - "Add AI chat to this app"
 - "Hook up Claude"
+- "把 Claude 接进去"
+- "接个 DeepSeek"
 
 ## Non-trigger examples
 
@@ -97,9 +109,10 @@ User:
 Route:
 
 1. `references/start-here.md`
-2. `integrate-one-provider.md`
-3. `providers/index.md`
-4. `providers/deepseek.md`
+2. `choose-the-right-recipe.md`
+3. `integrate-one-provider.md`
+4. `providers/index.md`
+5. `providers/deepseek.md`
 
 ### Example 2 - provider migration
 
@@ -110,11 +123,12 @@ User:
 Route:
 
 1. `references/start-here.md`
-2. `migrate-between-providers.md`
-3. `providers/index.md`
-4. `providers/openai.md`
-5. `providers/gemini.md`
-6. `comparisons/request-shape-differences.md`
+2. `choose-the-right-recipe.md`
+3. `migrate-between-providers.md`
+4. `providers/index.md`
+5. `providers/openai.md`
+6. `providers/gemini.md`
+7. `comparisons/request-shape-differences.md`
 
 ### Example 3 - add streaming
 
@@ -125,10 +139,11 @@ User:
 Route:
 
 1. `references/start-here.md`
-2. `add-streaming.md`
-3. `providers/index.md`
-4. `providers/anthropic.md`
-5. `comparisons/streaming-differences.md`
+2. `choose-the-right-recipe.md`
+3. `add-streaming.md`
+4. `providers/index.md`
+5. `providers/anthropic.md`
+6. `comparisons/streaming-differences.md`
 
 ### Example 4 - tool calling with missing provider
 
@@ -150,9 +165,10 @@ User:
 Route:
 
 1. `references/start-here.md`
-2. `debug-failed-request.md`
-3. `providers/index.md`
-4. `providers/deepseek.md`
+2. `choose-the-right-recipe.md`
+3. `debug-failed-request.md`
+4. `providers/index.md`
+5. `providers/deepseek.md`
 
 ### Example 6 - rate limit and retry
 
@@ -163,9 +179,10 @@ User:
 Route:
 
 1. `references/start-here.md`
-2. `handle-rate-limits-and-errors.md`
-3. `providers/index.md`
-4. the exact provider file
+2. `choose-the-right-recipe.md`
+3. `handle-rate-limits-and-errors.md`
+4. `providers/index.md`
+5. the exact provider file
 
 ### Example 7 - English direct retry work
 
@@ -176,9 +193,10 @@ User:
 Route:
 
 1. `references/start-here.md`
-2. `handle-rate-limits-and-errors.md`
-3. `providers/index.md`
-4. `providers/anthropic.md`
+2. `choose-the-right-recipe.md`
+3. `handle-rate-limits-and-errors.md`
+4. `providers/index.md`
+5. `providers/anthropic.md`
 
 ### Example 8 - English direct
 
@@ -189,9 +207,10 @@ User:
 Route:
 
 1. `references/start-here.md`
-2. `integrate-one-provider.md`
-3. `providers/index.md`
-4. `providers/zhipu-glm.md`
+2. `choose-the-right-recipe.md`
+3. `integrate-one-provider.md`
+4. `providers/index.md`
+5. `providers/zhipu-glm.md`
 
 ### Example 9 - ambiguous but likely integration
 
@@ -202,4 +221,4 @@ User:
 Behavior:
 
 - ask one question: "你要接入 DeepSeek 的原生 API，对吗？"
-- if yes, route through `references/start-here.md` -> `integrate-one-provider.md` -> `providers/index.md` -> `providers/deepseek.md`
+- if yes, route through `references/start-here.md` -> `choose-the-right-recipe.md` -> `integrate-one-provider.md` -> `providers/index.md` -> `providers/deepseek.md`

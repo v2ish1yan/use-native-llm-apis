@@ -8,6 +8,11 @@ If the main symptom is `429`, intermittent `5xx`, or missing retry logic, switch
 
 Find the first wrong assumption in the request path.
 
+## When to switch recipes
+
+- primary symptom is `429`, intermittent `5xx`, or missing backoff -> switch to `handle-rate-limits-and-errors.md`
+- the request does not exist yet and the task is really first-time integration -> switch to `integrate-one-provider.md`
+
 ## What to open first
 
 You should already have come through `references/start-here.md`.
@@ -29,6 +34,12 @@ Check these in order - stop at the first mismatch:
 5. **top-level request keys** - `messages` vs `input` vs `contents`?
 6. **nested content shape** - string vs block array vs parts array?
 7. **advanced features** - streaming toggle, tool schema names, JSON mode fields
+
+## Minimum questions to answer before coding
+
+- Which single assumption is most likely wrong first: auth, URL, path, body, or parser?
+- Does the status code point to request correctness or retry policy?
+- Can I show the raw outbound request and raw inbound response yet?
 
 ## Status-code guide
 
@@ -88,6 +99,7 @@ async function debugRequest(url: string, headers: Record<string, string>, body: 
 - Forgetting region-specific endpoints (Azure, AWS, some Chinese providers)
 - Debugging stream parsing when the initial non-stream request is not yet valid
 - Changing the request body before confirming the auth header is correct
+- adding retries to hide a `401` or `422`
 
 ## Quick checklist for migrated code
 

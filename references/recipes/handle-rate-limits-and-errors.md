@@ -11,6 +11,11 @@ Turn "it sometimes fails" into a small, explicit policy:
 - log enough detail to distinguish rate limits from auth or request-shape bugs
 - fail loudly when the error is non-retryable
 
+## When to switch recipes
+
+- the request is failing with `400`, `401`, `403`, `404`, `415`, or `422` -> switch to `debug-failed-request.md`
+- there is no confirmed provider request yet -> switch to `integrate-one-provider.md`
+
 ## What to open first
 
 You should already have come through `references/start-here.md`.
@@ -39,6 +44,12 @@ Do not retry forever. A small capped policy is usually enough:
 - base delay: `500ms`
 - cap delay: `8s`
 - jitter: yes
+
+## Minimum questions to answer before coding
+
+- Is this actually a retryable failure?
+- Does the provider send `Retry-After` or request-id headers I should preserve?
+- What is the final failure path after retries are exhausted?
 
 ## Retry-After rule
 
@@ -226,6 +237,7 @@ async function callProviderWithRetries(
 - do not swallow the final error and return an empty string or placeholder JSON
 - do not use identical fixed sleeps for every retry
 - do not hide provider request ids; they are often the fastest support handle
+- do not use retry loops to cover up quota, billing, or auth misconfiguration
 
 ## Quick decision table
 

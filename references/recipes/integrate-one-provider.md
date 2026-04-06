@@ -11,6 +11,12 @@ Get to one verified request path quickly:
 3. inspect the raw response shape
 4. add streaming, tools, or structured output only after the base request works
 
+## When to switch recipes
+
+- user is porting existing working code from another provider -> switch to `migrate-between-providers.md`
+- user mainly needs `429` / `5xx` retry policy -> switch to `handle-rate-limits-and-errors.md`
+- user's first request is failing with `400` / `401` / `422` -> keep this recipe only long enough to confirm the provider, then use `debug-failed-request.md`
+
 ## What to open first
 
 You should already have come through `references/start-here.md`.
@@ -28,6 +34,14 @@ If you know the provider name but not the file path, use `references/providers/i
 3. Log the raw JSON response before wrapping it in app-specific helpers.
 4. Confirm which field your app should read for generated text.
 5. Only then add retries, streaming, tools, or response schemas.
+
+## Minimum questions to answer before coding
+
+- Which auth header does this provider expect?
+- Which exact endpoint path should the first request hit?
+- Which field contains the final text?
+
+If any answer is still "I think", go back to the provider file.
 
 ## Minimal integration pattern (TypeScript)
 
@@ -84,6 +98,12 @@ async function callProvider(prompt: string): Promise<string> {
 - minimal request body shape (top-level keys, message format)
 - response field that contains generated text
 - provider-specific caveats about streaming, tools, or JSON mode
+
+## Common wrong moves
+
+- starting with streaming before one plain request works
+- copying an OpenAI body shape into another provider without checking nesting
+- accepting any non-empty JSON as success before the text extraction path is verified
 
 ## Do not do this first
 

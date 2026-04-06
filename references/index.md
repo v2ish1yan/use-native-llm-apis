@@ -7,11 +7,12 @@ If you are using this skill during coding work, start with [start-here.md](start
 ## Recommended flow
 
 1. open [start-here.md](start-here.md)
-2. open exactly one task recipe
-3. open [providers/index.md](providers/index.md) and click the exact provider file
-4. open one comparison file only when the task requires it
-5. run [routing-checklist.md](routing-checklist.md)
-6. only then write or patch code
+2. if the task is still fuzzy, open [recipes/choose-the-right-recipe.md](recipes/choose-the-right-recipe.md)
+3. open exactly one task recipe
+4. open [providers/index.md](providers/index.md) and click the exact provider file
+5. open one comparison file only when the task requires it
+6. run [routing-checklist.md](routing-checklist.md)
+7. only then write or patch code
 
 Do not guess provider file paths from memory when the provider name is available in this repo.
 
@@ -25,6 +26,11 @@ Do not guess provider file paths from memory when the provider name is available
 | Add tool calling | [recipes/add-tool-calling.md](recipes/add-tool-calling.md) |
 | Add structured output | [recipes/add-structured-output.md](recipes/add-structured-output.md) |
 | Debug a failed request | [recipes/debug-failed-request.md](recipes/debug-failed-request.md) |
+| Handle rate limits and retries | [recipes/handle-rate-limits-and-errors.md](recipes/handle-rate-limits-and-errors.md) |
+
+## If the task is still unclear
+
+- Start with [recipes/choose-the-right-recipe.md](recipes/choose-the-right-recipe.md)
 
 ## By provider
 

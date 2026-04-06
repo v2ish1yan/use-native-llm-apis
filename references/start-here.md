@@ -9,6 +9,8 @@ Use this page first when the skill is triggered.
 3. Open one comparison file only when needed.
 4. Run [routing-checklist.md](routing-checklist.md) before coding.
 
+If the task boundary is still fuzzy, open [recipes/choose-the-right-recipe.md](recipes/choose-the-right-recipe.md) before picking a recipe.
+
 ## Choose one task
 
 | User need | Recipe |
@@ -22,6 +24,13 @@ Use this page first when the skill is triggered.
 | handle `429`, `5xx`, backoff, or retry policy | [recipes/handle-rate-limits-and-errors.md](recipes/handle-rate-limits-and-errors.md) |
 
 Do not open multiple recipes unless the current recipe explicitly requires a comparison file.
+
+## Fast split for common failures
+
+- `400 / 401 / 403 / 404 / 415 / 422` -> [recipes/debug-failed-request.md](recipes/debug-failed-request.md)
+- `429 / intermittent 5xx / retry / backoff / Retry-After` -> [recipes/handle-rate-limits-and-errors.md](recipes/handle-rate-limits-and-errors.md)
+- "just make provider X work" -> [recipes/integrate-one-provider.md](recipes/integrate-one-provider.md)
+- "port from provider A to provider B" -> [recipes/migrate-between-providers.md](recipes/migrate-between-providers.md)
 
 ## Resolve provider path
 

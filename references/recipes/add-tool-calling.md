@@ -11,6 +11,12 @@ Get one full tool loop working:
 3. execute the tool
 4. send the tool result back in the provider's native continuation format
 
+## When to switch recipes
+
+- the user only wants schema-shaped final JSON, not external function execution -> switch to `add-structured-output.md`
+- the base provider request does not work yet -> switch to `integrate-one-provider.md`
+- the request is failing before any tool call is emitted -> use `debug-failed-request.md`
+
 ## What to open first
 
 You should already have come through `references/start-here.md`.
@@ -28,6 +34,12 @@ If the provider is still unknown, stop and confirm it before continuing.
 3. Log the raw tool-call payload from the model.
 4. Execute the tool outside the model loop first if needed.
 5. Return the result using the provider's native continuation shape.
+
+## Minimum questions to answer before coding
+
+- How does this provider declare tools?
+- What exact field carries the tool call?
+- How must the tool result be returned to continue the conversation?
 
 ## Tool declaration shapes by provider
 
@@ -123,6 +135,12 @@ How to return a tool result back to the model:
 - OpenAI `role: "tool"` continuation vs Anthropic `tool_result` content block
 - Gemini `functionResponse` part vs function-call part
 - Tool call IDs: `call_*` (OpenAI) vs `toolu_*` (Anthropic)
+
+## Common wrong moves
+
+- using `parameters` where the provider expects `input_schema`
+- returning a tool result in OpenAI shape to an Anthropic conversation
+- testing with multiple tools before one deterministic tool loop works
 
 ## Minimal success test
 

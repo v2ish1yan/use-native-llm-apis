@@ -26,6 +26,7 @@ These should trigger the skill and route immediately:
 
 Expected behavior:
 
+- use `choose-the-right-recipe.md` when it helps disambiguate task class quickly
 - choose exactly one task recipe first
 - resolve the provider path through `references/providers/index.md`
 - open a comparison file only when the task needs one
@@ -46,6 +47,7 @@ Expected behavior:
 - if provider is present but the task is still ambiguous, ask one task question
 - do not ask two or three questions at once
 - do not pre-emptively choose a recipe before the ambiguity is resolved
+- do not skip directly to a guessed "integration" path just because a provider name appears
 
 ## Non-triggers
 
@@ -66,10 +68,11 @@ Expected behavior:
 When a provider is known, the route should always go through:
 
 1. `references/start-here.md`
-2. one task recipe
-3. `references/providers/index.md`
-4. the exact provider file
-5. `references/routing-checklist.md`
+2. `references/recipes/choose-the-right-recipe.md` when needed
+3. one task recipe
+4. `references/providers/index.md`
+5. the exact provider file
+6. `references/routing-checklist.md`
 
 It should never jump straight from `SKILL.md` to a guessed provider slug.
 
@@ -80,7 +83,7 @@ Last manually reviewed: `2026-04-06`
 - direct triggers: pass
 - ambiguous prompts: pass
 - non-triggers: pass
-- provider-path order: pass after confirming the route is `start-here -> recipe -> providers/index -> provider file -> routing-checklist`
+- provider-path order: pass after confirming the route is `start-here -> choose-the-right-recipe (when needed) -> recipe -> providers/index -> provider file -> routing-checklist`
 
 ## Notes from the latest review
 
