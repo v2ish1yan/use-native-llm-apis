@@ -12,6 +12,7 @@ Use the `Depth` column:
 
 - `gold`: strong end-to-end reference
 - `usable`: enough detail for many integrations
+- `partial`: some public signals are verified, but not enough to promise reliable end-to-end coding guidance
 - `skeleton`: basic notes only; expect to verify against official docs before shipping
 
 If the provider is not in this table, return to the main task and say coverage is missing instead of inventing a path.
@@ -52,7 +53,7 @@ If the provider is not in this table, return to the main task and say coverage i
 | Cubence | usable | Cubence API | [cubence.md](cubence.md) |
 | CrazyRouter | usable | Crazy Router | [crazyrouter.md](crazyrouter.md) |
 | Compshare | usable | Compshare API, ModelVerse | [compshare.md](compshare.md) |
-| CTok.ai | skeleton | CTok | [ctok-ai.md](ctok-ai.md) |
+| CTok.ai | partial | CTok | [ctok-ai.md](ctok-ai.md) |
 | Right Code | usable | RightCode, Right Codes | [rightcode.md](rightcode.md) |
 | X-Code API | usable | XCode, X-Code | [xcode-api.md](xcode-api.md) |
 | Ai Go Code | usable | AIGoCode, AI Go Code | [aigocode.md](aigocode.md) |

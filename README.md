@@ -17,16 +17,17 @@ It is not a universal SDK, and it is not 31 equally deep provider references.
 - a small set of deep core-provider references
 - a wider provider registry with uneven depth
 
-Some provider files are strong enough to drive end-to-end code generation. Some are only usable as starting notes. Some are still skeletons.
+Some provider files are strong enough to drive end-to-end code generation. Some are only usable as starting notes. Some are still partial. Some are still skeletons.
 
 Always check [references/research/coverage-status.md](references/research/coverage-status.md) before relying on a provider file.
 
 ## Coverage honesty
 
-This repo currently has three practical content tiers:
+This repo currently has four practical content tiers:
 
 - `gold`: strong end-to-end references with request shape, response parsing, and advanced-feature guidance
 - `usable`: enough detail for many integrations, but not yet a full native reference
+- `partial`: some public signals are verified, but not enough to promise reliable end-to-end coding guidance
 - `skeleton`: basic auth/base-url/endpoint notes, not enough to promise reliable code generation by themselves
 
 The skill architecture covers the full registry. The content depth does not.
