@@ -48,7 +48,7 @@ Depth labels:
 | Ai Go Code | usable | Public client guides now support a practical multi-client coding relay reference |
 | AICodeMirror | skeleton | Relay/tutorial notes only |
 | Right Code | usable | Public curl examples make the relay's protocol families concrete enough for practical integration |
-| X-Code API | skeleton | Relay notes only |
+| X-Code API | usable | Public guides now support a practical multi-client coding relay reference |
 | DMXAPI | usable | Public docs support practical guidance across chat, responses, Claude, and Gemini surfaces |
 | AICoding | pending | Third-party relay |
 | SSSAiCode | pending | Third-party relay |

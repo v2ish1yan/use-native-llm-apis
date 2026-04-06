@@ -4,40 +4,49 @@
 
 Use X-Code API when the project needs a coding-agent relay for Claude Code, Codex, or OpenCode. X-Code API is a managed relay platform, not a native model provider.
 
-Treat it as a coding-tool relay with stronger public evidence for Codex than for the other client paths.
+Treat it as a coding-tool relay with three publicly documented client paths.
 
-## Auth and Base URL
+## Auth and Base URLs
 
-Public docs show a standard OpenAI-compatible Codex-style configuration:
+Public X-Code docs expose multiple client-facing bases:
 
-- base URL: `https://x-code.cc/v1`
-- API key supplied by the X-Code platform
+- Claude Code: `https://x-code.cc`
+- Codex: `https://x-code.cc/v1`
+- OpenCode: `https://api-cn.x-code.cc/v1`
 
-For Codex, the public docs explicitly show:
+Auth depends on the client family:
 
-- `wire_api = "responses"`
-- `requires_openai_auth = true`
-- `OPENAI_BASE_URL="https://x-code.cc/v1"`
-- `OPENAI_API_KEY="your-api-key"`
+- Claude Code: `ANTHROPIC_AUTH_TOKEN`
+- Codex: `OPENAI_API_KEY`
+- OpenCode: provider `apiKey` fields in `opencode.json`
 
-## Primary access pattern
+## Protocol families
 
-X-Code's docs are organized by tool:
+X-Code now has publicly verified setup guides for:
 
-- Claude Code
-- Codex
-- OpenCode
+1. Claude Code using Anthropic-style base-url overrides
+2. Codex using `wire_api = "responses"`
+3. OpenCode using both Anthropic-style and OpenAI-style providers
 
-But the currently strongest publicly verified guide in this repo is the Codex configuration page.
+That means X-Code is no longer just a Codex-only evidence point. It is a multi-client relay with different protocol expectations per route.
 
-That means the practical evidence today is:
+## Claude Code usage
 
-- strong for Codex setup
-- weaker for end-to-end protocol detail on the other tool paths
+The Claude Code guide documents:
+
+```bash
+export ANTHROPIC_BASE_URL="https://x-code.cc"
+export ANTHROPIC_AUTH_TOKEN="your-api-key"
+```
+
+Practical rule:
+
+- for Claude Code, keep Anthropic-style expectations
+- do not reuse Codex/OpenAI assumptions on the Claude route
 
 ## Codex / Responses-oriented usage
 
-The verified Codex configuration page documents:
+The Codex guide documents:
 
 ```toml
 model_provider = "xcode"
@@ -64,24 +73,77 @@ Practical rule:
 - for Codex-oriented integration, treat X-Code as a Responses-style relay
 - use Responses expectations instead of classic chat-completions assumptions
 
-## Tool-path caution
+## OpenCode usage
 
-The docs home clearly shows Claude Code and OpenCode sections, but this repo has not yet captured enough public detail from those pages to promise protocol-level guidance equal to the Codex path.
+The OpenCode guide documents both Anthropic-style and OpenAI-style provider examples on X-Code:
 
-So for now:
+Anthropic-family example:
 
-- Codex path is the best-supported route in this file
-- Claude Code and OpenCode are confirmed as supported setup targets
-- exact per-route protocol details should still be verified in the current docs before shipping
+```json
+{
+  "provider": {
+    "xcodeapi": {
+      "name": "X-Code API",
+      "npm": "@ai-sdk/anthropic",
+      "options": {
+        "apiKey": "your-api-key",
+        "baseURL": "https://api-cn.x-code.cc/v1"
+      }
+    }
+  }
+}
+```
+
+OpenAI-family example:
+
+```json
+{
+  "provider": {
+    "xcodeapi-openai": {
+      "name": "X-Code API",
+      "npm": "@ai-sdk/openai",
+      "options": {
+        "apiKey": "your-api-key",
+        "baseURL": "https://api-cn.x-code.cc/v1"
+      }
+    }
+  }
+}
+```
+
+That makes OpenCode the clearest public proof that X-Code supports multiple protocol families, not one single OpenAI-like route.
+
+## Streaming and parsing notes
+
+Streaming and parsing should follow the selected client family:
+
+- Claude Code path -> Anthropic-style expectations
+- Codex path -> Responses-style expectations
+- OpenCode with `@ai-sdk/anthropic` -> Anthropic-style expectations
+- OpenCode with `@ai-sdk/openai` -> OpenAI-style expectations
+
+Do not reuse one parser or one auth scheme across all X-Code routes.
+
+## Development guidance
+
+When integrating X-Code API:
+
+1. choose the target client first
+2. copy the exact base URL for that client family
+3. configure the auth variables or provider fields expected by that client
+4. verify one minimal startup flow or request path
+5. only then add advanced features
 
 ## Common pitfalls
 
 - Treating X-Code like a native model vendor
-- Assuming the same configuration text applies identically to every supported tool
+- Assuming one base URL applies identically to Claude Code, Codex, and OpenCode
 - Assuming classic OpenAI chat-completions semantics when the verified Codex guide says `wire_api = "responses"`
-- Forgetting to validate model support and endpoint compatibility for the exact client in use
+- Forgetting that OpenCode can use both Anthropic-style and OpenAI-style providers on X-Code
 
 ## Sources
 
 - X-Code docs home: <https://docs.x-code.cc/>
+- X-Code Claude Code guide: <https://docs.x-code.cc/claude-code>
 - X-Code Codex guide: <https://docs.x-code.cc/codex>
+- X-Code OpenCode guide: <https://docs.x-code.cc/opencode>

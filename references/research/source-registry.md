@@ -239,7 +239,9 @@ Purpose:
 ## X-Code API
 
 - Docs home: <https://docs.x-code.cc/>
+- Claude Code guide: <https://docs.x-code.cc/claude-code>
 - Codex configuration: <https://docs.x-code.cc/codex>
+- OpenCode guide: <https://docs.x-code.cc/opencode>
 
 ## DMXAPI
 

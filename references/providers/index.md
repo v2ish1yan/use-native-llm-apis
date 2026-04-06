@@ -54,7 +54,7 @@ If the provider is not in this table, return to the main task and say coverage i
 | Compshare | usable | Compshare API, ModelVerse | [compshare.md](compshare.md) |
 | CTok.ai | skeleton | CTok | [ctok-ai.md](ctok-ai.md) |
 | Right Code | usable | RightCode, Right Codes | [rightcode.md](rightcode.md) |
-| X-Code API | skeleton | XCode, X-Code | [xcode-api.md](xcode-api.md) |
+| X-Code API | usable | XCode, X-Code | [xcode-api.md](xcode-api.md) |
 | Ai Go Code | usable | AIGoCode, AI Go Code | [aigocode.md](aigocode.md) |
 | AICodeMirror | skeleton | AI Code Mirror | [aicodemirror.md](aicodemirror.md) |
 | DMXAPI | usable | DMX API | [dmxapi.md](dmxapi.md) |
