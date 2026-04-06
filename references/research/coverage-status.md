@@ -27,7 +27,7 @@ Depth labels:
 | StepFun | usable | Solid starting reference, still thinner than core gold providers |
 | Azure OpenAI | usable | Deployment-specific guidance, not a full native-provider deep reference |
 | AWS Bedrock | usable | Useful deployment guidance, but not the same as a first-party native reference |
-| NVIDIA NIM | skeleton | Basic auth/base-url/endpoint notes only |
+| NVIDIA NIM | usable | Official API and model pages now support a practical hosted NIM reference with feature caveats |
 | ModelScope API Inference | usable | Serviceable hosted OpenAI-compatible guidance |
 | Xiaomi MiMo | usable | Good routing and API-family notes, still not a gold reference |
 | BaiLing | blocked | Public official API docs not yet confirmed enough for a reliable provider reference |

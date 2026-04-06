@@ -101,6 +101,8 @@ Purpose:
 ## NVIDIA NIM
 
 - LLM APIs reference: <https://docs.api.nvidia.com/nim/reference/llm-apis>
+- Chat-completions route example: <https://docs.api.nvidia.com/nim/reference/mistralai-mixtral-8x22b-instruct-infer>
+- Model page with structured-output and tool-calling notes: <https://docs.api.nvidia.com/nim/reference/z-ai-glm5>
 
 ## ModelScope API Inference
 

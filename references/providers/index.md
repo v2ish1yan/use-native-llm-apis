@@ -40,7 +40,7 @@ If the provider is not in this table, return to the main task and say coverage i
 | Xiaomi MiMo | usable | MiMo, Xiaomi | [xiaomi-mimo.md](xiaomi-mimo.md) |
 | Azure OpenAI | usable | Azure, Azure AI Foundry OpenAI | [azure-openai.md](azure-openai.md) |
 | AWS Bedrock | usable | Bedrock, Amazon Bedrock | [aws-bedrock.md](aws-bedrock.md) |
-| NVIDIA NIM | skeleton | NIM, NVIDIA API Catalog | [nvidia-nim.md](nvidia-nim.md) |
+| NVIDIA NIM | usable | NIM, NVIDIA API Catalog | [nvidia-nim.md](nvidia-nim.md) |
 | ModelScope | usable | Aliyun ModelScope | [modelscope.md](modelscope.md) |
 | GitHub Copilot SDK | usable | GitHub Models, Copilot | [github-copilot.md](github-copilot.md) |
 | OpenRouter | usable | OpenRouter API | [openrouter.md](openrouter.md) |
