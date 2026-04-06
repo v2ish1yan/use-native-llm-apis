@@ -171,8 +171,12 @@ Purpose:
 
 - Docs root: <https://www.compshare.cn/docs>
 - Platform overview: <https://www.compshare.cn/docs/overview/platform/introduce>
+- Quick start: <https://www.compshare.cn/docs/modelverse/models/quick-start>
 - OpenAI-compatible chat docs: <https://www.compshare.cn/docs/modelverse/models/text_api/openai_compatible>
 - OpenAPI protocol list and extension fields: <https://www.compshare.cn/docs/modelverse/models/text_api/api-expand>
+- Claude-compatible docs: <https://www.compshare.cn/docs/modelverse/models/text_api/claude_compatible>
+- Gemini-compatible docs: <https://www.compshare.cn/docs/modelverse/models/text_api/gemini_compatible>
+- FAQ: <https://www.compshare.cn/docs/modelverse/models/qa>
 
 ## CTok.ai
 
@@ -228,6 +232,9 @@ Purpose:
 - Quick start: <https://doc.dmxapi.com/jichu.html>
 - Common endpoints: <https://doc.dmxapi.com/jiekou.html>
 - Responses API note: <https://doc.dmxapi.com/responses.html>
+- Gemini-native docs: <https://doc.dmxapi.com/gemini-chat.html>
+- Gemini JSON docs: <https://doc.dmxapi.com/gemini-json.html>
+- Embeddings docs: <https://doc.dmxapi.com/embedding.html>
 
 ## cc-switch research aid
 

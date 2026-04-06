@@ -51,13 +51,13 @@ If the provider is not in this table, return to the main task and say coverage i
 | PackyCode | skeleton | Packy API | [packycode.md](packycode.md) |
 | Cubence | skeleton | Cubence API | [cubence.md](cubence.md) |
 | CrazyRouter | skeleton | Crazy Router | [crazyrouter.md](crazyrouter.md) |
-| Compshare | skeleton | Compshare API | [compshare.md](compshare.md) |
+| Compshare | usable | Compshare API, ModelVerse | [compshare.md](compshare.md) |
 | CTok.ai | skeleton | CTok | [ctok-ai.md](ctok-ai.md) |
 | Right Code | usable | RightCode, Right Codes | [rightcode.md](rightcode.md) |
 | X-Code API | skeleton | XCode, X-Code | [xcode-api.md](xcode-api.md) |
 | Ai Go Code | skeleton | AIGoCode, AI Go Code | [aigocode.md](aigocode.md) |
 | AICodeMirror | skeleton | AI Code Mirror | [aicodemirror.md](aicodemirror.md) |
-| DMXAPI | skeleton | DMX API | [dmxapi.md](dmxapi.md) |
+| DMXAPI | usable | DMX API | [dmxapi.md](dmxapi.md) |
 
 ## Notes
 

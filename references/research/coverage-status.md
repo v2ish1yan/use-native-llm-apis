@@ -49,10 +49,10 @@ Depth labels:
 | AICodeMirror | skeleton | Relay/tutorial notes only |
 | Right Code | usable | Public curl examples make the relay's protocol families concrete enough for practical integration |
 | X-Code API | skeleton | Relay notes only |
-| DMXAPI | skeleton | Relay notes only |
+| DMXAPI | usable | Public docs support practical guidance across chat, responses, Claude, and Gemini surfaces |
 | AICoding | pending | Third-party relay |
 | SSSAiCode | pending | Third-party relay |
-| Compshare | skeleton | Public docs are useful, but local reference depth is still thin |
+| Compshare | usable | Public protocol docs now support a practical multi-surface gateway reference |
 | Micu | pending | Third-party relay |
 | CTok.ai | partial | Official API root and `/v1/models` are verified, but public protocol docs remain limited |
 
