@@ -48,7 +48,7 @@ If the provider is not in this table, return to the main task and say coverage i
 | AiHubMix | usable | AIHubMix | [aihubmix.md](aihubmix.md) |
 | Novita AI | skeleton | Novita | [novita-ai.md](novita-ai.md) |
 | NewAPI | usable | New API | [newapi.md](newapi.md) |
-| PackyCode | skeleton | Packy API | [packycode.md](packycode.md) |
+| PackyCode | usable | Packy API | [packycode.md](packycode.md) |
 | Cubence | skeleton | Cubence API | [cubence.md](cubence.md) |
 | CrazyRouter | skeleton | Crazy Router | [crazyrouter.md](crazyrouter.md) |
 | Compshare | usable | Compshare API, ModelVerse | [compshare.md](compshare.md) |

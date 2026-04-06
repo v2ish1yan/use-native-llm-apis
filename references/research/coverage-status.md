@@ -42,7 +42,7 @@ Depth labels:
 | SiliconFlow | usable | One of the stronger gateway references, including request and feature notes |
 | Novita AI | skeleton | Has a file, but depth is still thin |
 | GitHub Copilot / Copilot SDK | usable | Special OAuth / BYOK reference with real integration value |
-| PackyCode | skeleton | Relay notes only |
+| PackyCode | usable | Public client guides now support a practical coding-tool relay reference |
 | Cubence | skeleton | Relay notes only |
 | CrazyRouter | skeleton | Relay notes only |
 | Ai Go Code | skeleton | Relay notes only |

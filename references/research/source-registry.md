@@ -191,6 +191,8 @@ Purpose:
 - CLI docs index: <https://docs.packyapi.com/docs/cli/>
 - Codex setup guide: <https://docs.packyapi.com/docs/cli/codex>
 - Claude guide: <https://docs.packyapi.com/docs/cli/claude>
+- Gemini guide: <https://docs.packyapi.com/docs/cli/gemini>
+- OpenCode guide: <https://docs.packyapi.com/docs/cli/opencode>
 
 ## Cubence
 
