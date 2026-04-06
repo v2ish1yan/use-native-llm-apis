@@ -2,6 +2,8 @@
 
 Use this recipe when a provider request is failing with 400-class errors or unexpected output.
 
+If the main symptom is `429`, intermittent `5xx`, or missing retry logic, switch to `references/recipes/handle-rate-limits-and-errors.md`.
+
 ## Goal
 
 Find the first wrong assumption in the request path.
@@ -36,8 +38,10 @@ Check these in order - stop at the first mismatch:
 | `401` | Auth token or auth header is wrong - check key, check header name |
 | `403` | Token exists but lacks permission, wrong region, or model not enabled for account |
 | `404` | Base URL or endpoint path is wrong |
+| `429` | Rate limit or quota guard fired - do not reshape the request yet; add backoff and honor `Retry-After` |
 | `415` | Content-Type header is wrong or missing |
 | `422` | Structurally valid JSON but semantically wrong - wrong field names, invalid schema |
+| `500`, `502`, `503`, `504`, `529` | Usually transient provider-side failure - confirm request validity, then add capped retries |
 
 ## Debug logging pattern
 

@@ -16,6 +16,7 @@
 - 给模型请求加 tool calling
 - 让模型返回结构化 JSON
 - 排查 400 / 401 / 422 这类请求级错误
+- 处理 429 / 5xx、退避重试、`Retry-After` 这类稳定性问题
 - 接入 OpenRouter、SiliconFlow、NewAPI、DMXAPI 这类网关或中转服务
 
 一句话说，它解决的不是“有没有 API”，而是“不同 API 的细节总是不一样，而且总在最烦的地方不一样”。
@@ -97,6 +98,7 @@ Use $use-native-llm-apis to write an Anthropic streaming request in TypeScript.
 - streaming、tool calling、structured output 的差异说明
 - 厂商迁移时的重点映射
 - 调试失败请求时的排查思路
+- rate limit、重试退避、错误响应排查模板
 
 如果你想继续深入看参考内容，可以看：
 

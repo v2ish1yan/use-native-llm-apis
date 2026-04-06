@@ -16,6 +16,7 @@ This skill is built for common integration tasks such as:
 - adding tool calling
 - returning structured JSON output
 - debugging 400 / 401 / 422 request failures
+- handling `429` / `5xx`, retry backoff, and `Retry-After` behavior
 - working with gateways and relays such as OpenRouter, SiliconFlow, NewAPI, and DMXAPI
 
 In short, it solves a very practical problem:
@@ -107,6 +108,7 @@ What you get is not a universal SDK. You get a high-value reference set:
 - differences in streaming, tool calling, and structured output
 - migration-oriented mapping hints
 - debugging-oriented request checks
+- reusable patterns for rate limits, retry policy, and error-envelope logging
 
 If you want to go deeper, start here:
 

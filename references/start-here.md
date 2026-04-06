@@ -19,6 +19,7 @@ Use this page first when the skill is triggered.
 | let the model call functions or tools | [recipes/add-tool-calling.md](recipes/add-tool-calling.md) |
 | return machine-parseable output | [recipes/add-structured-output.md](recipes/add-structured-output.md) |
 | fix a failing provider request | [recipes/debug-failed-request.md](recipes/debug-failed-request.md) |
+| handle `429`, `5xx`, backoff, or retry policy | [recipes/handle-rate-limits-and-errors.md](recipes/handle-rate-limits-and-errors.md) |
 
 Do not open multiple recipes unless the current recipe explicitly requires a comparison file.
 

@@ -20,7 +20,9 @@ These should trigger the skill and route immediately:
 - "Use $use-native-llm-apis to write an Anthropic streaming request in TypeScript."
 - "Convert this OpenAI request to Gemini native format."
 - "这个 DeepSeek 请求一直报 401"
+- "这个模型接口一直 429，帮我加重试和退避"
 - "Add tool calling to our Claude integration."
+- "Handle retries and backoff for this provider request."
 
 Expected behavior:
 

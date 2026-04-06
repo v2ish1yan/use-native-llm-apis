@@ -13,13 +13,16 @@ Purpose:
 - Docs root: <https://platform.openai.com/docs/>
 - API reference root: <https://platform.openai.com/docs/api-reference>
 - Responses migration guide: <https://platform.openai.com/docs/guides/migrate-to-responses>
+- Rate limits guide: <https://platform.openai.com/docs/guides/rate-limits>
 
 ## Anthropic
 
 - Docs root: <https://docs.anthropic.com/>
+- Errors: <https://docs.anthropic.com/en/api/errors>
 - Messages examples: <https://docs.anthropic.com/en/api/messages-examples>
 - Streaming: <https://docs.anthropic.com/en/docs/build-with-claude/streaming>
 - Tool use overview: <https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview>
+- Rate limits: <https://docs.anthropic.com/en/api/rate-limits>
 
 ## Gemini
 
@@ -28,6 +31,7 @@ Purpose:
 - Function calling: <https://ai.google.dev/gemini-api/docs/function-calling>
 - Structured output: <https://ai.google.dev/gemini-api/docs/structured-output>
 - Embeddings: <https://ai.google.dev/gemini-api/docs/embeddings>
+- Rate limits and quota: <https://ai.google.dev/gemini-api/docs/quota>
 
 ## DeepSeek
 
@@ -35,6 +39,7 @@ Purpose:
 - Chat completions: <https://api-docs.deepseek.com/api/create-chat-completion>
 - Function calling: <https://api-docs.deepseek.com/guides/function_calling>
 - JSON mode: <https://api-docs.deepseek.com/guides/json_mode>
+- Error codes: <https://api-docs.deepseek.com/quick_start/error_codes>
 
 ## Zhipu GLM
 

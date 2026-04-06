@@ -60,6 +60,8 @@ Ask at most one clarification question before routing.
 - "Wire tool calling into this model request"
 - "Make the model return structured JSON"
 - "Debug why this provider request is returning 400"
+- "Handle retries and backoff for this provider request"
+- "This model API keeps returning 429"
 - "Switch this project from OpenAI to DeepSeek"
 
 ## Ambiguous prompts
@@ -152,7 +154,33 @@ Route:
 3. `providers/index.md`
 4. `providers/deepseek.md`
 
-### Example 6 - English direct
+### Example 6 - rate limit and retry
+
+User:
+
+> 这个 LLM 接口一直 429，帮我加重试和退避
+
+Route:
+
+1. `references/start-here.md`
+2. `handle-rate-limits-and-errors.md`
+3. `providers/index.md`
+4. the exact provider file
+
+### Example 7 - English direct retry work
+
+User:
+
+> Handle retries and backoff for this Anthropic request
+
+Route:
+
+1. `references/start-here.md`
+2. `handle-rate-limits-and-errors.md`
+3. `providers/index.md`
+4. `providers/anthropic.md`
+
+### Example 8 - English direct
 
 User:
 
@@ -165,7 +193,7 @@ Route:
 3. `providers/index.md`
 4. `providers/zhipu-glm.md`
 
-### Example 7 - ambiguous but likely integration
+### Example 9 - ambiguous but likely integration
 
 User:
 
