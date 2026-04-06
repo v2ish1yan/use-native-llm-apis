@@ -114,6 +114,36 @@ If you want to go deeper, start here:
 - [tool-calling-differences.md](references/comparisons/tool-calling-differences.md)
 - [structured-output-differences.md](references/comparisons/structured-output-differences.md)
 
+## FAQ
+
+### If many platforms say they are OpenAI-compatible, why do I still need this skill?
+
+Because path compatibility is not behavior compatibility.
+
+Many platforms can accept a similar `/v1` request, but still differ in:
+
+- auth headers
+- streaming format
+- tool-calling fields
+- structured-output support
+- response field paths
+
+The real integration failures usually come from the parts that are "almost the same", not the parts that are obviously different.
+
+### How is this different from a unified SDK or abstraction layer?
+
+A unified SDK helps you call multiple providers through one interface.
+
+This skill helps when you need to work with native provider details directly and want to reduce guesswork, rework, and protocol mistakes.
+
+If your project depends on provider-native behavior, careful migrations, or request-level debugging, this skill is usually more direct than abstraction-layer docs.
+
+### How should I interpret `gold`, `usable`, and `partial`?
+
+- `gold`: strong enough to support more direct end-to-end implementation
+- `usable`: enough for many real integrations, but best used with verification while coding
+- `partial`: best treated as a starting point for research, not as a full production contract
+
 ## Install
 
 ### Codex

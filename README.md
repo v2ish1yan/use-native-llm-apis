@@ -104,6 +104,36 @@ Use $use-native-llm-apis to write an Anthropic streaming request in TypeScript.
 - [tool-calling-differences.md](references/comparisons/tool-calling-differences.md)
 - [structured-output-differences.md](references/comparisons/structured-output-differences.md)
 
+## FAQ
+
+### 既然很多平台都说自己 OpenAI-compatible，为什么还需要这个 skill？
+
+因为“路径兼容”不等于“行为兼容”。
+
+很多平台虽然能接受类似的 `/v1` 请求，但在这些地方仍然可能不同：
+
+- 鉴权 header
+- 流式输出格式
+- tool calling 字段
+- structured output 支持方式
+- 响应字段路径
+
+真正让代码出错的，通常不是“完全不会用”，而是“看起来差不多，但差在最关键的一两个字段上”。
+
+### 它和统一 SDK / 抽象层有什么区别？
+
+统一 SDK 解决的是“用同一套接口调用多个厂商”。
+
+这个 skill 解决的是“当你必须面对原生接口细节时，怎么少踩坑、少返工、少猜协议”。
+
+如果你的项目本来就需要 provider-native 能力、精细迁移、或请求级调试，它通常比抽象层文档更直接。
+
+### 我应该怎么理解 `gold` / `usable` / `partial`？
+
+- `gold`：可以优先拿来直接支撑更完整的接入实现
+- `usable`：足够支持很多真实集成，但最好边写边核对
+- `partial`：更适合做线索入口，不适合盲目生成完整生产代码
+
 ## 安装
 
 ### Codex
