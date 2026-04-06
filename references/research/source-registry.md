@@ -198,10 +198,19 @@ Purpose:
 
 - Docs root: <https://docs.cubence.com/>
 - Main site: <https://www.cubence.com/>
+- Quick start: <https://docs.cubence.com/en/docs/quick-start>
+- Codex setup: <https://docs.cubence.com/en/docs/setup/codex>
+- Claude Code setup: <https://docs.cubence.com/en/docs/setup/claude-code>
+- Gemini CLI setup: <https://docs.cubence.com/en/docs/setup/gemini-cli>
+- DROID integration: <https://docs.cubence.com/en/docs/setup/droid>
 
 ## CrazyRouter
 
+- Docs root: <https://docs.crazyrouter.com/>
+- Introduction: <https://docs.crazyrouter.com/introduction>
+- Request guide: <https://docs.crazyrouter.com/en/making-requests>
 - Main site: <https://crazyrouter.com/>
+- Quick-start guide: <https://crazyrouter.com/zh/blog/crazyrouter-api-quickstart>
 - Pricing and API compatibility explanation: <https://crazyrouter.com/tools/pricing-calculator>
 
 ## Ai Go Code

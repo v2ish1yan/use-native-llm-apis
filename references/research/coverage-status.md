@@ -43,8 +43,8 @@ Depth labels:
 | Novita AI | skeleton | Has a file, but depth is still thin |
 | GitHub Copilot / Copilot SDK | usable | Special OAuth / BYOK reference with real integration value |
 | PackyCode | usable | Public client guides now support a practical coding-tool relay reference |
-| Cubence | skeleton | Relay notes only |
-| CrazyRouter | skeleton | Relay notes only |
+| Cubence | usable | Public setup docs now support a practical multi-client coding relay reference |
+| CrazyRouter | usable | Public docs now support a practical OpenAI-compatible gateway reference with streaming guidance |
 | Ai Go Code | skeleton | Relay notes only |
 | AICodeMirror | skeleton | Relay/tutorial notes only |
 | Right Code | usable | Public curl examples make the relay's protocol families concrete enough for practical integration |
