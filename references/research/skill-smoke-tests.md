@@ -4,6 +4,14 @@ Use this file when changing trigger boundaries, routing rules, or start-path doc
 
 The point is to test whether an agent can choose the right path quickly without inventing missing details.
 
+## How to use this file
+
+For each prompt below, verify three things:
+
+1. whether the skill should trigger
+2. whether the agent asks at most one clarification question when needed
+3. whether routing follows the current source-of-truth path in `SKILL.md` and `references/start-here.md`
+
 ## Direct triggers
 
 These should trigger the skill and route immediately:
@@ -13,6 +21,13 @@ These should trigger the skill and route immediately:
 - "Convert this OpenAI request to Gemini native format."
 - "这个 DeepSeek 请求一直报 401"
 - "Add tool calling to our Claude integration."
+
+Expected behavior:
+
+- choose exactly one task recipe first
+- resolve the provider path through `references/providers/index.md`
+- open a comparison file only when the task needs one
+- reach code-writing only after `references/routing-checklist.md`
 
 ## Ambiguous prompts
 
@@ -28,6 +43,7 @@ Expected behavior:
 - if provider is missing, ask for the provider
 - if provider is present but the task is still ambiguous, ask one task question
 - do not ask two or three questions at once
+- do not pre-emptively choose a recipe before the ambiguity is resolved
 
 ## Non-triggers
 
@@ -38,6 +54,11 @@ These should stay out of this skill:
 - "帮我写一个 prompt 模板"
 - "最近有哪些模型发布了"
 
+Expected behavior:
+
+- do not load this skill just because an LLM vendor name appears
+- do not route into provider files for pricing, news, or generic prompt work
+
 ## Provider-path checks
 
 When a provider is known, the route should always go through:
@@ -45,7 +66,22 @@ When a provider is known, the route should always go through:
 1. `references/start-here.md`
 2. one task recipe
 3. `references/providers/index.md`
-4. `references/routing-checklist.md`
-5. the exact provider file
+4. the exact provider file
+5. `references/routing-checklist.md`
 
 It should never jump straight from `SKILL.md` to a guessed provider slug.
+
+## Current manual results
+
+Last manually reviewed: `2026-04-06`
+
+- direct triggers: pass
+- ambiguous prompts: pass
+- non-triggers: pass
+- provider-path order: pass after confirming the route is `start-here -> recipe -> providers/index -> provider file -> routing-checklist`
+
+## Notes from the latest review
+
+- PowerShell `Get-Content` may display mojibake for Chinese lines even when the file itself is valid UTF-8.
+- Validate suspected encoding issues with a UTF-8-aware reader before rewriting trigger examples.
+- Keep this file aligned with `SKILL.md`, `references/start-here.md`, and `references/recipes/prompt-patterns.md`.
