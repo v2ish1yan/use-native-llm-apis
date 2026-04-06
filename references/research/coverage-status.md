@@ -113,5 +113,6 @@ When a provider changes depth, also update:
 - `references/providers/index.md`
 - `references/research/source-registry.md`
 - `README.md`
+- `README-EN.md`
 - `references/research/cc-switch-provider-notes.md` when the change affects expansion planning
 

@@ -18,7 +18,8 @@ Keep five things healthy:
 - `references/start-here.md` defines the first routing path after the skill loads.
 - `references/routing-checklist.md` defines the final pre-coding self-check.
 - `references/recipes/prompt-patterns.md` gives trigger examples and few-shot routing examples.
-- `README.md` explains the project to humans and should not become a second source of trigger truth.
+- `README.md` is the Chinese human-facing entry document and should not become a second source of trigger truth.
+- `README-EN.md` is the English human-facing companion and should stay aligned with `README.md`.
 - `references/research/coverage-status.md` is the source of truth for depth labels such as `gold`, `usable`, `skeleton`, `partial`, `pending`, and `blocked`.
 
 ## Update checklist
@@ -31,8 +32,9 @@ When changing the skill itself:
 4. Update `references/routing-checklist.md` if the pre-coding contract changed.
 5. Update `references/recipes/prompt-patterns.md` if trigger examples or routing examples changed.
 6. Update `README.md` only after the above files are correct.
-7. If provider maturity changed, update `references/research/coverage-status.md`.
-8. If new official docs were used, update `references/research/source-registry.md`.
+7. Update `README-EN.md` after `README.md` if the human-facing explanation changed.
+8. If provider maturity changed, update `references/research/coverage-status.md`.
+9. If new official docs were used, update `references/research/source-registry.md`.
 
 ## Validation
 
@@ -77,7 +79,7 @@ A routing change is not complete unless it passes all three buckets:
 Do not merge a skill-quality change unless:
 
 - trigger wording became clearer or at least not broader without justification
-- `SKILL.md`, `start-here.md`, `routing-checklist.md`, `prompt-patterns.md`, and `README.md` still agree on boundaries
+- `SKILL.md`, `start-here.md`, `routing-checklist.md`, `prompt-patterns.md`, `README.md`, and `README-EN.md` still agree on boundaries
 - examples do not smuggle in unverified architecture assumptions
 - coverage marketing does not overstate maturity compared with `coverage-status.md`
 - the first 30 seconds of use feel easier, not harder
