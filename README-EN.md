@@ -41,12 +41,14 @@ It is especially useful for requests like:
 
 ## Coverage
 
-The repository currently covers 31 provider / gateway / relay entries, including:
+The repository currently covers 31 provider / gateway / relay entries:
 
-- native providers: OpenAI, Anthropic, Gemini, DeepSeek, Zhipu, Bailian, Kimi, Doubao, MiniMax, StepFun, Xiaomi MiMo
-- cloud and managed platforms: Azure OpenAI, AWS Bedrock, NVIDIA NIM, ModelScope, GitHub Copilot SDK
-- gateways and aggregation layers: OpenRouter, SiliconFlow, AiHubMix, Novita AI, NewAPI
-- relays and proxy services: PackyCode, Cubence, CrazyRouter, Compshare, CTok.ai, Right Code, X-Code API, Ai Go Code, AICodeMirror, DMXAPI
+| Category | Coverage |
+|---|---|
+| Native providers | OpenAI, Anthropic, Gemini, DeepSeek, Zhipu, Bailian, Kimi, Doubao, MiniMax, StepFun, Xiaomi MiMo |
+| Cloud and managed platforms | Azure OpenAI, AWS Bedrock, NVIDIA NIM, ModelScope, GitHub Copilot SDK |
+| Gateways and aggregation layers | OpenRouter, SiliconFlow, AiHubMix, Novita AI, NewAPI |
+| Relays and proxy services | PackyCode, Cubence, CrazyRouter, Compshare, CTok.ai, Right Code, X-Code API, Ai Go Code, AICodeMirror, DMXAPI |
 
 But the important part is this:
 

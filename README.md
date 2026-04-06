@@ -39,12 +39,14 @@
 
 ## 覆盖范围
 
-这个仓库当前覆盖 31 个 provider / gateway / relay 条目，包括：
+这个仓库当前覆盖 31 个 provider / gateway / relay 条目：
 
-- 原生 LLM 厂商：OpenAI、Anthropic、Gemini、DeepSeek、智谱、百炼、Kimi、豆包、MiniMax、StepFun、小米 MiMo
-- 云与托管平台：Azure OpenAI、AWS Bedrock、NVIDIA NIM、ModelScope、GitHub Copilot SDK
-- 网关与聚合层：OpenRouter、SiliconFlow、AiHubMix、Novita AI、NewAPI
-- 中转与代理服务：PackyCode、Cubence、CrazyRouter、Compshare、CTok.ai、Right Code、X-Code API、Ai Go Code、AICodeMirror、DMXAPI
+| 类别 | 覆盖项 |
+|---|---|
+| 原生 LLM 厂商 | OpenAI, Anthropic, Gemini, DeepSeek, 智谱, 百炼, Kimi, 豆包, MiniMax, StepFun, 小米 MiMo |
+| 云与托管平台 | Azure OpenAI, AWS Bedrock, NVIDIA NIM, ModelScope, GitHub Copilot SDK |
+| 网关与聚合层 | OpenRouter, SiliconFlow, AiHubMix, Novita AI, NewAPI |
+| 中转与代理服务 | PackyCode, Cubence, CrazyRouter, Compshare, CTok.ai, Right Code, X-Code API, Ai Go Code, AICodeMirror, DMXAPI |
 
 但这里要说清楚：
 
