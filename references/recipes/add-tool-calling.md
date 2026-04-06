@@ -41,7 +41,7 @@ The three major tool declaration formats:
     "function": {
       "name": "get_weather",
       "description": "Get the weather for a city",
-      "parameters": {          // ← note: "parameters"
+      "parameters": { // note: "parameters"
         "type": "object",
         "properties": {
           "city": { "type": "string" }
@@ -57,7 +57,7 @@ The three major tool declaration formats:
   "tools": [{
     "name": "get_weather",
     "description": "Get the weather for a city",
-    "input_schema": {          // ← note: "input_schema"
+    "input_schema": { // note: "input_schema"
       "type": "object",
       "properties": {
         "city": { "type": "string" }
@@ -70,7 +70,7 @@ The three major tool declaration formats:
 // Gemini
 {
   "tools": [{
-    "function_declarations": [{  // ← note: nested array
+    "function_declarations": [{ // note: nested array
       "name": "get_weather",
       "description": "Get the weather for a city",
       "parameters": {
@@ -90,7 +90,7 @@ The three major tool declaration formats:
 How to return a tool result back to the model:
 
 ```jsonc
-// OpenAI / DeepSeek — role: "tool" message
+// OpenAI / DeepSeek - role: "tool" message
 {
   "messages": [
     { "role": "user", "content": "What's the weather in Tokyo?" },
@@ -101,7 +101,7 @@ How to return a tool result back to the model:
   ]
 }
 
-// Anthropic — tool_result content block in a user message
+// Anthropic - tool_result content block in a user message
 {
   "messages": [
     { "role": "user", "content": "What's the weather in Tokyo?" },
@@ -119,7 +119,7 @@ How to return a tool result back to the model:
 
 ## High-risk differences
 
-- `parameters` vs `input_schema` — easy to miss, silent failure
+- `parameters` vs `input_schema` - easy to miss, silent failure
 - OpenAI `role: "tool"` continuation vs Anthropic `tool_result` content block
 - Gemini `functionResponse` part vs function-call part
 - Tool call IDs: `call_*` (OpenAI) vs `toolu_*` (Anthropic)
@@ -128,11 +128,11 @@ How to return a tool result back to the model:
 
 Use one deterministic tool, such as:
 
-- `get_weather(city)` → returns `{ temperature_c: 22 }`
-- `lookup_order(id)` → returns `{ status: "shipped" }`
+- `get_weather(city)` -> returns `{ temperature_c: 22 }`
+- `lookup_order(id)` -> returns `{ status: "shipped" }`
 
 The model should produce exactly one tool call and then answer using the tool result.
 
 ## Exit criteria
 
-This recipe is complete when one full request → tool call → tool result → final answer loop works with the provider's native schema.
+This recipe is complete when one full request -> tool call -> tool result -> final answer loop works with the provider's native schema.

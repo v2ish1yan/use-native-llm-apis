@@ -24,14 +24,14 @@ You should already have come through `references/start-here.md`.
 
 ## Generic SSE stream parser (TypeScript)
 
-This parser handles the SSE wire format shared by most providers. The provider-specific part is **which event names and data fields to extract** — fill those from the provider file.
+This parser handles the SSE wire format shared by most providers. The provider-specific part is **which event names and data fields to extract** - fill those from the provider file.
 
 ```ts
 async function streamProvider(
   url: string,
   headers: Record<string, string>,
   body: Record<string, unknown>,
-  // Provider-specific extractors — fill from the provider file
+  // Provider-specific extractors - fill from the provider file
   extractors: {
     isTextEvent: (eventName: string, data: Record<string, unknown>) => boolean;
     getTextChunk: (data: Record<string, unknown>) => string;
@@ -76,7 +76,11 @@ async function streamProvider(
       if (!dataText || dataText === "[DONE]") continue;
 
       let parsed: Record<string, unknown>;
-      try { parsed = JSON.parse(dataText); } catch { continue; }
+      try {
+        parsed = JSON.parse(dataText);
+      } catch {
+        continue;
+      }
 
       if (extractors.isTextEvent(eventName, parsed)) {
         const chunk = extractors.getTextChunk(parsed);

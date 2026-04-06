@@ -25,7 +25,7 @@ Use the strongest supported boundary in this order:
 ## Structured output by provider
 
 ```jsonc
-// ── OpenAI: response_format with json_schema ──
+// OpenAI: response_format with json_schema
 {
   "model": "gpt-4o",
   "messages": [{ "role": "user", "content": "Create a task" }],
@@ -49,8 +49,8 @@ Use the strongest supported boundary in this order:
 }
 // Response: choices[0].message.content is a JSON string matching the schema
 
-// ── Anthropic: tool-mediated structured output ──
-// No native json_schema support — use a tool as the schema boundary
+// Anthropic: tool-mediated structured output
+// No native json_schema support - use a tool as the schema boundary
 {
   "model": "claude-sonnet-4-5",
   "max_tokens": 512,
@@ -72,7 +72,7 @@ Use the strongest supported boundary in this order:
 }
 // Response: content block with type: "tool_use", input field contains the parsed object
 
-// ── Gemini: generationConfig responseMimeType ──
+// Gemini: generationConfig responseMimeType
 {
   "contents": [{ "role": "user", "parts": [{ "text": "Create a task" }] }],
   "generationConfig": {
@@ -93,7 +93,7 @@ Use the strongest supported boundary in this order:
 
 ## Validation pattern
 
-Never trust raw model output — always validate:
+Never trust raw model output - always validate:
 
 ```ts
 interface Task {
@@ -135,8 +135,8 @@ function parseTaskOutput(raw: string): Task {
 
 ## Common mistakes
 
-- Assuming "JSON mode" means full schema enforcement — most providers only guarantee valid JSON, not schema conformance
-- Reusing OpenAI `json_schema` fields in Gemini unchanged — Gemini uses `responseMimeType` + `responseSchema`
+- Assuming "JSON mode" means full schema enforcement - most providers only guarantee valid JSON, not schema conformance
+- Reusing OpenAI `json_schema` fields in Gemini unchanged - Gemini uses `responseMimeType` + `responseSchema`
 - Relying on prompt wording alone when strict parsing matters
 - Skipping runtime validation because the provider "usually" returns valid JSON
 
