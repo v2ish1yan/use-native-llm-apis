@@ -1,0 +1,17 @@
+{
+  "name": "native-llm-apis-marketplace",
+  "displayName": "Native LLM APIs",
+  "description": "Provider-native LLM API integration references covering 38+ providers",
+  "version": "1.0.0",
+  "author": "v2ish1yan",
+  "plugins": [
+    {
+      "name": "use-native-llm-apis",
+      "displayName": "Use Native LLM APIs",
+      "description": "Provider-native LLM API integration reference for coding assistants",
+      "version": "1.0.0",
+      "repository": "https://github.com/v2ish1yan/use-native-llm-apis",
+      "tags": ["llm", "api", "integration", "streaming", "tool-calling"]
+    }
+  ]
+}

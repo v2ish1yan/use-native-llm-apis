@@ -1,0 +1,39 @@
+{
+  "name": "use-native-llm-apis",
+  "version": "1.0.0",
+  "description": "Provider-native LLM API integration reference for coding assistants. Covers 38+ providers including OpenAI, Anthropic, Gemini, DeepSeek, and various gateways.",
+  "author": "v2ish1yan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v2ish1yan/use-native-llm-apis.git"
+  },
+  "keywords": [
+    "llm",
+    "api",
+    "openai",
+    "anthropic",
+    "gemini",
+    "deepseek",
+    "streaming",
+    "tool-calling",
+    "integration",
+    "migration"
+  ],
+  "skills": [
+    {
+      "name": "use-native-llm-apis",
+      "description": "Use when implementing, integrating, migrating, or debugging provider-native LLM APIs",
+      "path": "SKILL.md"
+    }
+  ],
+  "commands": [],
+  "hooks": [],
+  "agents": [],
+  "mcpServers": [],
+  "documentation": {
+    "readme": "README.md",
+    "startHere": "references/start-here.md",
+    "providerIndex": "references/providers/index.md"
+  }
+}
