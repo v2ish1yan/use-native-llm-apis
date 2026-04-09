@@ -85,21 +85,36 @@ More examples → [prompt-patterns.md](references/recipes/prompt-patterns.md)
 
 ## Install
 
-### Codex
+### Option 1: Claude Code Plugin (Recommended)
+
+```
+/plugin install https://github.com/v2ish1yan/use-native-llm-apis
+```
+
+Or add via Marketplace:
+
+```
+/plugin marketplace add v2ish1yan/use-native-llm-apis
+/plugin install use-native-llm-apis@native-llm-apis-marketplace
+```
+
+### Option 2: Manual Clone
+
+**Codex**
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME\.codex\skills" | Out-Null
 git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.codex\skills\use-native-llm-apis"
 ```
 
-### Claude Code
+**Claude Code**
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
 git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.claude\skills\use-native-llm-apis"
 ```
 
-Update:
+**Update**
 
 ```powershell
 git -C "$HOME\.codex\skills\use-native-llm-apis" pull

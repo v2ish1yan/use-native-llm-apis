@@ -85,21 +85,36 @@
 
 ## 安装
 
-### Codex
+### 方式一：Claude Code 插件安装（推荐）
+
+```
+/plugin install https://github.com/v2ish1yan/use-native-llm-apis
+```
+
+或添加 Marketplace：
+
+```
+/plugin marketplace add v2ish1yan/use-native-llm-apis
+/plugin install use-native-llm-apis@native-llm-apis-marketplace
+```
+
+### 方式二：手动克隆
+
+**Codex**
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME\.codex\skills" | Out-Null
 git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.codex\skills\use-native-llm-apis"
 ```
 
-### Claude Code
+**Claude Code**
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
 git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.claude\skills\use-native-llm-apis"
 ```
 
-更新：
+**更新**
 
 ```powershell
 git -C "$HOME\.codex\skills\use-native-llm-apis" pull
