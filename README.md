@@ -87,11 +87,13 @@
 
 ### 方式一：Claude Code 插件安装（推荐）
 
+**直接安装（GitHub）**
+
 ```
-/plugin install https://github.com/v2ish1yan/use-native-llm-apis
+/plugin install use-native-llm-apis@github:v2ish1yan/use-native-llm-apis
 ```
 
-或添加 Marketplace：
+或先添加 Marketplace：
 
 ```
 /plugin marketplace add v2ish1yan/use-native-llm-apis

@@ -87,8 +87,10 @@ More examples → [prompt-patterns.md](references/recipes/prompt-patterns.md)
 
 ### Option 1: Claude Code Plugin (Recommended)
 
+**Direct Install (GitHub)**
+
 ```
-/plugin install https://github.com/v2ish1yan/use-native-llm-apis
+/plugin install use-native-llm-apis@github:v2ish1yan/use-native-llm-apis
 ```
 
 Or add via Marketplace:
