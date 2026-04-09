@@ -1,4 +1,4 @@
-# Claude Code Plugin: use-native-llm-apis
+# Claude Code Plugin: llm-apis
 
 Provider-native LLM API integration skill for Claude Code.
 

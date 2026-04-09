@@ -1,4 +1,4 @@
 interface:
-  display_name: "Use Native LLM APIs"
+  display_name: "LLM APIs"
   short_description: "Native LLM API refs plus migration guidance."
-  default_prompt: "Use $use-native-llm-apis to implement or migrate a provider-native LLM API integration."
+  default_prompt: "Use $llm-apis to implement or migrate a provider-native LLM API integration."

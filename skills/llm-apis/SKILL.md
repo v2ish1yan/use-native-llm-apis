@@ -1,5 +1,5 @@
 ---
-name: use-native-llm-apis
+name: llm-apis
 description: Use when implementing, integrating, migrating, or debugging provider-native LLM APIs in code, especially auth, request shapes, streaming, tool calling, structured output, or provider switching.
 ---
 

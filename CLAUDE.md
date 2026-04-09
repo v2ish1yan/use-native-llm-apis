@@ -1,4 +1,4 @@
-# use-native-llm-apis for Claude Code
+# llm-apis for Claude Code
 
 ## What this skill is for
 

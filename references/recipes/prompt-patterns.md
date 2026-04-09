@@ -1,6 +1,6 @@
 # Prompt Patterns and Few-Shot Triggers
 
-Use this file to decide whether a user's request should trigger the `use-native-llm-apis` skill.
+Use this file to decide whether a user's request should trigger the `llm-apis` skill.
 
 ## Core trigger rule
 
