@@ -1,24 +1,22 @@
 {
   "name": "native-llm-apis-marketplace",
-  "displayName": "Native LLM APIs",
-  "description": "Provider-native LLM API integration references covering 38+ providers",
-  "version": "1.0.0",
-  "author": {
+  "owner": {
     "name": "v2ish1yan",
-    "email": "",
-    "url": "https://github.com/v2ish1yan"
+    "email": ""
+  },
+  "metadata": {
+    "description": "Provider-native LLM API integration references covering 38+ providers",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "use-native-llm-apis",
-      "displayName": "Use Native LLM APIs",
-      "description": "Provider-native LLM API integration reference for coding assistants",
-      "version": "1.0.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/v2ish1yan/use-native-llm-apis.git"
-      },
-      "tags": ["llm", "api", "integration", "streaming", "tool-calling"]
+      "description": "Provider-native LLM API integration reference for coding assistants. Covers 38+ providers including OpenAI, Anthropic, Gemini, DeepSeek, and various gateways.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./"
+      ]
     }
   ]
 }
