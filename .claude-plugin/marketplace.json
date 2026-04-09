@@ -12,6 +12,7 @@
     {
       "name": "llm-apis",
       "description": "Provider-native LLM API integration reference for coding assistants. Covers 38+ providers including OpenAI, Anthropic, Gemini, DeepSeek, and various gateways.",
+      "repository": "https://github.com/v2ish1yan/llm-apis",
       "version": "1.0.0",
       "source": "./",
       "strict": false,

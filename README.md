@@ -1,6 +1,6 @@
 <div align="center">
 
-# use-native-llm-apis
+# llm-apis
 
 **原生 LLM API 集成参考，写给编码助手用**
 
@@ -90,13 +90,13 @@
 **直接安装（GitHub）**
 
 ```
-/plugin install llm-apis@github:v2ish1yan/use-native-llm-apis
+/plugin install llm-apis@github:v2ish1yan/llm-apis
 ```
 
 或先添加 Marketplace：
 
 ```
-/plugin marketplace add v2ish1yan/use-native-llm-apis
+/plugin marketplace add v2ish1yan/llm-apis
 /plugin install llm-apis@native-llm-apis-marketplace
 ```
 
@@ -106,24 +106,24 @@
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME\.codex\skills" | Out-Null
-git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.codex\skills\use-native-llm-apis"
+git clone https://github.com/v2ish1yan/llm-apis.git "$HOME\.codex\skills\llm-apis"
 ```
 
 **Claude Code**
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
-git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.claude\skills\use-native-llm-apis"
+git clone https://github.com/v2ish1yan/llm-apis.git "$HOME\.claude\skills\llm-apis"
 ```
 
 **更新**
 
 ```powershell
-git -C "$HOME\.codex\skills\use-native-llm-apis" pull
-git -C "$HOME\.claude\skills\use-native-llm-apis" pull
+git -C "$HOME\.codex\skills\llm-apis" pull
+git -C "$HOME\.claude\skills\llm-apis" pull
 ```
 
-> 目录名必须保持为 `use-native-llm-apis`。安装或更新后重启工具。
+> 目录名必须保持为 `llm-apis`。安装或更新后重启工具。
 
 ## FAQ
 

@@ -1,6 +1,6 @@
 <div align="center">
 
-# use-native-llm-apis
+# llm-apis
 
 **Provider-native LLM API integration reference for coding assistants**
 
@@ -90,13 +90,13 @@ More examples → [prompt-patterns.md](references/recipes/prompt-patterns.md)
 **Direct Install (GitHub)**
 
 ```
-/plugin install llm-apis@github:v2ish1yan/use-native-llm-apis
+/plugin install llm-apis@github:v2ish1yan/llm-apis
 ```
 
 Or add via Marketplace:
 
 ```
-/plugin marketplace add v2ish1yan/use-native-llm-apis
+/plugin marketplace add v2ish1yan/llm-apis
 /plugin install llm-apis@native-llm-apis-marketplace
 ```
 
@@ -106,24 +106,24 @@ Or add via Marketplace:
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME\.codex\skills" | Out-Null
-git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.codex\skills\use-native-llm-apis"
+git clone https://github.com/v2ish1yan/llm-apis.git "$HOME\.codex\skills\llm-apis"
 ```
 
 **Claude Code**
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills" | Out-Null
-git clone https://github.com/v2ish1yan/use-native-llm-apis.git "$HOME\.claude\skills\use-native-llm-apis"
+git clone https://github.com/v2ish1yan/llm-apis.git "$HOME\.claude\skills\llm-apis"
 ```
 
 **Update**
 
 ```powershell
-git -C "$HOME\.codex\skills\use-native-llm-apis" pull
-git -C "$HOME\.claude\skills\use-native-llm-apis" pull
+git -C "$HOME\.codex\skills\llm-apis" pull
+git -C "$HOME\.claude\skills\llm-apis" pull
 ```
 
-> The folder name must remain `use-native-llm-apis`. Restart the tool after install or update.
+> The folder name must remain `llm-apis`. Restart the tool after install or update.
 
 ## FAQ
 

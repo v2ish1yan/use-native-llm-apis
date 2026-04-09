@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/v2ish1yan/use-native-llm-apis.git"
+    "url": "https://github.com/v2ish1yan/llm-apis.git"
   },
   "keywords": [
     "llm",
