@@ -12,10 +12,11 @@
     {
       "name": "use-native-llm-apis",
       "description": "Provider-native LLM API integration reference for coding assistants. Covers 38+ providers including OpenAI, Anthropic, Gemini, DeepSeek, and various gateways.",
+      "version": "1.0.0",
       "source": "./",
       "strict": false,
       "skills": [
-        "./"
+        "./skills/use-native-llm-apis"
       ]
     }
   ]
