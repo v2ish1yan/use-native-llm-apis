@@ -90,14 +90,14 @@
 **直接安装（GitHub）**
 
 ```
-/plugin install use-native-llm-apis@github:v2ish1yan/use-native-llm-apis
+/plugin install llm-apis@github:v2ish1yan/use-native-llm-apis
 ```
 
 或先添加 Marketplace：
 
 ```
 /plugin marketplace add v2ish1yan/use-native-llm-apis
-/plugin install use-native-llm-apis@native-llm-apis-marketplace
+/plugin install llm-apis@native-llm-apis-marketplace
 ```
 
 ### 方式二：手动克隆

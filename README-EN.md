@@ -90,14 +90,14 @@ More examples → [prompt-patterns.md](references/recipes/prompt-patterns.md)
 **Direct Install (GitHub)**
 
 ```
-/plugin install use-native-llm-apis@github:v2ish1yan/use-native-llm-apis
+/plugin install llm-apis@github:v2ish1yan/use-native-llm-apis
 ```
 
 Or add via Marketplace:
 
 ```
 /plugin marketplace add v2ish1yan/use-native-llm-apis
-/plugin install use-native-llm-apis@native-llm-apis-marketplace
+/plugin install llm-apis@native-llm-apis-marketplace
 ```
 
 ### Option 2: Manual Clone

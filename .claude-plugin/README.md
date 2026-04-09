@@ -7,14 +7,14 @@ Provider-native LLM API integration skill for Claude Code.
 ### Direct GitHub Install (Recommended)
 
 ```
-/plugin install use-native-llm-apis@github:v2ish1yan/use-native-llm-apis
+/plugin install llm-apis@github:v2ish1yan/use-native-llm-apis
 ```
 
 ### From Marketplace
 
 ```
 /plugin marketplace add v2ish1yan/use-native-llm-apis
-/plugin install use-native-llm-apis@native-llm-apis-marketplace
+/plugin install llm-apis@native-llm-apis-marketplace
 ```
 
 ## Usage
